@@ -1,12 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715560512
+::res://::1715560852
 icon.svg::CompressedTexture2D::1929323658878216135::1715552348::1715552373::1::::<><>::
 README.md::TextFile::-1::1715552307::0::1::::<><>::
 ::res://assets/::1715553298
-::res://assets/backgrounds/::1715553411
+::res://assets/backgrounds/::1715563134
+desert_background_pedro.png::CompressedTexture2D::7358154296742424619::1715563088::1715563297::1::::<><>::
 ::res://assets/enemies/::1715553280
 ::res://assets/player/::1715553293
 ::res://assets/tiles/::1715553270
-::res://Start Screen/::1715557272
+::res://scenes/::1715560780
+::res://scenes/levels/::1715560874
+level_1.tscn::PackedScene::5385080224453766939::1715560783::0::1::::<><>::
+start_screen.tscn::PackedScene::5284489611569290466::1715560874::0::1::::<><>::
+::res://scenes/levels/Start Screen/::1715560858
 start_screen.tscn::PackedScene::5556092976803698870::1715557272::0::1::::<><>::
-Untitled drawing.png::CompressedTexture2D::5503221152549317737::1715557272::1715560517::1::::<><>::
+Untitled drawing.png::CompressedTexture2D::5503221152549317737::1715557272::1715560857::1::::<><>::
