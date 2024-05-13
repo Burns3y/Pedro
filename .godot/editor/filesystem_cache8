@@ -1,5 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715552369
+::res://::1715560512
 icon.svg::CompressedTexture2D::1929323658878216135::1715552348::1715552373::1::::<><>::
-::res://Pedro/::1715552307
 README.md::TextFile::-1::1715552307::0::1::::<><>::
+::res://assets/::1715553298
+::res://assets/backgrounds/::1715553411
+::res://assets/enemies/::1715553280
+::res://assets/player/::1715553293
+::res://assets/tiles/::1715553270
+::res://Start Screen/::1715557272
+start_screen.tscn::PackedScene::5556092976803698870::1715557272::0::1::::<><>::
+Untitled drawing.png::CompressedTexture2D::5503221152549317737::1715557272::1715560517::1::::<><>::
