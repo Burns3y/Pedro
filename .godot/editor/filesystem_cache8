@@ -1,16 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715652880
+::res://::1715722146
 icon.svg::CompressedTexture2D::1929323658878216135::1715552348::1715552373::1::::<><>::
 README.md::TextFile::-1::1715552307::0::1::::<><>::
 ::res://assets/::1715553298
-::res://assets/backgrounds/::1715652946
-desert_bg2.png::CompressedTexture2D::3657203973664637735::1715652805::1715652956::1::::<><>::
+::res://assets/backgrounds/::1715722260
+pedro_bg3.png::CompressedTexture2D::2105473407485533758::1715722183::1715722275::1::::<><>::
 ::res://assets/enemies/::1715553280
 ::res://assets/player/::1715553293
 ::res://assets/tiles/::1715553270
 ::res://scenes/::1715560780
-::res://scenes/levels/::1715643886
-level_1.tscn::PackedScene::5385080224453766939::1715643886::0::1::::<><>::uid://dc3lyxrwaxtt8::::res://assets/backgrounds/desert_background_pedro.png
+::res://scenes/levels/::1715653011
+level_1.tscn::PackedScene::5385080224453766939::1715653011::0::1::::<><>::uid://bsdtu6c01arml::::res://assets/backgrounds/desert_bg2.png
 start_screen.tscn::PackedScene::5284489611569290466::1715560874::0::1::::<><>::
 ::res://scenes/levels/Start Screen/::1715560858
 start_screen.tscn::PackedScene::5556092976803698870::1715557272::0::1::::<><>::
