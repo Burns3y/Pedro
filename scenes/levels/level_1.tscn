@@ -1,15 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://ciytqqd3poxt0"]
 
-[ext_resource type="Texture2D" uid="uid://dc3lyxrwaxtt8" path="res://assets/backgrounds/desert_background_pedro.png" id="1_0pf5a"]
+[ext_resource type="Texture2D" uid="uid://bsdtu6c01arml" path="res://assets/backgrounds/desert_bg2.png" id="1_lqab1"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="DesertBackgroundPedro" type="Sprite2D" parent="."]
-position = Vector2(837, 320)
-scale = Vector2(1.55392, 1.55392)
-texture = ExtResource("1_0pf5a")
+[node name="DesertBg2" type="Sprite2D" parent="."]
+position = Vector2(551, 276)
+texture = ExtResource("1_lqab1")
 
-[node name="DesertBackgroundPedro2" type="Sprite2D" parent="."]
-position = Vector2(2521, 320)
-scale = Vector2(1.55392, 1.55392)
-texture = ExtResource("1_0pf5a")
+[node name="DesertBg3" type="Sprite2D" parent="."]
+position = Vector2(1653, 276)
+texture = ExtResource("1_lqab1")
