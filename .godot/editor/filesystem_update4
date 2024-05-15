@@ -1,3 +1,6 @@
 res://scenes/levels/level_1.tscn
+<<<<<<< HEAD
 res://scenes/levels/start_screen.tscn
 res://scenes/levels/start_screen.gd
+=======
+>>>>>>> 5bff8f3eacbca71839484f339bd54a16cd82ef9a
