@@ -1,16 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715811535
+::res://::1715812027
 icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715723894::1::::<><>::
 README.md::TextFile::-1::1715556632::0::1::::<><>::
-::res://assets/::1715741626
+::res://assets/::1715812045
 ::res://assets/backgrounds/::1715722527
 pedro_bg3.png::CompressedTexture2D::2105473407485533758::1715722527::1715722527::1::::<><>::
+::res://assets/start screen/::1715812045
+file (1).png::CompressedTexture2D::5620943075005483460::1715811920::1715812057::1::::<><>::
 ::res://assets/tiles/::1715741626
 Screenshot 2024-05-14 at 5.35.22 PM.png::CompressedTexture2D::1669229331926929324::1715741626::1715741626::1::::<><>::
 Screenshot 2024-05-14 at 5.37.10 PM.png::CompressedTexture2D::6264565415955291250::1715741626::1715741626::1::::<><>::
 ::res://scenes/::1715722527
-::res://scenes/levels/::1715811535
-level 1.tscn::PackedScene::4302208723476667012::1715811538::0::1::::<><>::uid://chksvnkh4bye7::::res://scenes/levels/start_screen.tscn<>uid://4853smc3bg2i::::res://assets/backgrounds/pedro_bg3.png
-start_screen.tscn::PackedScene::5285938156543290688::1715811535::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd
-::res://scenes/levels/Start Screen/::1715811535
+::res://scenes/levels/::1715811733
+level 1.tscn::PackedScene::4302208723476667012::1715811733::0::1::::<><>::uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://4853smc3bg2i::::res://assets/backgrounds/pedro_bg3.png
+::res://scenes/levels/Start Screen/::1715811999
+file (1).png::CompressedTexture2D::7348703133297401075::1715811999::1715811953::1::::<><>::
 start_screen.gd::GDScript::-1::1715811525::0::1::::<>Node2D<>::
+start_screen.tscn::PackedScene::5285938156543290688::1715811733::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd

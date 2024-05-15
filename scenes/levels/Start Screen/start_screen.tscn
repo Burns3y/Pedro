@@ -1,35 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://chksvnkh4bye7"]
+[gd_scene load_steps=3 format=3 uid="uid://chksvnkh4bye7"]
 
 [ext_resource type="Script" path="res://scenes/levels/Start Screen/start_screen.gd" id="1_gr0yc"]
+[ext_resource type="Texture2D" uid="uid://cmc3d1tg8mw81" path="res://assets/start screen/file (1).png" id="2_qo5hh"]
 
 [node name="Start_Screen" type="Node2D"]
 script = ExtResource("1_gr0yc")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0.501961)
-offset_right = 1171.0
-offset_bottom = 686.0
+offset_left = -7.0
+offset_top = -36.0
+offset_right = 1164.0
+offset_bottom = 650.0
 
 [node name="start_button" type="Button" parent="."]
-offset_left = 384.0
-offset_top = 408.0
-offset_right = 539.0
-offset_bottom = 505.0
-text = "Start"
+offset_left = 548.0
+offset_top = 311.0
+offset_right = 644.0
+offset_bottom = 342.0
+text = "Start Game"
+flat = true
+icon_alignment = 1
 
 [node name="quit_button" type="Button" parent="."]
-offset_left = 575.0
-offset_top = 410.0
-offset_right = 730.0
-offset_bottom = 507.0
-text = "Quit"
+offset_left = 546.0
+offset_top = 345.0
+offset_right = 639.0
+offset_bottom = 376.0
+text = "Quit Game"
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="logo_place_holder" type="TextEdit" parent="."]
-offset_left = 336.0
-offset_top = 40.0
-offset_right = 804.0
-offset_bottom = 288.0
-text = "Logo Needs to go here "
+[node name="File(1)" type="Sprite2D" parent="."]
+modulate = Color(0.67471, 1, 0.594779, 1)
+position = Vector2(593, 138)
+scale = Vector2(0.411765, 0.411765)
+texture = ExtResource("2_qo5hh")
 
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
