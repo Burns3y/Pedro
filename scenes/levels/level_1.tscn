@@ -5,12 +5,18 @@
 
 [node name="Level1" type="Node2D"]
 
-[node name="PedroBg4" type="Sprite2D" parent="."]
-position = Vector2(1163, 343)
+[node name="Background" type="Node2D" parent="."]
+
+[node name="PedroBg4" type="Sprite2D" parent="Background"]
+position = Vector2(1264, 347)
 texture = ExtResource("1_hjvpk")
 
-[node name="PedroBg3" type="Sprite2D" parent="."]
+[node name="PedroBg3" type="Sprite2D" parent="Background"]
 position = Vector2(536, 344)
 texture = ExtResource("1_hjvpk")
 
 [node name="Start_Screen" parent="." instance=ExtResource("2_4smwf")]
+visible = false
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
