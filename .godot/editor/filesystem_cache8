@@ -1,14 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715723892
+::res://::1715741202
 icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715723894::1::::<><>::
 README.md::TextFile::-1::1715556632::0::1::::<><>::
 ::res://assets/::1715722527
 ::res://assets/backgrounds/::1715722527
 pedro_bg3.png::CompressedTexture2D::2105473407485533758::1715722527::1715722527::1::::<><>::
 ::res://scenes/::1715722527
-::res://scenes/levels/::1715723863
-level_1.tscn::PackedScene::5385080224453766939::1715723863::0::1::::<><>::uid://4853smc3bg2i::::res://assets/backgrounds/pedro_bg3.png<>uid://clfobl0mkqxle::::res://scenes/levels/Start Screen/start_screen.tscn
-start_screen.tscn::PackedScene::5284489611569290466::1715722527::0::1::::<><>::
-::res://scenes/levels/Start Screen/::1715722527
-start_screen.tscn::PackedScene::5556092976803698870::1715722527::0::1::::<><>::
-Untitled drawing.png::CompressedTexture2D::5503221152549317737::1715722527::1715722527::1::::<><>::
+::res://scenes/levels/::1715728831
+level_1.tscn::PackedScene::5385080224453766939::1715728831::0::1::::<><>::uid://4853smc3bg2i::::res://assets/backgrounds/pedro_bg3.png<>uid://chksvnkh4bye7::::res://scenes/levels/start_screen.tscn
+start_screen.gd::GDScript::-1::1715728831::0::1::::<>Node2D<>::
+start_screen.tscn::PackedScene::5285938156543290688::1715728831::0::1::::<><>::res://scenes/levels/start_screen.gd
+::res://scenes/levels/Start Screen/::1715725393
