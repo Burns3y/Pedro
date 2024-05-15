@@ -15,4 +15,9 @@ var SPEED = 0.2
 func _physics_process(delta):
 	if SIGNAL == "true":
 		position.y += SPEED
-		SPEED = -1000
+		SPEED = 0
+		var sprite = $start_button
+		while modulate.a > 0:
+			sprite.modulate.a -= 0.1
+			await get_tree().create_timer(3.0).timeout
+		
