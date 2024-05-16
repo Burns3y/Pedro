@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1715816568
 icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715723894::1::::<><>::
 README.md::TextFile::-1::1715556632::0::1::::<><>::
@@ -17,3 +18,18 @@ level 1.tscn::PackedScene::4302208723476667012::1715816391::0::1::::<><>::uid://
 file (1).png::CompressedTexture2D::7348703133297401075::1715811999::1715811953::1::::<><>::
 start_screen.gd::GDScript::-1::1715816321::0::1::::<>Node2D<>::
 start_screen.tscn::PackedScene::5285938156543290688::1715816391::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+=======
+::res://::1715723816
+icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715722628::1::::<><>::
+README.md::TextFile::-1::1715556632::0::1::::<><>::
+::res://assets/::1715722527
+::res://assets/backgrounds/::1715722527
+pedro_bg3.png::CompressedTexture2D::2105473407485533758::1715722527::1715722527::1::::<><>::
+::res://scenes/::1715722527
+::res://scenes/levels/::1715722527
+level_1.tscn::PackedScene::5385080224453766939::1715722527::0::1::::<><>::uid://4853smc3bg2i::::res://assets/backgrounds/pedro_bg3.png
+start_screen.tscn::PackedScene::5284489611569290466::1715722527::0::1::::<><>::
+::res://scenes/levels/Start Screen/::1715722527
+start_screen.tscn::PackedScene::5556092976803698870::1715722527::0::1::::<><>::
+Untitled drawing.png::CompressedTexture2D::5503221152549317737::1715722527::1715722527::1::::<><>::
+>>>>>>> Stashed changes
