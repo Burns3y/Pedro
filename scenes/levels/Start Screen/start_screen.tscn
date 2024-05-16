@@ -32,7 +32,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="File(1)" type="Sprite2D" parent="."]
+[node name="Logo" type="Sprite2D" parent="."]
 modulate = Color(0.67471, 1, 0.594779, 1)
 position = Vector2(593, 138)
 scale = Vector2(0.411765, 0.411765)
