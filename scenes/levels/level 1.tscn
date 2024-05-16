@@ -2135,8 +2135,11 @@ scale = Vector2(1.04897, 1.04897)
 texture = ExtResource("2_llwn8")
 
 [node name="Start_Screen" parent="PedroBg3" instance=ExtResource("1_pf7gu")]
+visible = false
 position = Vector2(-587.226, -389.907)
 
 [node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(0.1, 0.1)
 tile_set = SubResource("TileSet_1ypu3")
 format = 2
+layer_0/tile_data = PackedInt32Array(-1881123998, 1, 0, 1288843817, 1, 0, 25755660, 1, 1, 25755683, 1, 1)
