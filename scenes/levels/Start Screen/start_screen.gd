@@ -11,10 +11,10 @@ func _on_quit_button_pressed():
 
 func _physics_process(delta):
 	if SIGNAL == "true":
-		while modulate.a > 0:
-			$Panel.modulate.a -= 0.1
-			$start_button.modulate.a -= 0.1
-			$quit_button.modulate.a -= 0.1
-			$Logo.modulate.a -= 0.1
+		while $Panel.modulate.a > 0:
+			$Panel.modulate.a -= 0.05
+			$start_button.modulate.a -= 0.05
+			$quit_button.modulate.a -= 0.05
+			$Logo.modulate.a -= 0.05
 			await get_tree().create_timer(3.0).timeout
 		
