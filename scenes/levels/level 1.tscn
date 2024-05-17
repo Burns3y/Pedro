@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=3 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Texture2D" uid="uid://4853smc3bg2i" path="res://assets/backgrounds/pedro_bg3.png" id="1_u5ag3"]
+[ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 
-[node name="PedroBg3" type="Sprite2D"]
-position = Vector2(795, 340)
+[node name="Node2D" type="Node2D"]
+
+[node name="PedroBg3" type="Sprite2D" parent="."]
+position = Vector2(451, 319)
+scale = Vector2(0.829897, 0.829897)
 texture = ExtResource("1_u5ag3")
+
+[node name="PedroBg4" type="Sprite2D" parent="."]
+position = Vector2(1153, 319)
+scale = Vector2(0.829897, 0.829897)
+texture = ExtResource("1_u5ag3")
+
+[node name="Start_Screen" parent="." instance=ExtResource("2_ibqr6")]
+position = Vector2(-4, 23)
