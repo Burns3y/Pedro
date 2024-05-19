@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dop2b1xwl11ei"
-path="res://.godot/imported/Screenshot 2024-05-16 113249.png-78dc0df38c243f339902b6ea0383b3ea.ctex"
+uid="uid://bgge8gs78soy2"
+path="res://.godot/imported/pedro_tiles.png-6576c9c18fef33e1dee2e7d5fefff517.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/Screenshot 2024-05-16 113249.png"
-dest_files=["res://.godot/imported/Screenshot 2024-05-16 113249.png-78dc0df38c243f339902b6ea0383b3ea.ctex"]
+source_file="res://assets/tiles/pedro_tiles.png"
+dest_files=["res://.godot/imported/pedro_tiles.png-6576c9c18fef33e1dee2e7d5fefff517.ctex"]
 
 [params]
 
