@@ -373,13 +373,8 @@ sources/1 = SubResource("TileSetAtlasSource_1xq0u")
 [node name="Level1" type="Node2D"]
 
 [node name="PedroBg3" type="Sprite2D" parent="."]
-position = Vector2(451, 319)
-scale = Vector2(0.829897, 0.829897)
-texture = ExtResource("1_u5ag3")
-
-[node name="PedroBg4" type="Sprite2D" parent="."]
-position = Vector2(1153, 319)
-scale = Vector2(0.829897, 0.829897)
+position = Vector2(594.43, 280)
+scale = Vector2(1.09021, 1.09021)
 texture = ExtResource("1_u5ag3")
 
 [node name="TileMap" type="TileMap" parent="."]
