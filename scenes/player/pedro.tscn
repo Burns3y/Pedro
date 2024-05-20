@@ -1,5 +1,187 @@
-[gd_scene format=3 uid="uid://61bcos6b4c8a"]
+[gd_scene load_steps=6 format=3 uid="uid://61bcos6b4c8a"]
+
+[ext_resource type="Script" path="res://scenes/player/pedro.gd" id="1_kkii7"]
+[ext_resource type="Texture2D" uid="uid://2qtxcw6rkddv" path="res://icon.svg" id="2_xe0kl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ua1t"]
+radius = 14.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j61ke"]
+radius = 2.0
+height = 18.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_alnin"]
+radius = 2.0
+height = 12.0
 
 [node name="Pedro" type="CharacterBody2D"]
+script = ExtResource("1_kkii7")
 
 [node name="PedroImage" type="Sprite2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(412, 605)
+shape = SubResource("CapsuleShape2D_0ua1t")
+
+[node name="pedro place holder" type="Sprite2D" parent="."]
+position = Vector2(412.25, 604.688)
+scale = Vector2(0.167968, 0.286133)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(422, 599)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(423, 601)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(424, 603)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+position = Vector2(424, 607)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+position = Vector2(423, 608)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon6" type="Sprite2D" parent="."]
+position = Vector2(422, 611)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon7" type="Sprite2D" parent="."]
+position = Vector2(422, 611)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon14" type="Sprite2D" parent="."]
+position = Vector2(418, 615)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon15" type="Sprite2D" parent="."]
+position = Vector2(415, 617)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon16" type="Sprite2D" parent="."]
+position = Vector2(411, 617)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon24" type="Sprite2D" parent="."]
+position = Vector2(428, 613)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon25" type="Sprite2D" parent="."]
+position = Vector2(428, 613)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon26" type="Sprite2D" parent="."]
+position = Vector2(396, 613)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon17" type="Sprite2D" parent="."]
+position = Vector2(408, 616)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon27" type="Sprite2D" parent="."]
+position = Vector2(406, 629.5)
+scale = Vector2(0.03125, 0.0859375)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon28" type="Sprite2D" parent="."]
+position = Vector2(419, 629.188)
+scale = Vector2(0.03125, 0.0908202)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon18" type="Sprite2D" parent="."]
+position = Vector2(408, 594)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon19" type="Sprite2D" parent="."]
+position = Vector2(410, 593)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon20" type="Sprite2D" parent="."]
+position = Vector2(411, 593)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon21" type="Sprite2D" parent="."]
+position = Vector2(413, 593)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon22" type="Sprite2D" parent="."]
+position = Vector2(415, 594)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon23" type="Sprite2D" parent="."]
+position = Vector2(417, 595)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon8" type="Sprite2D" parent="."]
+position = Vector2(402, 599.25)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon9" type="Sprite2D" parent="."]
+position = Vector2(401, 601)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon10" type="Sprite2D" parent="."]
+position = Vector2(400, 603)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon11" type="Sprite2D" parent="."]
+position = Vector2(400, 606)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon12" type="Sprite2D" parent="."]
+position = Vector2(401, 609)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="Icon13" type="Sprite2D" parent="."]
+position = Vector2(402, 611.25)
+scale = Vector2(0.03125, 0.144531)
+texture = ExtResource("2_xe0kl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(428, 613)
+shape = SubResource("CapsuleShape2D_j61ke")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(419, 629)
+shape = SubResource("CapsuleShape2D_alnin")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(406, 629)
+shape = SubResource("CapsuleShape2D_alnin")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(396, 613)
+shape = SubResource("CapsuleShape2D_j61ke")
