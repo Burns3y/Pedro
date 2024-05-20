@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=7 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Texture2D" uid="uid://4853smc3bg2i" path="res://assets/backgrounds/pedro_bg3.png" id="1_u5ag3"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
+[ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xq0u"]
 texture = ExtResource("3_6idkb")
@@ -407,3 +408,6 @@ layer_0/tile_data = PackedInt32Array(655360, 65537, 0, 720896, 1, 1, 786432, 1, 
 
 [node name="Start_Screen" parent="." instance=ExtResource("2_ibqr6")]
 position = Vector2(-4, 23)
+
+[node name="Pedro" parent="." instance=ExtResource("4_josbn")]
+position = Vector2(-362, -718)
