@@ -1,16 +1,17 @@
 extends Node2D
 
-var SIGNAL = "false"
+var SIGNAL = false
+signal started
 
 func _on_start_button_pressed():
-	SIGNAL = "true"
-	
+	SIGNAL = true
+	started.emit()
 
 func _on_quit_button_pressed():
 	get_tree().quit()
 
 func _physics_process(delta):
-	if SIGNAL == "true":
+	if SIGNAL == true:
 		while $Panel.modulate.a > 0:
 			$Panel.modulate.a -= 0.05
 			$start_button.modulate.a -= 0.05
