@@ -185,3 +185,10 @@ shape = SubResource("CapsuleShape2D_alnin")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2(396, 613)
 shape = SubResource("CapsuleShape2D_j61ke")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+limit_left = 0
+limit_top = 0
+limit_bottom = 750
+position_smoothing_enabled = true
