@@ -17,6 +17,7 @@ height = 18.0
 
 [node name="Pedro" type="CharacterBody2D"]
 script = ExtResource("1_kkii7")
+JUMP_VELOCITY = -10000.0
 
 [node name="CollisionShapeBody" type="CollisionShape2D" parent="."]
 position = Vector2(412, 605)
