@@ -1,23 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716240100
-icon.svg::CompressedTexture2D::1929323658878216135::1715815304::1715815304::1::::<><>::
-README.md::TextFile::-1::1715815304::0::1::::<><>::
-::res://assets/::1715815304
-::res://assets/backgrounds/::1716240100
-pedro_bg3.png::CompressedTexture2D::2105473407485533758::1715815304::1715815304::1::::<><>::
-Screenshot 2024-05-14 at 4.55.09 PM.png::CompressedTexture2D::9220638704651966838::1716240094::1716240102::1::::<><>::
-::res://assets/start screen/::1715815304
-file (1).png::CompressedTexture2D::5620943075005483460::1715815304::1715815304::1::::<><>::
-::res://assets/tiles/::1716157629
-pedro_tiles.png::CompressedTexture2D::3992697112924620511::1716157620::1716157629::1::::<><>::
-::res://scenes/::1716171321
-::res://scenes/levels/::1716239986
-level 1.tscn::PackedScene::4302208723476667012::1716239986::0::1::::<><>::uid://4853smc3bg2i::::res://assets/backgrounds/pedro_bg3.png<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn
-::res://scenes/levels/Start Screen/::1716206698
-file (1).png::CompressedTexture2D::7348703133297401075::1715815304::1715815304::1::::<><>::
-player contain box.tscn::PackedScene::9200074563549068635::1716206698::0::1::::<><>::
-start_screen.gd::GDScript::-1::1716204688::0::1::::<>Node2D<>::
-start_screen.tscn::PackedScene::5285938156543290688::1716206697::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
-::res://scenes/player/::1716239436
-pedro.gd::GDScript::-1::1716205123::0::1::::<>CharacterBody2D<>::
-pedro.tscn::PackedScene::2229593027509493570::1716239436::0::1::::<><>::res://scenes/player/pedro.gd<>uid://2qtxcw6rkddv::::res://icon.svg
+::res://::1716238866
+icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715723894::1::::<><>::
+README.md::TextFile::-1::1715556632::0::1::::<><>::
+::res://assets/::1716173284
+::res://assets/backgrounds/::1715722527
+pedro_bg3.png::CompressedTexture2D::2105473407485533758::1715722527::1715722527::1::::<><>::
+::res://assets/start screen/::1716173286
+file (1).png::CompressedTexture2D::5620943075005483460::1715811920::1716173286::1::::<><>::
+::res://assets/tiles/::1716171404
+desktop.ini::TextFile::-1::1715816362::0::1::::<><>::
+pedro_tiles.png::CompressedTexture2D::3992697112924620511::1716171404::1716171404::1::::<><>::
+::res://scenes/::1716173284
+::res://scenes/levels/::1716238782
+level 1.tscn::PackedScene::4302208723476667012::1716238782::0::1::::<><>::uid://4853smc3bg2i::::res://assets/backgrounds/pedro_bg3.png<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn
+::res://scenes/levels/Start Screen/::1716238782
+file (1).png::CompressedTexture2D::7348703133297401075::1715811999::1715811953::1::::<><>::
+player contain box.tscn::PackedScene::9200074563549068635::1716238747::0::1::::<><>::
+start_screen.gd::GDScript::-1::1716238782::0::1::::<>Node2D<>::
+start_screen.tscn::PackedScene::5285938156543290688::1716238782::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+::res://scenes/player/::1716238782
+pedro.gd::GDScript::-1::1716238782::0::1::::<>CharacterBody2D<>::
+pedro.tscn::PackedScene::2229593027509493570::1716238747::0::1::::<><>::res://scenes/player/pedro.gd<>uid://2qtxcw6rkddv::::res://icon.svg
