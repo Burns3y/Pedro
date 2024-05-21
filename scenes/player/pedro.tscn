@@ -16,177 +16,177 @@ radius = 2.0
 height = 18.0
 
 [node name="Pedro" type="CharacterBody2D"]
+position = Vector2(0, 1)
 script = ExtResource("1_kkii7")
 
 [node name="CollisionShapeBody" type="CollisionShape2D" parent="."]
-position = Vector2(412, 605)
+position = Vector2(1, -0.750015)
 shape = SubResource("CapsuleShape2D_0ua1t")
 
 [node name="CollisionShapeRightLeg" type="CollisionShape2D" parent="."]
-position = Vector2(419, 629)
+position = Vector2(8, 23.25)
 shape = SubResource("CapsuleShape2D_alnin")
 
 [node name="CollisionShapeLeftLeg" type="CollisionShape2D" parent="."]
-position = Vector2(406, 629)
+position = Vector2(-5, 23.25)
 shape = SubResource("CapsuleShape2D_alnin")
 
 [node name="CollisionShapeLeftArm" type="CollisionShape2D" parent="."]
-position = Vector2(396, 613)
+position = Vector2(-15, 7.24998)
 shape = SubResource("CapsuleShape2D_j61ke")
 
 [node name="CollisionShapeRightArm" type="CollisionShape2D" parent="."]
-position = Vector2(428, 613)
+position = Vector2(17, 7.24998)
 shape = SubResource("CapsuleShape2D_j61ke")
 
 [node name="PedroImages" type="Node2D" parent="."]
 
 [node name="pedro place holder" type="Sprite2D" parent="PedroImages"]
-position = Vector2(412.25, 604.688)
+position = Vector2(1.25, -1.06203)
 scale = Vector2(0.167968, 0.286133)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon" type="Sprite2D" parent="PedroImages"]
-position = Vector2(422, 599)
+position = Vector2(11, -6.75002)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon2" type="Sprite2D" parent="PedroImages"]
-position = Vector2(423, 601)
+position = Vector2(12, -4.75002)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon3" type="Sprite2D" parent="PedroImages"]
-position = Vector2(424, 603)
+position = Vector2(13, -2.75002)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon4" type="Sprite2D" parent="PedroImages"]
-position = Vector2(424, 607)
+position = Vector2(13, 1.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon5" type="Sprite2D" parent="PedroImages"]
-position = Vector2(423, 608)
+position = Vector2(12, 2.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon6" type="Sprite2D" parent="PedroImages"]
-position = Vector2(422, 611)
+position = Vector2(11, 5.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon7" type="Sprite2D" parent="PedroImages"]
-position = Vector2(422, 611)
+position = Vector2(11, 5.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon14" type="Sprite2D" parent="PedroImages"]
-position = Vector2(418, 615)
+position = Vector2(7, 9.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon15" type="Sprite2D" parent="PedroImages"]
-position = Vector2(415, 617)
+position = Vector2(4, 11.25)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon16" type="Sprite2D" parent="PedroImages"]
-position = Vector2(411, 617)
+position = Vector2(0, 11.25)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon24" type="Sprite2D" parent="PedroImages"]
-position = Vector2(428, 613)
+position = Vector2(17, 7.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon25" type="Sprite2D" parent="PedroImages"]
-position = Vector2(428, 613)
+position = Vector2(17, 7.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon26" type="Sprite2D" parent="PedroImages"]
-position = Vector2(396, 613)
+position = Vector2(-15, 7.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon17" type="Sprite2D" parent="PedroImages"]
-position = Vector2(408, 616)
+position = Vector2(-3, 10.25)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon27" type="Sprite2D" parent="PedroImages"]
-position = Vector2(406, 629.5)
+position = Vector2(-5, 23.75)
 scale = Vector2(0.03125, 0.0859375)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon28" type="Sprite2D" parent="PedroImages"]
-position = Vector2(419, 629.188)
+position = Vector2(8, 23.438)
 scale = Vector2(0.03125, 0.0908202)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon18" type="Sprite2D" parent="PedroImages"]
-position = Vector2(408, 594)
+position = Vector2(-3, -11.75)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon19" type="Sprite2D" parent="PedroImages"]
-position = Vector2(410, 593)
+position = Vector2(-1, -12.75)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon20" type="Sprite2D" parent="PedroImages"]
-position = Vector2(411, 593)
+position = Vector2(0, -12.75)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon21" type="Sprite2D" parent="PedroImages"]
-position = Vector2(413, 593)
+position = Vector2(2, -12.75)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon22" type="Sprite2D" parent="PedroImages"]
-position = Vector2(415, 594)
+position = Vector2(4, -11.75)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon23" type="Sprite2D" parent="PedroImages"]
-position = Vector2(417, 595)
+position = Vector2(6, -10.75)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon8" type="Sprite2D" parent="PedroImages"]
-position = Vector2(402, 599.25)
+position = Vector2(-9, -6.50002)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon9" type="Sprite2D" parent="PedroImages"]
-position = Vector2(401, 601)
+position = Vector2(-10, -4.75002)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon10" type="Sprite2D" parent="PedroImages"]
-position = Vector2(400, 603)
+position = Vector2(-11, -2.75002)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon11" type="Sprite2D" parent="PedroImages"]
-position = Vector2(400, 606)
+position = Vector2(-11, 0.249985)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon12" type="Sprite2D" parent="PedroImages"]
-position = Vector2(401, 609)
+position = Vector2(-10, 3.24998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon13" type="Sprite2D" parent="PedroImages"]
-position = Vector2(402, 611.25)
+position = Vector2(-9, 5.49998)
 scale = Vector2(0.03125, 0.144531)
 texture = ExtResource("2_xe0kl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
 limit_left = 0
 limit_top = 0
 limit_bottom = 750
