@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://blyb8t5y6148r"]
+
+[ext_resource type="Texture2D" uid="uid://2qtxcw6rkddv" path="res://icon.svg" id="1_86sbq"]
+[ext_resource type="Script" path="res://scenes/enemies/border_patrol_guard.gd" id="1_rc3ng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
+size = Vector2(74, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
+size = Vector2(62, 10)
+
+[node name="BorderPatrolGuard" type="CharacterBody2D"]
+script = ExtResource("1_rc3ng")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("1_86sbq")
+
+[node name="DangerousHitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sqisi")
+
+[node name="HeadJumpRegion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadJumpRegion"]
+position = Vector2(0, -44)
+shape = SubResource("RectangleShape2D_hjcay")
