@@ -1,27 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://blyb8t5y6148r"]
+[gd_scene load_steps=6 format=3 uid="uid://blyb8t5y6148r"]
 
 [ext_resource type="Texture2D" uid="uid://2qtxcw6rkddv" path="res://icon.svg" id="1_86sbq"]
 [ext_resource type="Script" path="res://scenes/enemies/border_patrol_guard.gd" id="1_rc3ng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
-size = Vector2(74, 43.5)
+size = Vector2(72, 59.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
 size = Vector2(62, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
+size = Vector2(74, 49)
 
 [node name="BorderPatrolGuard" type="CharacterBody2D"]
 script = ExtResource("1_rc3ng")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0, -14)
+position = Vector2(0, -4)
 scale = Vector2(0.578125, 0.578125)
 texture = ExtResource("1_86sbq")
 
-[node name="DangerousHitbox" type="CollisionShape2D" parent="."]
+[node name="FloorHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.6875)
 shape = SubResource("RectangleShape2D_sqisi")
 
 [node name="HeadJumpRegion" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadJumpRegion"]
-position = Vector2(0, -44)
+position = Vector2(0, -35)
 shape = SubResource("RectangleShape2D_hjcay")
+
+[node name="PlayerDiesHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDiesHitbox"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_dtad3")
+
+[connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
+[connection signal="body_entered" from="PlayerDiesHitbox" to="." method="_on_player_dies_hitbox_body_entered"]
