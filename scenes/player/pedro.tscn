@@ -7,8 +7,9 @@
 radius = 16.0
 height = 78.0
 
-[node name="Pedro" type="CharacterBody2D"]
+[node name="Pedro" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(1, 53)
+collision_mask = 7
 script = ExtResource("1_kkii7")
 
 [node name="CollisionShapeBody3" type="CollisionShape2D" parent="."]
