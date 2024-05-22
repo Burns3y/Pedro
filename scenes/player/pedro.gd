@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var SPEED = 13000
-var JUMP_VELOCITY: int = -27500
+const JUMP_VELOCITY = -600
 var started: bool = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -16,11 +16,11 @@ func _physics_process(delta):
 	if started == true:
 		# Add the gravity.
 		if not is_on_floor():
-			velocity.y += gravity * delta
+			velocity.y += gravity * delta + 10
 
 		# Handle jump.
 		if Input.is_action_just_pressed("jump") and is_on_floor():
-			velocity.y = JUMP_VELOCITY * delta
+			velocity.y = JUMP_VELOCITY
 			
 		# Wall jump
 		elif Input.is_action_just_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:

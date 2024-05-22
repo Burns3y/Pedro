@@ -10,8 +10,8 @@ script = ExtResource("1_gr0yc")
 self_modulate = Color(1, 1, 1, 0.501961)
 offset_left = -42.0
 offset_top = -63.0
-offset_right = 1129.0
-offset_bottom = 748.0
+offset_right = 2440.0
+offset_bottom = 1519.0
 
 [node name="start_button" type="Button" parent="."]
 offset_left = 493.0
