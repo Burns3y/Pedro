@@ -16,5 +16,10 @@ func _physics_process(delta):
 	if is_on_wall():
 		direction.x = direction.x * -1
 		velocity.x = direction.x * SPEED
-
+		
+	var last_collided_object = get_last_slide_collision()
+	if last_collided_object != null:
+		print(last_collided_object)
+		
+		
 	move_and_slide()
