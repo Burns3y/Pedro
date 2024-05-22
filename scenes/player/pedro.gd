@@ -34,8 +34,8 @@ func _physics_process(delta):
 		elif Input.is_action_just_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
 			velocity.y = JUMP_VELOCITY 
 		elif Input.is_action_just_pressed("jump") and is_on_wall_only() and position.x <= 5500:
-			velocity.x = 0
-			velocity.y = 0
+			velocity.y += gravity * delta + 100
+			velocity.x = -100
 
 		move_and_slide()
 
