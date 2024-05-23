@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://b2ka0p8hqghii"]
 
+[ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_cfhtt"]
 [ext_resource type="Texture2D" uid="uid://4853smc3bg2i" path="res://assets/backgrounds/pedro_bg3.png" id="1_u5ag3"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
-[ext_resource type="PackedScene" uid="uid://blyb8t5y6148r" path="res://scenes/enemies/border_patrol_guard.tscn" id="5_rgbq8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf8v0"]
 size = Vector2(40, 507)
@@ -377,6 +377,7 @@ physics_layer_0/collision_mask = 7
 sources/1 = SubResource("TileSetAtlasSource_1xq0u")
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_cfhtt")
 
 [node name="BackWall" type="StaticBody2D" parent="."]
 
@@ -449,13 +450,7 @@ scale = Vector2(1.15731, 0.907039)
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="BorderPatrolGuard" parent="Enemies" instance=ExtResource("5_rgbq8")]
-position = Vector2(3700, 543)
-collision_layer = 2
-collision_mask = 7
-
 [node name="Start_Screen" parent="." instance=ExtResource("2_ibqr6")]
 position = Vector2(27, -11)
 
-[connection signal="player_died" from="Enemies/BorderPatrolGuard" to="Pedro" method="_on_border_patrol_guard_player_died"]
 [connection signal="started" from="Start_Screen" to="Pedro" method="_on_start_screen_started"]
