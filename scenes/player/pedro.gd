@@ -4,7 +4,6 @@ extends CharacterBody2D
 var SPEED = 13000
 const JUMP_VELOCITY = -600
 var started: bool = false
-var NO_WALL_JUMP = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -14,6 +13,7 @@ func _on_start_screen_started():
 	print("Started")
 
 func _physics_process(delta):
+	var NO_WALL_JUMP = false
 	if started == true:
 		# Add the gravity.
 		if not is_on_floor():
