@@ -32,3 +32,4 @@ func _on_player_dies_hitbox_body_entered(body):
 func _on_head_jump_region_body_entered(body):
 	if body.is_in_group("Player"):
 		print("Guard Died")
+		queue_free()
