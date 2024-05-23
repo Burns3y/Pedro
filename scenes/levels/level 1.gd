@@ -11,11 +11,16 @@ func _ready():
 
 
 func _process(delta):
-	if $Pedro.position.x > 1500 and guard_2_spawned != true:
-		print("guard spawned")
+	if $Pedro.position.x > 1500 and not guard_2_spawned:
 		var guard_2 = guard_scene.instantiate() as CharacterBody2D
 		guard_2.position = Vector2(4088, 517)
 		guard_2_spawned = true
 		$Enemies.add_child(guard_2)
-		for i in range(5):
-			print(guard_2.position)
+
+
+func _on_start_screen_started():
+	if not guard_1_spawned:
+		var guard_1 = guard_scene.instantiate() as CharacterBody2D
+		guard_1.position = Vector2(791, 536)
+		guard_1_spawned = true
+		$Enemies.add_child(guard_1)

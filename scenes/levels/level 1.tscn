@@ -453,4 +453,5 @@ scale = Vector2(1.15731, 0.907039)
 [node name="Start_Screen" parent="." instance=ExtResource("2_ibqr6")]
 position = Vector2(27, -11)
 
+[connection signal="started" from="Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="Start_Screen" to="Pedro" method="_on_start_screen_started"]
