@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://61bcos6b4c8a"]
+[gd_scene load_steps=5 format=3 uid="uid://61bcos6b4c8a"]
 
 [ext_resource type="Script" path="res://scenes/player/pedro.gd" id="1_kkii7"]
 [ext_resource type="Texture2D" uid="uid://2qtxcw6rkddv" path="res://icon.svg" id="2_xe0kl"]
@@ -7,84 +7,99 @@
 radius = 16.0
 height = 78.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4vko"]
+size = Vector2(1, 38)
+
 [node name="Pedro" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(1, 53)
 collision_mask = 7
 script = ExtResource("1_kkii7")
 
 [node name="CollisionShapeBody3" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -52)
 shape = SubResource("CapsuleShape2D_crioc")
+
+[node name="LeftAndRightAreas" type="Node2D" parent="."]
+
+[node name="RightArea" type="Area2D" parent="LeftAndRightAreas"]
+position = Vector2(17, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftAndRightAreas/RightArea"]
+shape = SubResource("RectangleShape2D_g4vko")
+
+[node name="LeftArea" type="Area2D" parent="LeftAndRightAreas"]
+position = Vector2(-17, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftAndRightAreas/LeftArea"]
+shape = SubResource("RectangleShape2D_g4vko")
 
 [node name="PedroImages" type="Node2D" parent="."]
 
 [node name="Icon15" type="Sprite2D" parent="PedroImages"]
-position = Vector2(5, -36)
+position = Vector2(6.4, 15.2)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon19" type="Sprite2D" parent="PedroImages"]
-position = Vector2(-1, -72)
+position = Vector2(0.4, -20.8)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon20" type="Sprite2D" parent="PedroImages"]
-position = Vector2(15, -68)
+position = Vector2(16.4, -16.8)
 scale = Vector2(0.1, 0.110938)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon25" type="Sprite2D" parent="PedroImages"]
-position = Vector2(-17, -69)
+position = Vector2(-15.6, -17.8)
 scale = Vector2(0.1, 0.110938)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon21" type="Sprite2D" parent="PedroImages"]
-position = Vector2(-2, -32)
+position = Vector2(-0.6, 19.2)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon22" type="Sprite2D" parent="PedroImages"]
-position = Vector2(-8, -35)
+position = Vector2(-6.6, 16.2)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon23" type="Sprite2D" parent="PedroImages"]
-position = Vector2(-11, -40)
+position = Vector2(-9.6, 11.2)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon8" type="Sprite2D" parent="PedroImages"]
-position = Vector2(1, -34)
+position = Vector2(2.4, 17.2)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon9" type="Sprite2D" parent="PedroImages"]
-position = Vector2(8, -41)
+position = Vector2(9.4, 10.2)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon10" type="Sprite2D" parent="PedroImages"]
-position = Vector2(11, -68)
+position = Vector2(12.4, -16.8)
 scale = Vector2(0.1, 0.235938)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon24" type="Sprite2D" parent="PedroImages"]
-position = Vector2(-13, -69)
+position = Vector2(-11.6, -17.8)
 scale = Vector2(0.1, 0.235938)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon11" type="Sprite2D" parent="PedroImages"]
-position = Vector2(-7, -69)
+position = Vector2(-5.6, -17.8)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon12" type="Sprite2D" parent="PedroImages"]
-position = Vector2(5, -69)
+position = Vector2(6.4, -17.8)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
 [node name="Icon13" type="Sprite2D" parent="PedroImages"]
-position = Vector2(8, -45)
+position = Vector2(9.4, 6.2)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("2_xe0kl")
 
@@ -93,3 +108,6 @@ limit_left = 0
 limit_top = 0
 limit_bottom = 750
 position_smoothing_enabled = true
+
+[connection signal="body_entered" from="LeftAndRightAreas/RightArea" to="." method="_on_right_area_body_entered"]
+[connection signal="body_entered" from="LeftAndRightAreas/LeftArea" to="." method="_on_left_area_body_entered"]

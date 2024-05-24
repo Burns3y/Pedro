@@ -5,6 +5,9 @@ var SPEED = 13000
 const JUMP_VELOCITY = -600
 var started: bool = false
 
+var disable_left: bool = false
+var disable_right: bool = false
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -37,10 +40,14 @@ func _physics_process(delta):
 		# Wall jump
 		elif Input.is_action_just_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
 			velocity.y = JUMP_VELOCITY 
-		elif Input.is_action_just_pressed("jump") and is_on_wall_only() and position.x <= 5500:
-			velocity.y += gravity * delta + 500
-			velocity.x = -100
-			NO_WALL_JUMP = true
+			if disable_left:
+				print("disable left")
+		#elif Input.is_action_just_pressed("jump") and is_on_wall_only() and position.x <= 5500:
+			#
+			#
+			#velocity.y += gravity * delta + 500
+			#velocity.x = -100
+			#NO_WALL_JUMP = true
 
 		move_and_slide()
 
@@ -48,3 +55,13 @@ func _physics_process(delta):
 func _on_border_patrol_guard_player_died():
 	print("Pedro died")
 	
+
+
+func _on_left_area_body_entered(body):
+	print("left", body)
+	disable_left = true
+
+
+func _on_right_area_body_entered(body):
+	print("right", body)
+	disable_right = true
