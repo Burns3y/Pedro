@@ -10,7 +10,7 @@ func _ready():
 
 
 
-func _process(delta):
+func _process(_delta):
 	if $Pedro.position.x > 1500 and not guard_2_spawned:
 		var guard_2 = guard_scene.instantiate() as CharacterBody2D
 		guard_2.position = Vector2(4088, 517)

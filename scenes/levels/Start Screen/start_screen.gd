@@ -10,7 +10,7 @@ func _on_start_button_pressed():
 func _on_quit_button_pressed():
 	get_tree().quit()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if SIGNAL == true:
 		while $Panel.modulate.a > 0:
 			$Panel.modulate.a -= 0.05
