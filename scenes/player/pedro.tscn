@@ -17,7 +17,7 @@ shape = SubResource("CapsuleShape2D_crioc")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
-limit_bottom = 750
+limit_bottom = 720
 position_smoothing_enabled = true
 
 [node name="Pedro" type="Sprite2D" parent="."]
