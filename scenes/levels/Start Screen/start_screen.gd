@@ -12,9 +12,8 @@ func _on_quit_button_pressed():
 
 func _physics_process(_delta):
 	if SIGNAL == true:
-		while $Panel.modulate.a > 0:
-			$Panel.modulate.a -= 0.05
-			$start_button.modulate.a -= 0.05
-			$quit_button.modulate.a -= 0.05
-			$Logo.modulate.a -= 0.05
+		while $".".modulate.a > 0:
+			$".".modulate.a -= 0.05
 			await get_tree().create_timer(3.0).timeout
+	elif $".".modulate.a <= 0:
+		$".".modulate.a = 1
