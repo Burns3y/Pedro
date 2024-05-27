@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dl377cv5wwebd"]
 
 [ext_resource type="Texture2D" uid="uid://2qtxcw6rkddv" path="res://icon.svg" id="1_86sbq"]
-[ext_resource type="Script" path="res://scenes/enemies/border_patrol_guard.gd" id="1_rc3ng"]
+[ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_jrwv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
 size = Vector2(72, 59.375)
@@ -15,7 +15,7 @@ size = Vector2(74, 49)
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 7
-script = ExtResource("1_rc3ng")
+script = ExtResource("1_jrwv4")
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(0, -4)

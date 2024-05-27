@@ -3,7 +3,7 @@ extends Node2D
 var guard_1_spawned: bool = false
 var guard_2_spawned: bool = false
 
-var guard_scene: PackedScene = preload("res://scenes/enemies/border_patrol_guard.tscn")
+var guard_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -24,6 +24,6 @@ func _on_start_screen_started():
 		guard_1.position = Vector2(791, 536)
 		guard_1_spawned = true
 		$Enemies.add_child(guard_1)
-		$Enemies/Enemy.connect("player_died", $Pedro._on_border_patrol_guard_player_died)
+		$Enemies/Enemy.connect("player_died", $Pedro._on_player_died)
 
 
