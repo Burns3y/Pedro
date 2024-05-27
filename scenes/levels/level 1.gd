@@ -26,4 +26,3 @@ func _on_start_screen_started():
 		$Enemies.add_child(guard_1)
 		$Enemies/Enemy.connect("player_died", $Pedro._on_player_died)
 
-

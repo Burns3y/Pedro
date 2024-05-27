@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal player_died
+
 var NO_WALL_JUMP = 0
 var SPEED = 13000
 const JUMP_VELOCITY = -600
@@ -46,6 +48,9 @@ func _physics_process(delta):
 
 func _on_player_died():
 	print("Pedro died")
+	player_died.emit()
+	position = Vector2(304, 469)
+	started = false
 	
 #
 #

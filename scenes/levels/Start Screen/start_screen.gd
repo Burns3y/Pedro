@@ -18,4 +18,3 @@ func _physics_process(_delta):
 			$quit_button.modulate.a -= 0.05
 			$Logo.modulate.a -= 0.05
 			await get_tree().create_timer(3.0).timeout
-		
