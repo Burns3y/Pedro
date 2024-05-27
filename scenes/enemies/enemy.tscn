@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://plha7dgmf7v6"]
+[gd_scene load_steps=6 format=3 uid="uid://dl377cv5wwebd"]
 
 [ext_resource type="Texture2D" uid="uid://2qtxcw6rkddv" path="res://icon.svg" id="1_86sbq"]
 [ext_resource type="Script" path="res://scenes/enemies/border_patrol_guard.gd" id="1_rc3ng"]

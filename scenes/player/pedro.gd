@@ -44,9 +44,9 @@ func _physics_process(delta):
 		move_and_slide()
 
 
-#func _on_border_patrol_guard_player_died():
-	#print("Pedro died")
-	#
+func _on_border_patrol_guard_player_died():
+	print("Pedro died")
+	
 #
 #
 #func _on_left_area_body_entered(body):

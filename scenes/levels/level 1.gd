@@ -24,3 +24,6 @@ func _on_start_screen_started():
 		guard_1.position = Vector2(791, 536)
 		guard_1_spawned = true
 		$Enemies.add_child(guard_1)
+		$Enemies/Enemy.connect("player_died", $Pedro._on_border_patrol_guard_player_died)
+
+
