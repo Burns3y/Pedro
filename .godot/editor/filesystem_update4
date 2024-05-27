@@ -1,5 +1,4 @@
 res://scenes/levels/Start Screen/start_screen.tscn
-res://scenes/player/pedro.gd
 res://scenes/levels/level 1.tscn
 res://scenes/player/pedro.tscn
 res://scenes/enemies/border_patrol_guard.tscn
