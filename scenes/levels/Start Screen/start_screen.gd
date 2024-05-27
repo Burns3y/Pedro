@@ -12,8 +12,10 @@ func _on_quit_button_pressed():
 
 func _physics_process(_delta):
 	if SIGNAL == true:
+		print("disappearing")
 		while $".".modulate.a > 0:
 			$".".modulate.a -= 0.05
 			await get_tree().create_timer(3.0).timeout
-	elif $".".modulate.a <= 0:
+	elif $".".modulate.a < 1:
 		$".".modulate.a = 1
+		print("reappearing")

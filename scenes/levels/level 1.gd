@@ -16,6 +16,8 @@ func _process(_delta):
 		guard_2.position = Vector2(4088, 517)
 		guard_2_spawned = true
 		$Enemies.add_child(guard_2)
+		$Enemies/Enemy.connect("player_died", $Pedro._on_player_died)
+		$Enemies/Enemy.connect("player_died",$"Start_Screen"._on_player_died)
 
 
 func _on_start_screen_started():
@@ -30,4 +32,5 @@ func _on_start_screen_started():
 		
 func _on_player_died():
 	$Start_Screen.SIGNAL = false
-
+	guard_1_spawned = false
+	guard_2_spawned = false

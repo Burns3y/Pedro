@@ -48,17 +48,5 @@ func _physics_process(delta):
 
 func _on_player_died():
 	print("Pedro died")
-	player_died.emit()
 	position = Vector2(304, 469)
 	started = false
-	
-#
-#
-#func _on_left_area_body_entered(body):
-	#print("left", body)
-	#disable_left = true
-#
-#
-#func _on_right_area_body_entered(body):
-	#print("right", body)
-	#disable_right = true
