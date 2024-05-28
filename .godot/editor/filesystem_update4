@@ -2,6 +2,3 @@ res://scenes/levels/Start Screen/start_screen.tscn
 res://scenes/levels/level 1.tscn
 res://scenes/player/pedro.tscn
 res://scenes/enemies/enemy.tscn
-res://scenes/player/pedro.gd
-res://stats.gd
-res://stats.tscn

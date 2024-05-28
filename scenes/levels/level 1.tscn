@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
-[ext_resource type="PackedScene" uid="uid://8ksf4l7lj7o6" path="res://stats.tscn" id="6_kxkac"]
+[ext_resource type="PackedScene" path="res://stats.tscn" id="6_kxkac"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf8v0"]
 size = Vector2(40, 507)
