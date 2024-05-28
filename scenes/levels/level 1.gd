@@ -11,13 +11,7 @@ func _ready():
 
 
 func _process(_delta):
-	if $Pedro.position.x > 1500 and not guard_2_spawned:
-		var guard_2 = guard_scene.instantiate() as CharacterBody2D
-		guard_2.position = Vector2(4088, 517)
-		guard_2_spawned = true
-		$Enemies.add_child(guard_2)
-		$Enemies/Enemy.connect("player_died", $Pedro._on_player_died)
-		$Enemies/Enemy.connect("player_died",$"Start_Screen"._on_player_died)
+	pass
 
 
 func _on_start_screen_started():
@@ -26,9 +20,17 @@ func _on_start_screen_started():
 		guard_1.position = Vector2(791, 536)
 		guard_1_spawned = true
 		$Enemies.add_child(guard_1)
-		$Enemies/Enemy.connect("player_died", $Pedro._on_player_died)
-		$Enemies/Enemy.connect("player_died",$".". _on_player_died)
-		
+		guard_1.name = "Guard_1"
+		guard_1.connect("player_died", $Pedro._on_player_died)
+		guard_1.connect("player_died", $".". _on_player_died)
+	if not guard_2_spawned:
+		var guard_2 = guard_scene.instantiate() as CharacterBody2D
+		guard_2.position = Vector2(4088, 517)
+		guard_2_spawned = true
+		$Enemies.add_child(guard_2)
+		guard_2.name = "Guard_2"
+		guard_2.connect("player_died", $Pedro._on_player_died)
+		guard_2.connect("player_died", $"."._on_player_died)
 		
 func _on_player_died():
 	$Start_Screen.SIGNAL = false
