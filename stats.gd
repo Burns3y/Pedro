@@ -8,7 +8,8 @@ func _ready():
 	var NUM = 0
 	# Set the text
 	while true:
-		text_edit.text = str(NUM)
+		var timer = "Timer: " + str(NUM)
+		text_edit.text = str(timer)
 		await get_tree().create_timer(1).timeout
 		NUM += 1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
