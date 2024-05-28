@@ -32,7 +32,13 @@ func _on_start_screen_started():
 		guard_2.connect("player_died", $Pedro._on_player_died)
 		guard_2.connect("player_died", $"."._on_player_died)
 		
+		
 func _on_player_died():
 	$Start_Screen.SIGNAL = false
 	guard_1_spawned = false
 	guard_2_spawned = false
+	call_deferred("remove_enemies")
+
+func remove_enemies():
+	for enemy in $Enemies.get_children():
+		$Enemies.remove_child(enemy)
