@@ -41,7 +41,13 @@ func _physics_process(delta):
 		# Wall jump
 		elif Input.is_action_just_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
 			velocity.y = JUMP_VELOCITY 
-			
+		
+		if direction == -1:
+			$PedroImage.flip_h = true
+			$PedroImage.offset.x = -18
+		elif direction == 1:
+			$PedroImage.flip_h = false
+			$PedroImage.offset.x = 0
 			
 		move_and_slide()
 
