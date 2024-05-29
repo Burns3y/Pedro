@@ -6,7 +6,7 @@ var ended: bool = false
 
 func _process(_delta):
 	
-	if $"../../Pedro".position.x > 5700:
+	if $"../../Pedro".position.x > 5700 and $"../../Pedro".is_on_floor():
 		ended = true
 	print(ended)
 	
