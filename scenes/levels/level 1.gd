@@ -31,7 +31,7 @@ func _on_start_screen_started():
 		
 		
 func _on_player_died():
-	$Start_Screen.SIGNAL = false
+	$UI/Start_Screen.SIGNAL = false
 	guard_1_spawned = false
 	guard_2_spawned = false
 	call_deferred("remove_enemies")

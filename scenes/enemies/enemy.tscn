@@ -10,7 +10,7 @@ size = Vector2(72, 59.375)
 size = Vector2(62, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
-size = Vector2(74, 49)
+size = Vector2(74, 53)
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
@@ -35,7 +35,7 @@ shape = SubResource("RectangleShape2D_hjcay")
 [node name="PlayerDiesHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDiesHitbox"]
-position = Vector2(0, -0.5)
+position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_dtad3")
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
