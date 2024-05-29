@@ -6,3 +6,4 @@ res://stats.tscn
 res://scenes/UI/stats.tscn
 res://scenes/UI/stats.gd
 res://scenes/levels/level 1.gd
+res://scenes/UI/Start Screen/start_screen.tscn
