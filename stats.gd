@@ -1,23 +1,22 @@
-extends CharacterBody2D
+extends Area2D
 
 var SPEED = 13000
+var time_spent: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# Get the TextEdit node (assuming it's a child of the current node)
-	var text_edit = $TextEdit
-	var NUM = 0
-	# Set the text
-	while true:
-		var timer = "Timer: " + str(NUM)
-		text_edit.text = str(timer)
-		await get_tree().create_timer(1).timeout
-		NUM += 1
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var direction = Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED * delta
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+func _process(_delta):
+	if $Timer.is_stopped() and $"../../Start_Screen".SIGNAL:
+		$Timer.start()
 		
-	(move_and_slide())
+	elif not $"../../Start_Screen".SIGNAL:
+		time_spent = 0
+		$TextEdit.text = "Timer: 0"
+
+
+func _on_timer_timeout():
+	time_spent += 1
+	var timer = "Timer: " + str(time_spent)
+	$TextEdit.text = timer

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
-[ext_resource type="PackedScene" path="res://stats.tscn" id="6_kxkac"]
+[ext_resource type="PackedScene" uid="uid://8ksf4l7lj7o6" path="res://stats.tscn" id="6_kxkac"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf8v0"]
 size = Vector2(40, 507)
@@ -104,13 +104,13 @@ layer_0/tile_data = PackedInt32Array(655360, 65537, 0, 720896, 1, 1, 786432, 1, 
 position = Vector2(304, 469)
 scale = Vector2(1.15731, 0.907039)
 
+[node name="Statistics" parent="Pedro" instance=ExtResource("6_kxkac")]
+position = Vector2(-70.854, -162.066)
+
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Start_Screen" parent="." instance=ExtResource("2_ibqr6")]
 position = Vector2(27, -11)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_kxkac")]
-position = Vector2(302, 59)
 
 [connection signal="started" from="Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="Start_Screen" to="Pedro" method="_on_start_screen_started"]

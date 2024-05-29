@@ -6,13 +6,10 @@ var guard_2_spawned: bool = false
 var guard_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
+	pass
 
 func _process(_delta):
 	pass
-
 
 func _on_start_screen_started():
 	if not guard_1_spawned:
