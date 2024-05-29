@@ -6,3 +6,5 @@ res://scenes/levels/Start Screen/start_screen.tscn
 res://scenes/enemies/enemy.gd
 res://scenes/player/pedro.gd
 res://scenes/UI/stats.gd
+res://scenes/levels/level 1.gd
+res://scenes/levels/Start Screen/start_screen.gd

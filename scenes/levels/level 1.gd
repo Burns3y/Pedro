@@ -39,3 +39,5 @@ func _on_player_died():
 func remove_enemies():
 	for enemy in $Enemies.get_children():
 		$Enemies.remove_child(enemy)
+		
+

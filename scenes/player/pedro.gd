@@ -44,9 +44,6 @@ func _physics_process(delta):
 			$PedroImage.flip_h = false
 			$PedroImage.offset.x = 0
 			
-		if self.position.x > 5700 and is_on_floor():
-			print("Stop timer") 
-			$"../UI/Stats"
 		move_and_slide()
 
 
