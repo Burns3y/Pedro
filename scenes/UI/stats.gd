@@ -18,3 +18,4 @@ func _on_timer_timeout():
 	time_spent += 1
 	var timer = "Timer: " + str(time_spent)
 	$Label.text = timer
+

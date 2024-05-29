@@ -18,30 +18,25 @@ func _physics_process(delta):
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta + 10
-#
+
 		## Get the input direction and handle the movement/deceleration.
-		## As good practice, you should replace UI actions with custom gameplay actions.
 		var direction = Input.get_axis("left", "right")
 		if direction and NO_WALL_JUMP == 0:
 			velocity.x = direction * SPEED * delta
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 
-		if is_on_wall_only() and position.x < 5500:
-			#temproarily disables movement for player
-			NO_WALL_JUMP = 1
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			await get_tree().create_timer(0.000001).timeout
-			NO_WALL_JUMP = 0
-		#jumping mechancis
+
+		#JUMPING MECHANICS
 		# Handle jump.
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			
+
 		# Wall jump
 		elif Input.is_action_just_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
 			velocity.y = JUMP_VELOCITY 
-		
+
+		#Flipping image depending on direction
 		if direction == -1:
 			$PedroImage.flip_h = true
 			$PedroImage.offset.x = -18
@@ -49,10 +44,12 @@ func _physics_process(delta):
 			$PedroImage.flip_h = false
 			$PedroImage.offset.x = 0
 			
+		if self.position.x > 5700 and is_on_floor():
+			print("Stop timer") 
+			$"../UI/Stats"
 		move_and_slide()
 
 
 func _on_player_died():
-	print("Pedro died")
 	position = Vector2(304, 469)
 	started = false
