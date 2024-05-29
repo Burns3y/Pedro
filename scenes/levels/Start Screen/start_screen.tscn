@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://chksvnkh4bye7"]
 
-[ext_resource type="Script" path="res://scenes/levels/Start Screen/start_screen.gd" id="1_k0pi0"]
-[ext_resource type="Texture2D" uid="uid://cmc3d1tg8mw81" path="res://assets/start screen/file (1).png" id="2_bxxpy"]
+[ext_resource type="Script" path="res://scenes/levels/Start Screen/start_screen.gd" id="1_gr0yc"]
+[ext_resource type="Texture2D" uid="uid://cmc3d1tg8mw81" path="res://assets/start screen/file (1).png" id="2_qo5hh"]
 
 [node name="Start_Screen" type="Node2D"]
-script = ExtResource("1_k0pi0")
+script = ExtResource("1_gr0yc")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0.501961)
@@ -36,7 +36,7 @@ expand_icon = true
 modulate = Color(0.67471, 1, 0.594779, 1)
 position = Vector2(547, 126)
 scale = Vector2(0.411765, 0.411765)
-texture = ExtResource("2_bxxpy")
+texture = ExtResource("2_qo5hh")
 
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
