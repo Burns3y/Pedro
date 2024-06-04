@@ -13,11 +13,13 @@ func _process(_delta):
 		$Timer.start()
 
 func _on_timer_timeout():
-	time_spent += 1
-	var timer = "Timer: " + str(time_spent)
-	$Label.text = timer
+	if $"../../Pedro".started == true:
+		time_spent += 1
+		var timer = "Timer: " + str(time_spent)
+		$Label.text = timer
 
 
 func _on_start_screen_started():
 	time_spent = 0
 	$Label.text = "Timer: 0"
+
