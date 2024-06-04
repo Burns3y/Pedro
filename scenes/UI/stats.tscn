@@ -13,5 +13,6 @@ offset_bottom = 32.0
 text = "Timer: 0"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
