@@ -6,15 +6,17 @@ var NO_WALL_JUMP = 0
 var SPEED = 13000
 const JUMP_VELOCITY = -600
 var started: bool = false
+var ended: bool = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _on_start_screen_started():
 	started = true
+	position = Vector2(304, 469)
 
 func _physics_process(delta):
-	if started == true:
+	if started and not ended:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta + 10
@@ -45,8 +47,13 @@ func _physics_process(delta):
 			$PedroImage.offset.x = 0
 			
 		move_and_slide()
+		
+		if position.x > 5720 and is_on_floor():
+			ended = true
+			$"..".restart()
 
 
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false
+	$"../UI/Start_Screen".position = Vector2(0, 0)

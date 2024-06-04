@@ -4,13 +4,13 @@
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_jrwv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
-size = Vector2(72, 59.375)
+size = Vector2(72, 61.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
-size = Vector2(62, 10)
+size = Vector2(72, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
-size = Vector2(74, 53)
+size = Vector2(74, 52)
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
@@ -23,19 +23,19 @@ scale = Vector2(0.578125, 0.578125)
 texture = ExtResource("1_86sbq")
 
 [node name="FloorHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2.6875)
+position = Vector2(0, 1.6875)
 shape = SubResource("RectangleShape2D_sqisi")
 
 [node name="HeadJumpRegion" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadJumpRegion"]
-position = Vector2(0, -35)
+position = Vector2(0, -34.5)
 shape = SubResource("RectangleShape2D_hjcay")
 
 [node name="PlayerDiesHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDiesHitbox"]
-position = Vector2(0, -2.5)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_dtad3")
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]

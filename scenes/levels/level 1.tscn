@@ -56,10 +56,10 @@ scale = Vector2(0.829897, 0.829897)
 texture = ExtResource("1_u5ag3")
 
 [node name="DesertBackground2" type="Node2D" parent="Backgrounds"]
-position = Vector2(1519, -1)
+position = Vector2(1831, -1)
 
 [node name="PedroBg3" type="Sprite2D" parent="Backgrounds/DesertBackground2"]
-position = Vector2(451, 319)
+position = Vector2(447, 319)
 scale = Vector2(0.829897, 0.829897)
 texture = ExtResource("1_u5ag3")
 
@@ -69,7 +69,7 @@ scale = Vector2(0.829897, 0.829897)
 texture = ExtResource("1_u5ag3")
 
 [node name="DesertBackground3" type="Node2D" parent="Backgrounds"]
-position = Vector2(3105, -1)
+position = Vector2(3412, -1)
 
 [node name="PedroBg3" type="Sprite2D" parent="Backgrounds/DesertBackground3"]
 position = Vector2(451, 319)
@@ -82,7 +82,7 @@ scale = Vector2(0.829897, 0.829897)
 texture = ExtResource("1_u5ag3")
 
 [node name="DesertBackground4" type="Node2D" parent="Backgrounds"]
-position = Vector2(4632, -2)
+position = Vector2(4822, -2)
 
 [node name="PedroBg3" type="Sprite2D" parent="Backgrounds/DesertBackground4"]
 position = Vector2(451, 319)
@@ -90,7 +90,7 @@ scale = Vector2(0.829897, 0.829897)
 texture = ExtResource("1_u5ag3")
 
 [node name="PedroBg4" type="Sprite2D" parent="Backgrounds/DesertBackground4"]
-position = Vector2(1124, 319)
+position = Vector2(1217, 319)
 scale = Vector2(0.829897, 0.829897)
 texture = ExtResource("1_u5ag3")
 
@@ -115,3 +115,4 @@ position = Vector2(27, -11)
 
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
+[connection signal="started" from="UI/Start_Screen" to="UI/Stats" method="_on_start_screen_started"]
