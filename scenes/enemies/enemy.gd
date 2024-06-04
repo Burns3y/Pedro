@@ -18,6 +18,13 @@ func _physics_process(delta):
 	if is_on_wall():
 		direction.x = direction.x * -1
 		velocity.x = direction.x * SPEED
+	
+	if direction[0] == -1:
+		$Icon.flip_h = false
+		$Icon.offset.x = -18
+	elif direction[0] == 1:
+		$Icon.flip_h = true
+		$Icon.offset.x = 0
 		
 
 	move_and_slide()

@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://dl377cv5wwebd"]
 
-[ext_resource type="Texture2D" uid="uid://2qtxcw6rkddv" path="res://icon.svg" id="1_86sbq"]
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_jrwv4"]
+[ext_resource type="Texture2D" uid="uid://cdbk8vjq66kk4" path="res://scenes/enemies/unnamed (1).png" id="2_36tve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
-size = Vector2(72, 61.375)
+size = Vector2(80, 51)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
-size = Vector2(72, 11)
+size = Vector2(80, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
-size = Vector2(74, 52)
+size = Vector2(82, 48)
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
@@ -18,24 +18,24 @@ collision_mask = 7
 script = ExtResource("1_jrwv4")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0, -4)
-scale = Vector2(0.578125, 0.578125)
-texture = ExtResource("1_86sbq")
+position = Vector2(16, 3)
+scale = Vector2(1.46812, 2.01953)
+texture = ExtResource("2_36tve")
 
 [node name="FloorHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.6875)
+position = Vector2(-3, 4)
 shape = SubResource("RectangleShape2D_sqisi")
 
 [node name="HeadJumpRegion" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadJumpRegion"]
-position = Vector2(0, -34.5)
+position = Vector2(-3, -23)
 shape = SubResource("RectangleShape2D_hjcay")
 
 [node name="PlayerDiesHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDiesHitbox"]
-position = Vector2(0, -2)
+position = Vector2(-3, 3)
 shape = SubResource("RectangleShape2D_dtad3")
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
