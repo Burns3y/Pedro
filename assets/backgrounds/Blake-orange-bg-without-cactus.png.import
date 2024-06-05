@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmuyyqxm8r6xx"
-path="res://.godot/imported/background 2024-06-04 at 11.23.41 AM(1).png-a6e42d08d88ed167c5dce83a60508885.ctex"
+uid="uid://rktpj4gvvmsu"
+path="res://.godot/imported/Blake-orange-bg-without-cactus.png-6ebb8cce61ba0c51eb2afee186c033d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/background 2024-06-04 at 11.23.41 AM(1).png"
-dest_files=["res://.godot/imported/background 2024-06-04 at 11.23.41 AM(1).png-a6e42d08d88ed167c5dce83a60508885.ctex"]
+source_file="res://assets/backgrounds/Blake-orange-bg-without-cactus.png"
+dest_files=["res://.godot/imported/Blake-orange-bg-without-cactus.png-6ebb8cce61ba0c51eb2afee186c033d5.ctex"]
 
 [params]
 
