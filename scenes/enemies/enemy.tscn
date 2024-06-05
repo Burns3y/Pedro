@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cdbk8vjq66kk4" path="res://scenes/enemies/unnamed (1).png" id="2_36tve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
-size = Vector2(82, 51)
+size = Vector2(82, 49.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
-size = Vector2(80, 11)
+size = Vector2(82, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
 size = Vector2(84, 48)
@@ -23,7 +23,7 @@ scale = Vector2(1.46812, 2.01953)
 texture = ExtResource("2_36tve")
 
 [node name="FloorHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 4)
+position = Vector2(-3, 4.75)
 shape = SubResource("RectangleShape2D_sqisi")
 
 [node name="HeadJumpRegion" type="Area2D" parent="."]
