@@ -48,7 +48,7 @@ func _physics_process(delta):
 			
 		move_and_slide()
 		
-		if position.x > 5720 and is_on_floor():
+		if position.x > 5714 and is_on_floor():
 			ended = true
 			$"..".restart()
 

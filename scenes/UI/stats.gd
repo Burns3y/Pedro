@@ -14,6 +14,8 @@ func _process(_delta):
 	if s > 60:
 		m += 1
 		s = 0
+		
+		get_tree()
 
 	if ($Timer.is_stopped() and $"../Start_Screen".SIGNAL) or $"../../Pedro".ended:
 		#if paused:
