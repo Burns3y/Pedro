@@ -1,11 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfp0yfnkd2pbg"]
+[gd_scene load_steps=3 format=3 uid="uid://dfp0yfnkd2pbg"]
 
+[ext_resource type="Script" path="res://scenes/items/taco.gd" id="1_mihe7"]
 [ext_resource type="Texture2D" uid="uid://cp7r3nw60km05" path="res://assets/items/taco.png" id="1_tlh3q"]
 
 [node name="Taco" type="Area2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_tlh3q")
+script = ExtResource("1_mihe7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(32, -1, -37, -1, -37, -6, -36, -10, -28, -18, -24, -20, -11, -24, 4, -24, 15, -22, 19, -20, 23, -18, 31, -9)
+
+[node name="TacoImage" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tlh3q")

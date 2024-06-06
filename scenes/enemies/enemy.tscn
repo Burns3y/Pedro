@@ -7,20 +7,15 @@
 size = Vector2(82, 49.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
-size = Vector2(82, 11)
+size = Vector2(84, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
-size = Vector2(84, 48)
+size = Vector2(84, 46)
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_jrwv4")
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(16, 3)
-scale = Vector2(1.46812, 2.01953)
-texture = ExtResource("2_36tve")
 
 [node name="FloorHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 4.75)
@@ -35,8 +30,13 @@ shape = SubResource("RectangleShape2D_hjcay")
 [node name="PlayerDiesHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDiesHitbox"]
-position = Vector2(-3, 3)
+position = Vector2(-3, 4)
 shape = SubResource("RectangleShape2D_dtad3")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(16, 3)
+scale = Vector2(1.46812, 2.01953)
+texture = ExtResource("2_36tve")
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
 [connection signal="body_entered" from="PlayerDiesHitbox" to="." method="_on_player_dies_hitbox_body_entered"]
