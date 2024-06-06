@@ -77,14 +77,6 @@ position = Vector2(27, -11)
 
 [node name="Stats" parent="UI" instance=ExtResource("7_wjxst")]
 
-[node name="Blake-orange-bg-without-cactus" type="Sprite2D" parent="."]
-position = Vector2(1510, 2865)
-texture = ExtResource("2_h6b5x")
-
-[node name="Blake-orange-bg-without-cactus2" type="Sprite2D" parent="."]
-position = Vector2(4429, 2867)
-texture = ExtResource("2_h6b5x")
-
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="UI/Stats" method="_on_start_screen_started"]
