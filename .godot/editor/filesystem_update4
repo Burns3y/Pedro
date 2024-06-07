@@ -1,7 +1,7 @@
+res://scenes/items/taco.tscn
+res://scenes/items/taco.gd
 res://scenes/levels/level 1.tscn
 res://scenes/player/pedro.tscn
 res://scenes/UI/stats.tscn
 res://scenes/levels/Start Screen/start_screen.tscn
 res://scenes/enemies/enemy.tscn
-res://scenes/items/taco.tscn
-res://scenes/items/taco.gd
