@@ -6,7 +6,11 @@ var guard_2_spawned: bool = false
 var guard_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	for taco in $Items.get_children():
+		taco.connect("taco_collected", self._on_taco_collected)
+
+func _on_taco_collected():
+	$UI/Stats.increase_score()
 
 func _process(_delta):
 	pass
@@ -48,3 +52,4 @@ func restart():
 	guard_1_spawned = false
 	guard_2_spawned = false
 	call_deferred("remove_enemies")
+

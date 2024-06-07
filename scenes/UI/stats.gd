@@ -4,6 +4,7 @@ var ms: int = 0
 var s: int = 0
 var m: int = 0
 var ended: bool = false
+var score: int = 0
 
 func _process(_delta):
 	
@@ -29,12 +30,16 @@ func _on_timer_timeout():
 	if $"../../Pedro".started == true:
 		ms += 5
 		var timer = "Timer: " + str(m) + " : " + str(s) + " : " + str(ms)
-		$Label.text = timer
+		$TimerText.text = timer
 
 
 func _on_start_screen_started():
 	ms = 0
 	s = 0
 	m = 0
-	$Label.text = "Timer: 0 : 0 : 0"
+	$TimerText.text = "Timer: 0 : 0 : 0"
+	
+func increase_score():
+	score += 1
+	$ScoreText.text = "Score: " + str(score)
 

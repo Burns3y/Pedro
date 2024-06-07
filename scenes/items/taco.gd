@@ -4,6 +4,7 @@ var direction: Vector2 = Vector2.DOWN
 var speed:int = 20
 var initial_y: int
 var current_direction: int = 1
+signal taco_collected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,8 +22,7 @@ func _process(delta):
 	position += speed * direction * current_direction * delta
 
 
-
-
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		queue_free()
+		taco_collected.emit()
