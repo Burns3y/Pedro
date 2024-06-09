@@ -24,14 +24,17 @@ func _on_start_screen_started():
 		var new_taco = taco_scene.instantiate()
 		$Items.add_child(new_taco)
 		new_taco.position = taco_position
+		#Connecting signal
 		new_taco.connect("taco_collected", self._on_taco_collected)
 		new_taco.name = "Taco"
 
-
+	#Spawning enemies
 	for enemy_position in enemy_spawn_points:
 		var new_enemy = enemy_scene.instantiate() as CharacterBody2D
 		new_enemy.position = enemy_position
 		$Enemies.add_child(new_enemy)
+		
+		#Connecting signals
 		new_enemy.connect("player_died", $Pedro._on_player_died)
 		new_enemy.connect("player_died", $".". _on_player_died)
 		new_enemy.name = "Enemy"
@@ -53,6 +56,8 @@ func remove_tacos():
 
 func restart():
 	$UI/Start_Screen.SIGNAL = false
+	$UI/Start_Screen/Panel/quit_button.disabled = false
+	$UI/Start_Screen/Panel/start_button.disabled = false
 	call_deferred("remove_enemies")
 	call_deferred("remove_tacos")
 

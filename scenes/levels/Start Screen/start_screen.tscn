@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/levels/Start Screen/start_screen.gd" id="1_gr0yc"]
 [ext_resource type="Texture2D" uid="uid://cmc3d1tg8mw81" path="res://assets/start screen/file (1).png" id="2_qo5hh"]
 
-[node name="Start_Screen" type="Node2D"]
+[node name="Start_Screen" type="CanvasLayer"]
 script = ExtResource("1_gr0yc")
 
 [node name="Panel" type="Panel" parent="."]
@@ -13,30 +13,30 @@ offset_top = -63.0
 offset_right = 1111.0
 offset_bottom = 754.0
 
-[node name="start_button" type="Button" parent="."]
-offset_left = 493.0
-offset_top = 312.0
-offset_right = 589.0
-offset_bottom = 343.0
+[node name="start_button" type="Button" parent="Panel"]
+offset_left = 535.0
+offset_top = 375.0
+offset_right = 631.0
+offset_bottom = 406.0
 text = "Start Game"
 flat = true
 icon_alignment = 1
 
-[node name="quit_button" type="Button" parent="."]
-offset_left = 494.0
-offset_top = 344.0
-offset_right = 587.0
-offset_bottom = 375.0
+[node name="quit_button" type="Button" parent="Panel"]
+offset_left = 536.0
+offset_top = 407.0
+offset_right = 629.0
+offset_bottom = 438.0
 text = "Quit Game"
 flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Logo" type="Sprite2D" parent="."]
+[node name="Logo" type="Sprite2D" parent="Panel"]
 modulate = Color(0.67471, 1, 0.594779, 1)
-position = Vector2(547, 126)
+position = Vector2(589, 189)
 scale = Vector2(0.411765, 0.411765)
 texture = ExtResource("2_qo5hh")
 
-[connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Panel/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Panel/quit_button" to="." method="_on_quit_button_pressed"]
