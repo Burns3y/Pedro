@@ -9,3 +9,4 @@ res://scenes/enemies/enemy.tscn
 res://scenes/enemies/enemy.gd
 res://scenes/levels/Start Screen/start_screen.gd
 res://scenes/player/pedro.gd
+res://scenes/UI/stats.gd

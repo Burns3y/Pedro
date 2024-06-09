@@ -23,8 +23,8 @@ func _process(_delta):
 			#print("Paused")
 		#elif not paused:
 			#print("Not paused")
-			
-		$Timer.start()
+		if not $"../..".paused:
+			$Timer.start()
 
 func _on_timer_timeout():
 	if $"../../Pedro".started == true:

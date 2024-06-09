@@ -17,7 +17,7 @@ func _on_start_screen_started():
 	
 
 func _physics_process(delta):
-	if started and not ended:
+	if started and not ended and not $"..".paused:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta + 10
@@ -49,7 +49,7 @@ func _physics_process(delta):
 			
 		move_and_slide()
 		
-		if position.x > 5714 and is_on_floor():
+		if position.x > 5715 and is_on_floor():
 			ended = true
 			$"..".restart()
 
