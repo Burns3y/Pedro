@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717725329
+::res://::1717966681
 icon.svg::CompressedTexture2D::1929323658878216135::1716705158::1716705158::1::::<><>::
 README.md::TextFile::-1::1716705158::0::1::::<><>::
 stats.gd::GDScript::-1::1717018183::0::1::::<>Area2D<>::
@@ -16,24 +16,24 @@ file (1).png::CompressedTexture2D::5620943075005483460::1716705158::1716705158::
 desktop.ini::TextFile::-1::1716705158::0::1::::<><>::
 pedro_tiles.png::CompressedTexture2D::3992697112924620511::1716705158::1716705158::1::::<><>::
 ::res://scenes/::1717634104
-::res://scenes/enemies/::1717672407
+::res://scenes/enemies/::1717826610
 border_patrol_guard.gd::GDScript::-1::1716807663::0::1::::<>CharacterBody2D<>::
-enemy.gd::GDScript::-1::1717630169::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::7991142136265741125::1717672407::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://cdbk8vjq66kk4::::res://scenes/enemies/unnamed (1).png
+enemy.gd::GDScript::-1::1717728020::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::7991142136265741125::1717826610::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://cdbk8vjq66kk4::::res://scenes/enemies/unnamed (1).png
 unnamed (1).png::CompressedTexture2D::4986139494844101569::1717538150::1717538222::1::::<><>::
-::res://scenes/items/::1717672407
-taco.gd::GDScript::-1::1717672406::0::1::::<>Area2D<>::
-taco.tscn::PackedScene::7542733002611890796::1717672407::0::1::::<><>::res://scenes/items/taco.gd<>uid://cp7r3nw60km05::::res://assets/items/taco.png
-::res://scenes/levels/::1717672406
-level 1.gd::GDScript::-1::1717462801::0::1::::<>Node2D<>::
-level 1.tscn::PackedScene::4302208723476667012::1717672406::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://rktpj4gvvmsu::::res://assets/backgrounds/Blake-orange-bg-without-cactus.png<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://dfp0yfnkd2pbg::::res://scenes/items/taco.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
-::res://scenes/levels/Start Screen/::1717672407
+::res://scenes/items/::1717826610
+taco.gd::GDScript::-1::1717757945::0::1::::<>Area2D<>::
+taco.tscn::PackedScene::7542733002611890796::1717826610::0::1::::<><>::res://scenes/items/taco.gd<>uid://cp7r3nw60km05::::res://assets/items/taco.png
+::res://scenes/levels/::1717826610
+level 1.gd::GDScript::-1::1717826587::0::1::::<>Node2D<>::
+level 1.tscn::PackedScene::4302208723476667012::1717826610::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://rktpj4gvvmsu::::res://assets/backgrounds/Blake-orange-bg-without-cactus.png<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://dfp0yfnkd2pbg::::res://scenes/items/taco.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
+::res://scenes/levels/Start Screen/::1717826610
 file (1).png::CompressedTexture2D::7348703133297401075::1717018183::1717018183::1::::<><>::
 start_screen.gd::GDScript::-1::1717467126::0::1::::<>Node2D<>::
-start_screen.tscn::PackedScene::5285938156543290688::1717672407::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
-::res://scenes/player/::1717672407
-pedro.gd::GDScript::-1::1717548572::0::1::::<>CharacterBody2D<>::
-pedro.tscn::PackedScene::2229593027509493570::1717672407::0::1::::<><>::res://scenes/player/pedro.gd<>uid://g4cvkrgjehfy::::res://assets/Pedro.png
-::res://scenes/UI/::1717672407
-stats.gd::GDScript::-1::1717542362::0::1::::<>CanvasLayer<>::
-stats.tscn::PackedScene::6981506424700935880::1717672407::0::1::::<><>::res://scenes/UI/stats.gd
+start_screen.tscn::PackedScene::5285938156543290688::1717826610::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+::res://scenes/player/::1717826610
+pedro.gd::GDScript::-1::1717733755::0::1::::<>CharacterBody2D<>::
+pedro.tscn::PackedScene::2229593027509493570::1717826610::0::1::::<><>::res://scenes/player/pedro.gd<>uid://g4cvkrgjehfy::::res://assets/Pedro.png
+::res://scenes/UI/::1717826610
+stats.gd::GDScript::-1::1717731738::0::1::::<>CanvasLayer<>::
+stats.tscn::PackedScene::6981506424700935880::1717826610::0::1::::<><>::res://scenes/UI/stats.gd

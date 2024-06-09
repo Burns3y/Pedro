@@ -37,7 +37,9 @@ func _on_start_screen_started():
 	ms = 0
 	s = 0
 	m = 0
+	score = 0
 	$TimerText.text = "Timer: 0 : 0 : 0"
+	$ScoreText.text = "Score: 0"
 	
 func increase_score():
 	score += 1

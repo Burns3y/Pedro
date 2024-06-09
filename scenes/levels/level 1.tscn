@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=10 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_cfhtt"]
 [ext_resource type="Texture2D" uid="uid://rktpj4gvvmsu" path="res://assets/backgrounds/Blake-orange-bg-without-cactus.png" id="2_h6b5x"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
-[ext_resource type="PackedScene" uid="uid://dfp0yfnkd2pbg" path="res://scenes/items/taco.tscn" id="7_18vrl"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="7_wjxst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf8v0"]
@@ -69,18 +68,6 @@ layer_0/tile_data = PackedInt32Array(655360, 65537, 0, 720896, 1, 1, 786432, 1, 
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Items" type="Node2D" parent="."]
-
-[node name="Taco" parent="Items" instance=ExtResource("7_18vrl")]
-position = Vector2(2726, 140)
-
-[node name="Taco2" parent="Items" instance=ExtResource("7_18vrl")]
-position = Vector2(875, 437)
-
-[node name="Taco3" parent="Items" instance=ExtResource("7_18vrl")]
-position = Vector2(5675, 69)
-
-[node name="Taco4" parent="Items" instance=ExtResource("7_18vrl")]
-position = Vector2(1876, 286)
 
 [node name="Pedro" parent="." instance=ExtResource("4_josbn")]
 position = Vector2(304, 469)

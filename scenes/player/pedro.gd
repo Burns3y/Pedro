@@ -14,6 +14,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _on_start_screen_started():
 	started = true
 	position = Vector2(304, 469)
+	
 
 func _physics_process(delta):
 	if started and not ended:
