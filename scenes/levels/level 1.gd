@@ -26,7 +26,8 @@ func _process(_delta):
 		pause.emit()
 
 func _on_start_screen_started():
-	
+	remove_enemies()
+	remove_tacos()
 	#Spawning Tacos
 	for taco_position in taco_spawn_points:
 		var new_taco = taco_scene.instantiate()
@@ -47,7 +48,6 @@ func _on_start_screen_started():
 		new_enemy.connect("player_died", $".". _on_player_died)
 		self.connect("pause", new_enemy.pause)
 		new_enemy.name = "Enemy"
-		
 
 
 func _on_player_died():
@@ -64,9 +64,9 @@ func remove_tacos():
 	
 
 func restart():
+	call_deferred("remove_enemies")
+	call_deferred("remove_tacos")
 	$UI/Start_Screen.SIGNAL = false
 	$UI/Start_Screen/Panel/quit_button.disabled = false
 	$UI/Start_Screen/Panel/start_button.disabled = false
-	call_deferred("remove_enemies")
-	call_deferred("remove_tacos")
 
