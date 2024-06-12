@@ -1,11 +1,10 @@
 extends Node2D
 
-signal pause
-var paused = false
+var game_is_paused: bool = false
+signal pause(game_is_paused)
 
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
 var taco_scene: PackedScene = preload("res://scenes/items/taco.tscn")
-
 var taco_spawn_points = [Vector2(875, 437), Vector2(1876, 286), Vector2(2726, 140), Vector2(4975, 221), Vector2(5675, 69)]
 var enemy_spawn_points = [Vector2(791, 536), Vector2(3000, 500), Vector2(4088, 517)]
 # Called when the node enters the scene tree for the first time.
@@ -17,17 +16,17 @@ func _on_taco_collected():
 	print("Collected")
 
 func _process(_delta):
-	if Input.is_action_just_pressed("pause") and not paused and $UI/Start_Screen.SIGNAL:
-		paused = true
-		pause.emit()
+	if Input.is_action_just_pressed("pause") and not game_is_paused:
+		game_is_paused = true
+		pause.emit(game_is_paused)
 		
-	elif Input.is_action_just_pressed("pause") and paused:
-		paused = false
-		pause.emit()
+	elif Input.is_action_just_pressed("pause") and game_is_paused:
+		game_is_paused = false
+		pause.emit(game_is_paused)
+
 
 func _on_start_screen_started():
-	remove_enemies()
-	remove_tacos()
+	
 	#Spawning Tacos
 	for taco_position in taco_spawn_points:
 		var new_taco = taco_scene.instantiate()
@@ -48,6 +47,7 @@ func _on_start_screen_started():
 		new_enemy.connect("player_died", $".". _on_player_died)
 		self.connect("pause", new_enemy.pause)
 		new_enemy.name = "Enemy"
+		
 
 
 func _on_player_died():
@@ -64,9 +64,9 @@ func remove_tacos():
 	
 
 func restart():
-	call_deferred("remove_enemies")
-	call_deferred("remove_tacos")
 	$UI/Start_Screen.SIGNAL = false
 	$UI/Start_Screen/Panel/quit_button.disabled = false
 	$UI/Start_Screen/Panel/start_button.disabled = false
+	call_deferred("remove_enemies")
+	call_deferred("remove_tacos")
 

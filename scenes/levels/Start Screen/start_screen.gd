@@ -1,6 +1,6 @@
 extends CanvasLayer
 var SIGNAL: bool = false
-#var paused: bool = false
+
 signal started
 
 func _on_start_button_pressed():
