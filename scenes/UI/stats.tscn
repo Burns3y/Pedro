@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6p5nj1fodfa3"]
+[gd_scene load_steps=3 format=3 uid="uid://c6p5nj1fodfa3"]
 
 [ext_resource type="Script" path="res://scenes/UI/stats.gd" id="1_uama8"]
+[ext_resource type="PackedScene" uid="uid://b0he72gf0cmhf" path="res://timer.tscn" id="2_1dkk0"]
 
 [node name="Stats" type="CanvasLayer"]
 script = ExtResource("1_uama8")
@@ -12,10 +13,6 @@ offset_right = 196.0
 offset_bottom = 33.0
 text = "Timer: 0 : 0 : 0"
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
-one_shot = true
-
 [node name="ScoreText" type="Label" parent="."]
 offset_left = 992.0
 offset_top = 10.0
@@ -23,4 +20,4 @@ offset_right = 1072.0
 offset_bottom = 33.0
 text = "Score: 0"
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Timer" parent="." instance=ExtResource("2_1dkk0")]

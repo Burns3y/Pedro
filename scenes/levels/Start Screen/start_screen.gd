@@ -1,5 +1,4 @@
 extends CanvasLayer
-
 var SIGNAL: bool = false
 #var paused: bool = false
 signal started
@@ -36,3 +35,4 @@ func _process(_delta):
 		$Panel/start_button.disabled = false
 		$Panel/start_button.text = "Restart"
 		$Panel/quit_button.disabled = false
+		
