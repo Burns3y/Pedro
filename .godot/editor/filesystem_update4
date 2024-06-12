@@ -7,3 +7,4 @@ res://scenes/enemies/enemy.tscn
 res://scenes/items/taco.tscn
 res://timer.tscn
 res://scenes/UI/stats.gd
+res://scenes/enemies/enemy.gd

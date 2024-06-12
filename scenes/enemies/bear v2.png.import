@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdbk8vjq66kk4"
-path="res://.godot/imported/unnamed (1).png-b1b61750243fe8ed8846db301e0bb5e9.ctex"
+uid="uid://c706oqx7qhx7u"
+path="res://.godot/imported/bear v2.png-bc26bfa692dfb03379abd78b7cbacddb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/enemies/unnamed (1).png"
-dest_files=["res://.godot/imported/unnamed (1).png-b1b61750243fe8ed8846db301e0bb5e9.ctex"]
+source_file="res://scenes/enemies/bear v2.png"
+dest_files=["res://.godot/imported/bear v2.png-bc26bfa692dfb03379abd78b7cbacddb.ctex"]
 
 [params]
 

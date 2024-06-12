@@ -5,7 +5,7 @@ signal player_died
 signal player_killed_guard
 
 #Creates movement variables
-const SPEED = 300.0
+const SPEED = 150
 var direction = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var paused: bool = false
@@ -33,10 +33,8 @@ func _physics_process(delta):
 		#Changes icon direction whenit hits a wall so character points in the right direction
 		if direction[0] == -1:
 			$Icon.flip_h = false
-			$Icon.offset.x = 0
 		elif direction[0] == 1:
 			$Icon.flip_h = true
-			$Icon.offset.x = -25
 			
 
 		move_and_slide()

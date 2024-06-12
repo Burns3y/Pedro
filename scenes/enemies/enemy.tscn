@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://dl377cv5wwebd"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_jrwv4"]
-[ext_resource type="Texture2D" uid="uid://cdbk8vjq66kk4" path="res://scenes/enemies/unnamed (1).png" id="2_36tve"]
+[ext_resource type="Texture2D" uid="uid://c706oqx7qhx7u" path="res://scenes/enemies/bear v2.png" id="2_l1ala"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
-size = Vector2(82, 49.5)
+size = Vector2(103, 62.6949)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
-size = Vector2(84, 11)
+size = Vector2(103, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
-size = Vector2(84, 46)
+size = Vector2(104.5, 66)
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
@@ -18,25 +18,27 @@ collision_mask = 7
 script = ExtResource("1_jrwv4")
 
 [node name="FloorHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 4.75)
+position = Vector2(0.500002, -0.652555)
 shape = SubResource("RectangleShape2D_sqisi")
 
 [node name="HeadJumpRegion" type="Area2D" parent="."]
+position = Vector2(6.85151, 1.19489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadJumpRegion"]
-position = Vector2(-3, -23)
+position = Vector2(-5.85151, -39.1949)
 shape = SubResource("RectangleShape2D_hjcay")
 
 [node name="PlayerDiesHitbox" type="Area2D" parent="."]
+position = Vector2(6.85151, 1.19489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDiesHitbox"]
-position = Vector2(-3, 4)
+position = Vector2(-6.60151, -4.19489)
 shape = SubResource("RectangleShape2D_dtad3")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(16, 3)
-scale = Vector2(1.46812, 2.01953)
-texture = ExtResource("2_36tve")
+position = Vector2(0, 7.62939e-06)
+scale = Vector2(1.225, 1.465)
+texture = ExtResource("2_l1ala")
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
 [connection signal="body_entered" from="PlayerDiesHitbox" to="." method="_on_player_dies_hitbox_body_entered"]
