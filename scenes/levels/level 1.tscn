@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_cfhtt"]
-[ext_resource type="Texture2D" uid="uid://rktpj4gvvmsu" path="res://assets/backgrounds/Blake-orange-bg-without-cactus.png" id="2_h6b5x"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
+[ext_resource type="Texture2D" uid="uid://n7ljlhtjbr6n" path="res://assets/backgrounds/orange dessert with cacti.png" id="2_nkett"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
 [ext_resource type="PackedScene" uid="uid://b0he72gf0cmhf" path="res://timer.tscn" id="7_rl0tw"]
@@ -38,20 +38,20 @@ script = ExtResource("1_cfhtt")
 
 [node name="Backgrounds" type="Node2D" parent="."]
 
-[node name="OrangeBG" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(1251, 274)
-scale = Vector2(0.861, 0.861)
-texture = ExtResource("2_h6b5x")
+[node name="OrangeDessertWithCacti" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(1036, 353)
+scale = Vector2(1.08619, 1.08619)
+texture = ExtResource("2_nkett")
 
-[node name="OrangeBG2" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(3762, 276)
-scale = Vector2(0.86095, 0.86095)
-texture = ExtResource("2_h6b5x")
+[node name="OrangeDessertWithCacti2" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(3109, 353)
+scale = Vector2(1.08619, 1.08619)
+texture = ExtResource("2_nkett")
 
-[node name="OrangeBG3" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(6280, 277)
-scale = Vector2(0.86095, 0.86095)
-texture = ExtResource("2_h6b5x")
+[node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(5191, 353)
+scale = Vector2(1.08619, 1.08619)
+texture = ExtResource("2_nkett")
 
 [node name="BackWall" type="StaticBody2D" parent="."]
 position = Vector2(-30, 1)

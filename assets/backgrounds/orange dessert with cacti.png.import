@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rktpj4gvvmsu"
-path="res://.godot/imported/Blake-orange-bg-without-cactus.png-6ebb8cce61ba0c51eb2afee186c033d5.ctex"
+uid="uid://n7ljlhtjbr6n"
+path="res://.godot/imported/orange dessert with cacti.png-a426d1a5d7f452687bdfe61386931ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/Blake-orange-bg-without-cactus.png"
-dest_files=["res://.godot/imported/Blake-orange-bg-without-cactus.png-6ebb8cce61ba0c51eb2afee186c033d5.ctex"]
+source_file="res://assets/backgrounds/orange dessert with cacti.png"
+dest_files=["res://.godot/imported/orange dessert with cacti.png-a426d1a5d7f452687bdfe61386931ce1.ctex"]
 
 [params]
 
