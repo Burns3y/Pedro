@@ -7,6 +7,7 @@ var SPEED = 13000
 const JUMP_VELOCITY = -600
 var started: bool = false
 var ended: bool = false
+var is_paused: bool = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -17,7 +18,7 @@ func _on_start_screen_started():
 	
 
 func _physics_process(delta):
-	if started and not ended:
+	if started and not ended and not $"..".game_is_paused:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta + 10
