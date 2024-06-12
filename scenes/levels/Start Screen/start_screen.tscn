@@ -14,6 +14,7 @@ offset_right = 1111.0
 offset_bottom = 754.0
 
 [node name="start_button" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 535.0
 offset_top = 375.0
 offset_right = 631.0
@@ -23,6 +24,7 @@ flat = true
 icon_alignment = 1
 
 [node name="quit_button" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 536.0
 offset_top = 407.0
 offset_right = 629.0

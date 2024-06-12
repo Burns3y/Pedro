@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var game_is_paused: bool = false
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
 var taco_scene: PackedScene = preload("res://scenes/items/taco.tscn")
 var taco_spawn_points = [Vector2(875, 437), Vector2(1876, 286), Vector2(2726, 140), Vector2(4975, 221), Vector2(5675, 69)]
@@ -14,6 +14,10 @@ func _on_taco_collected():
 	print("Collected")
 
 func _process(_delta):
+	#if Input.is_action_just_pressed("pause") and not game_is_paused:
+		#for child in self.get_children():
+			#child.paused
+		#game_is_paused = true
 	pass
 
 func _on_start_screen_started():

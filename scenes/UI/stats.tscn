@@ -12,14 +12,14 @@ offset_right = 196.0
 offset_bottom = 33.0
 text = "Timer: 0 : 0 : 0"
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
-
 [node name="ScoreText" type="Label" parent="."]
 offset_left = 992.0
 offset_top = 10.0
 offset_right = 1072.0
 offset_bottom = 33.0
 text = "Score: 0"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
