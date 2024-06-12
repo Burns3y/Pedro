@@ -3,11 +3,12 @@ extends CanvasLayer
 var ms: int = 0
 var s: int = 0
 var m: int = 0
+var timer_active = false
 var ended: bool = false
 var score: int = 0
 
-func _process(_delta):
-	if ms > 99:
+func _process(delta):
+	if ms > 100:
 		s += 1
 		ms = 0
 	if s > 60:
@@ -17,9 +18,11 @@ func _process(_delta):
 	if ($Timer.is_stopped() and $"../Start_Screen".SIGNAL) or $"../../Pedro".ended:
 		if not $"../..".paused:
 			$Timer.start()
+			timer_active = true
 			
 	if not $"../..".paused and $"../Start_Screen".SIGNAL:
-		ms += 5
+		if timer_active:
+			ms += 100 * delta
 		var timer = "Timer: " + str(m) + " : " + str(s) + " : " + str(ms)
 		$TimerText.text = timer
 
