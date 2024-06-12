@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=10 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_cfhtt"]
 [ext_resource type="Texture2D" uid="uid://rktpj4gvvmsu" path="res://assets/backgrounds/Blake-orange-bg-without-cactus.png" id="2_h6b5x"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
-[ext_resource type="PackedScene" uid="uid://b0he72gf0cmhf" path="res://timer.tscn" id="7_rl0tw"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="7_wjxst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf8v0"]
@@ -80,10 +79,6 @@ scale = Vector2(1.15731, 0.907039)
 
 [node name="Stats" parent="UI" instance=ExtResource("7_wjxst")]
 
-[node name="Timer" parent="." instance=ExtResource("7_rl0tw")]
-
-[connection signal="pause" from="." to="Timer" method="_on_level_1_pause"]
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="UI/Stats" method="_on_start_screen_started"]
-[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
