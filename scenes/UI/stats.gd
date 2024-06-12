@@ -8,6 +8,11 @@ var score: int = 0
 
 func _process(_delta):
 	
+	if $"../..".game_is_paused:
+		print("one shot timer")
+		$Timer.one_shot = true
+	else:
+		$Timer.one_shot = false
 	
 	if ms > 99:
 		s += 1
@@ -19,12 +24,8 @@ func _process(_delta):
 		get_tree()
 
 	if ($Timer.is_stopped() and $"../Start_Screen".SIGNAL) or $"../../Pedro".ended:
-		#if paused:
-			#print("Paused")
-		#elif not paused:
-			#print("Not paused")
-			
-		$Timer.start()
+		if not $"../..".game_is_paused:
+			$Timer.start()
 
 func _on_timer_timeout():
 	if $"../../Pedro".started == true:
@@ -44,4 +45,3 @@ func _on_start_screen_started():
 func increase_score():
 	score += 1
 	$ScoreText.text = "Score: " + str(score)
-
