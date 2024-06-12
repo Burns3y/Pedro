@@ -17,14 +17,20 @@ func _process(_delta):
 	if ($Timer.is_stopped() and $"../Start_Screen".SIGNAL) or $"../../Pedro".ended:
 		if not $"../..".paused:
 			$Timer.start()
-			print("started")
-
-func _on_timer_timeout():
-	if $"../../Pedro".started == true:
-		print("Started 2")
+			
+	if not $"../..".paused and $"../Start_Screen".SIGNAL:
 		ms += 5
 		var timer = "Timer: " + str(m) + " : " + str(s) + " : " + str(ms)
 		$TimerText.text = timer
+
+
+#func _on_timer_timeout():
+	####This does nothing rn it doesn't work
+	#if $"../../Pedro".started == true:
+		#print("Started 2")
+		#ms += 5
+		#var timer = "Timer: " + str(m) + " : " + str(s) + " : " + str(ms)
+		#$TimerText.text = timer
 
 
 func _on_start_screen_started():
