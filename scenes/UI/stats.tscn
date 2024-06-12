@@ -21,3 +21,4 @@ offset_bottom = 33.0
 text = "Score: 0"
 
 [node name="Timer" parent="." instance=ExtResource("2_1dkk0")]
+wait_time = 0.1
