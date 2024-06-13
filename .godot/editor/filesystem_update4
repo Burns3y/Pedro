@@ -5,3 +5,4 @@ res://scenes/UI/stats.tscn
 res://scenes/levels/Start Screen/start_screen.tscn
 res://scenes/enemies/enemy.tscn
 res://scenes/items/taco.tscn
+res://scenes/enemies/enemy.gd

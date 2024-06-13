@@ -26,13 +26,14 @@ func _physics_process(delta):
 			direction.x = direction.x * -1
 			velocity.x = direction.x * SPEED
 		
-		#Changes icon direction whenit hits a wall so character points in the right direction
-		if direction[0] == -1:
-			$Icon.flip_h = false
-			$Icon.offset.x = 0
-		elif direction[0] == 1:
-			$Icon.flip_h = true
-			$Icon.offset.x = -25
+		###Changes icon direction when it hits a wall so character points in the right direction
+		##Not needed with current img
+		#if direction[0] == -1:
+			#$Icon.flip_h = false
+			#$Icon.offset.x = 0
+		#elif direction[0] == 1:
+			#$Icon.flip_h = true
+			#$Icon.offset.x = 1
 			
 
 		move_and_slide()
