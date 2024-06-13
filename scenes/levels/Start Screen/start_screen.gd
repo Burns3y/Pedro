@@ -6,7 +6,7 @@ signal started
 func _on_start_button_pressed():
 	SIGNAL = true
 	started.emit()
-	$"../..".paused = false
+	$"../..".game_is_paused = false
 	$Panel/quit_button.disabled = true
 	$Panel/start_button.disabled = true
 	$"../../Pedro".ended = false
@@ -19,7 +19,7 @@ func _process(_delta):
 		SIGNAL = false
 		$Panel.modulate.a = 1
 		
-	elif SIGNAL == true and not $"../..".paused:
+	elif SIGNAL == true and not $"../..".game_is_paused:
 		
 		while $Panel.modulate.a > 0:
 			$Panel.modulate.a -= 0.05
@@ -30,7 +30,7 @@ func _process(_delta):
 
 		$Panel.modulate.a = 1
 
-	if $"../..".paused:
+	if $"../..".game_is_paused:
 		$Panel.modulate.a = 1
 		$Panel/start_button.disabled = false
 		$Panel/start_button.text = "Restart"

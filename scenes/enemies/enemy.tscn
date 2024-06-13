@@ -7,7 +7,7 @@
 size = Vector2(103, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjcay"]
-size = Vector2(103, 11)
+size = Vector2(104.5, 7.50001)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtad3"]
 size = Vector2(104.5, 65)
@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_sqisi")
 position = Vector2(6.85151, 1.19489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadJumpRegion"]
-position = Vector2(-5.85151, -39.1949)
+position = Vector2(-6.60151, -40.9449)
 shape = SubResource("RectangleShape2D_hjcay")
 
 [node name="PlayerDiesHitbox" type="Area2D" parent="."]

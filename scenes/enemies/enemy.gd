@@ -7,7 +7,7 @@ signal player_killed_guard
 var is_paused: bool = false
 
 #Creates movement variables
-const SPEED = 300.0
+const SPEED = 150.0
 var direction = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

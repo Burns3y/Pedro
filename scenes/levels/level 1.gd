@@ -13,7 +13,6 @@ func _ready():
 
 func _on_taco_collected():
 	$UI/Stats.increase_score()
-	print("Collected")
 
 func _process(_delta):
 	if Input.is_action_just_pressed("pause") and not game_is_paused:

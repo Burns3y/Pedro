@@ -9,7 +9,6 @@ var score: int = 0
 func _process(_delta):
 	
 	if $"../..".game_is_paused:
-		print("one shot timer")
 		$Timer.one_shot = true
 	else:
 		$Timer.one_shot = false
