@@ -42,10 +42,10 @@ func _physics_process(delta):
 		for i in range(4):
 			#var node_path1 = "Bearp" + str(num)
 			#var bear_sprite_visible = get_node(node_path1)
-			$BearP1.modulate.a = 0
-			get_tree().create_timer(0.3).timeout
-			
-
+			$BearP1.modulate.a = 1
+			$BearP2.modulate.a = 1
+			$BearP3.modulate.a = 1
+			$BearP4.modulate.a = 1
 		move_and_slide()
 
 #Emits a signal when the player hits the side, connects to the player through the level scene
