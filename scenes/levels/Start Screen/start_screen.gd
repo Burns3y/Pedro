@@ -4,12 +4,14 @@ var SIGNAL: bool = false
 signal started
 
 func _on_start_button_pressed():
+	$"../..".remove_enemies()
+	$"../..".remove_tacos()
 	SIGNAL = true
-	started.emit()
 	$"../..".game_is_paused = false
 	$Panel/quit_button.disabled = true
 	$Panel/start_button.disabled = true
 	$"../../Pedro".ended = false
+	started.emit()
 
 func _on_quit_button_pressed():
 	get_tree().quit()
