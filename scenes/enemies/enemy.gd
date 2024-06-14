@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 #Creates signals for guards and player dying
 signal player_died
-signal player_killed_guard
+signal player_killed_enemy(position)
 
 var is_paused: bool = false
 
@@ -45,6 +45,7 @@ func _on_player_dies_hitbox_body_entered(body):
 #When the player jumps on the head of the enemy, the enemy dies.
 func _on_head_jump_region_body_entered(body):
 	if body.is_in_group("Player"):
+		player_killed_enemy.emit(position)
 		queue_free()
 
 #If the level is paused or unpaused, it emits a signal.

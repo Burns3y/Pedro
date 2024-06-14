@@ -28,12 +28,7 @@ func _on_start_screen_started():
 	
 	#Spawning Tacos
 	for taco_position in taco_spawn_points:
-		var new_taco = taco_scene.instantiate()
-		$Items.add_child(new_taco)
-		new_taco.position = taco_position
-		#Connecting signal
-		new_taco.connect("taco_collected", self._on_taco_collected)
-		new_taco.name = "Taco"
+		spawn_taco(taco_position)
 
 	#Spawning enemies
 	for enemy_position in enemy_spawn_points:
@@ -43,10 +38,11 @@ func _on_start_screen_started():
 		
 		#Connecting signals
 		new_enemy.connect("player_died", $Pedro._on_player_died)
-		new_enemy.connect("player_died", $".". _on_player_died)
+		new_enemy.connect("player_died", self._on_player_died)
+		new_enemy.connect("player_killed_enemy", self.player_killed_enemy)
 		self.connect("pause", new_enemy.pause)
 		new_enemy.name = "Enemy"
-		
+
 
 
 func _on_player_died():
@@ -69,3 +65,15 @@ func restart():
 	call_deferred("remove_enemies")
 	call_deferred("remove_tacos")
 
+func player_killed_enemy(enemy_position):
+	#Spawns a taco when the enemy dies
+	spawn_taco(enemy_position)
+
+
+func spawn_taco(taco_position):
+	var new_taco = taco_scene.instantiate()
+	$Items.add_child(new_taco)
+	new_taco.position = taco_position
+	#Connecting signal
+	new_taco.connect("taco_collected", self._on_taco_collected)
+	new_taco.name = "Taco"
