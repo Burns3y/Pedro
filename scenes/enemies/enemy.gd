@@ -27,12 +27,23 @@ func _physics_process(delta):
 			velocity.x = direction.x * SPEED
 		
 		#Changes icon direction when it hits a wall so character points in the right direction
-		if direction[0] == -1:
-			$Icon.flip_h = false
-			#$Icon.offset.x = 0
-		elif direction[0] == 1:
-			$Icon.flip_h = true
-			#$Icon.offset.x = 1
+		if direction.x == -1:
+			$BearP1.flip_h = false
+			$BearP2.flip_h = false
+			$BearP3.flip_h = false
+			$BearP4.flip_h = false
+		elif direction.x == 1:
+			$BearP1.flip_h = true
+			$BearP2.flip_h = true
+			$BearP3.flip_h = true
+			$BearP4.flip_h = true
+		#Animation
+		var num = 1
+		for i in range(4):
+			#var node_path1 = "Bearp" + str(num)
+			#var bear_sprite_visible = get_node(node_path1)
+			$BearP1.modulate.a = 0
+			get_tree().create_timer(0.3).timeout
 			
 
 		move_and_slide()

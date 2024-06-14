@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dl377cv5wwebd"]
+[gd_scene load_steps=9 format=3 uid="uid://dl377cv5wwebd"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_jrwv4"]
-[ext_resource type="Texture2D" uid="uid://c706oqx7qhx7u" path="res://scenes/enemies/bear v2.png" id="2_l1ala"]
+[ext_resource type="Texture2D" uid="uid://bc7egnwkbqul7" path="res://scenes/enemies/bear p1.png" id="2_ude4h"]
+[ext_resource type="Texture2D" uid="uid://xis6fx172hei" path="res://scenes/enemies/bear p2.png" id="3_nbw5y"]
+[ext_resource type="Texture2D" uid="uid://ccnu26abgpj8g" path="res://scenes/enemies/bear p3.png" id="4_ujypd"]
+[ext_resource type="Texture2D" uid="uid://pcm05lvqx4fe" path="res://scenes/enemies/bear p4.png" id="5_icgol"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
 size = Vector2(103, 65)
@@ -35,10 +38,22 @@ position = Vector2(6.85151, 1.19489)
 position = Vector2(-6.60151, -3.69489)
 shape = SubResource("RectangleShape2D_dtad3")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0, 7.62939e-06)
-scale = Vector2(1.225, 1.465)
-texture = ExtResource("2_l1ala")
+[node name="BearP1" type="Sprite2D" parent="."]
+position = Vector2(-1, -9.53674e-07)
+scale = Vector2(1.255, 1.255)
+texture = ExtResource("2_ude4h")
+
+[node name="BearP2" type="Sprite2D" parent="."]
+scale = Vector2(1.255, 1.255)
+texture = ExtResource("3_nbw5y")
+
+[node name="BearP3" type="Sprite2D" parent="."]
+scale = Vector2(1.255, 1.255)
+texture = ExtResource("4_ujypd")
+
+[node name="BearP4" type="Sprite2D" parent="."]
+scale = Vector2(1.255, 1.255)
+texture = ExtResource("5_icgol")
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
 [connection signal="body_entered" from="PlayerDiesHitbox" to="." method="_on_player_dies_hitbox_body_entered"]
