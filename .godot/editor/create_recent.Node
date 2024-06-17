@@ -1,3 +1,4 @@
+TileMap
 AnimatedSprite2D
 AnimationPlayer
 Timer
@@ -12,4 +13,3 @@ TextEdit
 CharacterBody2D
 StaticBody2D
 Camera2D
-TileMap

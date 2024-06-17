@@ -32,7 +32,7 @@ func _process(_delta):
 
 		$Panel.modulate.a = 1
 
-	if $"../..".game_is_paused:
+	if $"../..".game_is_paused and not $"../../Pedro".ended:
 		$Panel.modulate.a = 1
 		$Panel/start_button.disabled = false
 		$Panel/start_button.text = "Restart"
