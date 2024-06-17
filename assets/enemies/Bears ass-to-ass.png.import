@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc7egnwkbqul7"
-path="res://.godot/imported/bear p1.png-124d06bd351aea273cfd7394f7b05a10.ctex"
+uid="uid://bem0jt2svuxtl"
+path="res://.godot/imported/Bears ass-to-ass.png-f06cf9bb2713b5ee676058a62198f5e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/enemies/bear p1.png"
-dest_files=["res://.godot/imported/bear p1.png-124d06bd351aea273cfd7394f7b05a10.ctex"]
+source_file="res://assets/enemies/Bears ass-to-ass.png"
+dest_files=["res://.godot/imported/Bears ass-to-ass.png-f06cf9bb2713b5ee676058a62198f5e1.ctex"]
 
 [params]
 

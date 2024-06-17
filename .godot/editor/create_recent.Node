@@ -1,7 +1,8 @@
+AnimatedSprite2D
+AnimationPlayer
 Timer
 CanvasLayer
 Label
-AnimationPlayer
 Node2D
 CollisionPolygon2D
 Sprite2D

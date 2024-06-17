@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccnu26abgpj8g"
-path="res://.godot/imported/bear p3.png-fb5a49dd4f2bb451ed8c148963731641.ctex"
+uid="uid://8us6kse2q0a3"
+path="res://.godot/imported/Bears no exterior space.png-35e170bb18d8f6bd5fcca1400d722097.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/enemies/bear p3.png"
-dest_files=["res://.godot/imported/bear p3.png-fb5a49dd4f2bb451ed8c148963731641.ctex"]
+source_file="res://assets/enemies/Bears no exterior space.png"
+dest_files=["res://.godot/imported/Bears no exterior space.png-35e170bb18d8f6bd5fcca1400d722097.ctex"]
 
 [params]
 

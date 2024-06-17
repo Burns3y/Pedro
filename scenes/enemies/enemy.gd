@@ -10,6 +10,8 @@ var is_paused: bool = false
 const SPEED = 150.0
 var direction = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var frame = 0
+
 
 func _ready():
 	velocity = direction * SPEED
@@ -28,24 +30,11 @@ func _physics_process(delta):
 		
 		#Changes icon direction when it hits a wall so character points in the right direction
 		if direction.x == -1:
-			$BearP1.flip_h = false
-			$BearP2.flip_h = false
-			$BearP3.flip_h = false
-			$BearP4.flip_h = false
+			$BearsActuallyFixed.flip_h = false
 		elif direction.x == 1:
-			$BearP1.flip_h = true
-			$BearP2.flip_h = true
-			$BearP3.flip_h = true
-			$BearP4.flip_h = true
-		#Animation
-		var num = 1
-		for i in range(4):
-			#var node_path1 = "Bearp" + str(num)
-			#var bear_sprite_visible = get_node(node_path1)
-			$BearP1.modulate.a = 1
-			$BearP2.modulate.a = 1
-			$BearP3.modulate.a = 1
-			$BearP4.modulate.a = 1
+			$BearsActuallyFixed.flip_h = true
+
+
 		move_and_slide()
 
 #Emits a signal when the player hits the side, connects to the player through the level scene
