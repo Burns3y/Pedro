@@ -79,8 +79,8 @@ libraries = {
 autoplay = "Bear_walking"
 
 [node name="WorkingBeraRanimeHentai" type="Sprite2D" parent="."]
-position = Vector2(362, 174.964)
-scale = Vector2(1.06495, 1.06495)
+position = Vector2(1.90735e-06, 11)
+scale = Vector2(0.079304, 0.079304)
 texture = ExtResource("2_te20n")
 hframes = 4
 

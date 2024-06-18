@@ -10,7 +10,6 @@ func _on_start_button_pressed():
 	$"../..".game_is_paused = false
 	$Panel/quit_button.disabled = true
 	$Panel/start_button.disabled = true
-	$"../../Pedro".ended = false
 	started.emit()
 
 func _on_quit_button_pressed():

@@ -1,7 +1,7 @@
 extends Node2D
 
 var game_is_paused: bool = false
-var level = 2
+var level = 1
 signal pause(game_is_paused)
 
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
@@ -18,7 +18,7 @@ func _on_taco_collected():
 	$UI/Stats.increase_score()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("pause") and not game_is_paused:
+	if Input.is_action_just_pressed("pause") and not game_is_paused and not $Pedro.ended:
 		game_is_paused = true
 		pause.emit(game_is_paused)
 		
@@ -29,22 +29,31 @@ func _process(_delta):
 
 func _on_start_screen_started():
 	
+	if $Pedro.ended:
+		level = 2
+		$Pedro.ended = false
+	
 	var taco_spawn_points
 	var enemy_spawn_points
 	if level == 1:
 		taco_spawn_points = level_1_taco_spawn_points
 		enemy_spawn_points = level_1_enemy_spawn_points
-	
+		$Lvl1Map.position.y = 0
+		$Lvl2Map.position.y = 870
+		
 	elif level == 2:
 		taco_spawn_points = level_2_taco_spawn_points
 		enemy_spawn_points = level_2_enemy_spawn_points
+		$Lvl1Map.position.y = -1180
+		$Lvl2Map.position.y = 0
+		
+		
 	#Spawning Tacos
 	for taco_position in taco_spawn_points:
 		spawn_taco(taco_position)
 
 	#Spawning enemies
 	for enemy_position in enemy_spawn_points:
-		print("spawning enemy")
 		var new_enemy = enemy_scene.instantiate() as CharacterBody2D
 		new_enemy.position = enemy_position
 		$Enemies.add_child(new_enemy)
@@ -55,7 +64,6 @@ func _on_start_screen_started():
 		new_enemy.connect("player_killed_enemy", self.player_killed_enemy)
 		self.connect("pause", new_enemy.pause)
 		new_enemy.name = "Enemy"
-
 
 
 func _on_player_died():
