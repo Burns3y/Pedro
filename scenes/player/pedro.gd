@@ -16,20 +16,14 @@ func _on_start_screen_started():
 	started = true
 	position = Vector2(304, 469)
 
-	
 
 func _physics_process(delta):
-	if position.y >= 700 and $"..".level == 2:
+	if (position.y >= 700 or (position.y > 1470 and position.x < 600)) and $"..".level == 2:
 		$Camera2D.limit_bottom = 2000
 		$Camera2D.position_smoothing_speed = 1
 	else:
-		while $Camera2D.limit_bottom > 720:
-			$Camera2D.limit_bottom -= 10
-			#await $Camera2D.create_timer(3.0).timeout
-			
-		while $Camera2D.position_smoothing_speed < 5:
-			$Camera2D.position_smoothing_speed += 1
-			#await $Camera2D.create_timer(5.0).timeout
+		$Camera2D.limit_bottom = 720
+		$Camera2D.position_smoothing_speed = 5
 	
 	if started and not ended and not $"..".game_is_paused:
 		# Add the gravity.
