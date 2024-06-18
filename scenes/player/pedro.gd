@@ -58,3 +58,7 @@ func _physics_process(delta):
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false
+
+
+
+#Level 1 pedro cam bottom 720

@@ -1,10 +1,10 @@
+Node2D
 TileMap
 AnimatedSprite2D
 AnimationPlayer
 Timer
 CanvasLayer
 Label
-Node2D
 CollisionPolygon2D
 Sprite2D
 Area2D
@@ -12,4 +12,3 @@ CollisionShape2D
 TextEdit
 CharacterBody2D
 StaticBody2D
-Camera2D
