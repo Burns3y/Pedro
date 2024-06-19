@@ -18,9 +18,14 @@ func _on_start_screen_started():
 
 
 func _physics_process(delta):
-	if (position.y >= 700 or (position.y > 1470 and position.x < 600)) and $"..".level == 2:
+	if position.y >= 700 and $"..".level == 2:
 		$Camera2D.limit_bottom = 2000
 		$Camera2D.position_smoothing_speed = 1
+
+	elif position.y > 550 and position.x < 600:
+		$Camera2D.limit_bottom = 2000
+		$Camera2D.position_smoothing_speed = 1
+
 	else:
 		$Camera2D.limit_bottom = 720
 		$Camera2D.position_smoothing_speed = 5
@@ -57,7 +62,7 @@ func _physics_process(delta):
 			
 		move_and_slide()
 		
-		if position.x > 5714 and is_on_floor():
+		if position.x > 5714.5 and is_on_floor():
 			ended = true
 			$"..".restart()
 
