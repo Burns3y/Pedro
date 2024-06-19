@@ -30,9 +30,9 @@ func _physics_process(delta):
 		
 		#Changes icon direction when it hits a wall so character points in the right direction
 		if direction.x == -1:
-			$WorkingBeraRanimeHentai.flip_h = false
+			$".".flip_h = false
 		elif direction.x == 1:
-			$WorkingBeraRanimeHentai.flip_h = true
+			$".".flip_h = true
 
 
 		move_and_slide()

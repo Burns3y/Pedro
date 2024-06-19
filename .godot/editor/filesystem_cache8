@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718761501
+::res://::1718831190
 icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715723894::1::::<><>::
 README.md::TextFile::-1::1715556632::0::1::::<><>::
 Timer.gd::GDScript::-1::1718235457::0::1::::<>Timer<>::
@@ -9,9 +9,8 @@ circle.png::CompressedTexture2D::3301507179259064626::1718761456::1718761504::1:
 Pedro.png::CompressedTexture2D::481159504133445134::1716761846::1716762081::1::::<><>::
 ::res://assets/backgrounds/::1718235457
 orange dessert with cacti.png::CompressedTexture2D::979199603935751591::1718235457::1718235457::1::::<><>::
-::res://assets/enemies/::1718761522
+::res://assets/enemies/::1718761583
 Bear animation working maybe.png::CompressedTexture2D::1438600483917201321::1718761522::1718761525::1::::<><>::
-working bera ranime hentai.png::CompressedTexture2D::1247812193831158018::1718667292::1718667293::1::::<><>::
 ::res://assets/items/::1718140162
 taco.png::CompressedTexture2D::5892817019424531040::1717985552::1718140162::1::::<><>::
 ::res://assets/start screen/::1716173286
@@ -20,10 +19,10 @@ file (1).png::CompressedTexture2D::5620943075005483460::1715811920::1716173286::
 desktop.ini::TextFile::-1::1715816362::0::1::::<><>::
 pedro_tiles.png::CompressedTexture2D::3992697112924620511::1716171404::1716171404::1::::<><>::
 ::res://scenes/::1718159396
-::res://scenes/enemies/::1718761404
+::res://scenes/enemies/::1718761858
 border_patrol_guard.gd::GDScript::-1::1716517174::0::1::::<>CharacterBody2D<>::
 enemy.gd::GDScript::-1::1718676572::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::7991142136265741125::1718761404::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://r1pjw57w6v35::::res://assets/enemies/working bera ranime hentai.png
+enemy.tscn::PackedScene::7991142136265741125::1718761858::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://uq4sl83cu4fl::::res://assets/enemies/Bear animation working maybe.png
 ::res://scenes/items/::1718758282
 taco.gd::GDScript::-1::1718230785::0::1::::<>Area2D<>::
 taco.tscn::PackedScene::7542733002611890796::1718758282::0::1::::<><>::res://scenes/items/taco.gd<>uid://cp7r3nw60km05::::res://assets/items/taco.png

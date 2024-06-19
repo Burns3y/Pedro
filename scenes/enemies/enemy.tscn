@@ -79,7 +79,8 @@ libraries = {
 autoplay = "Bear_walking"
 
 [node name="BearAnimationWorkingMaybe" type="Sprite2D" parent="."]
-position = Vector2(3, 85)
+position = Vector2(0, 3)
+scale = Vector2(0.0806452, 0.0806452)
 texture = ExtResource("2_of6e6")
 hframes = 4
 
