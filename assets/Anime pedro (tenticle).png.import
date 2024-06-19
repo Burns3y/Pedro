@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g4cvkrgjehfy"
-path="res://.godot/imported/Pedro.png-b0786900698d0266f269df8944506491.ctex"
+uid="uid://cplg0n10eyuc3"
+path="res://.godot/imported/Anime pedro (tenticle).png-ff9a4505d5ca650a042f0daf2567fd6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pedro.png"
-dest_files=["res://.godot/imported/Pedro.png-b0786900698d0266f269df8944506491.ctex"]
+source_file="res://assets/Anime pedro (tenticle).png"
+dest_files=["res://.godot/imported/Anime pedro (tenticle).png-ff9a4505d5ca650a042f0daf2567fd6d.ctex"]
 
 [params]
 

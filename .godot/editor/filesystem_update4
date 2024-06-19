@@ -4,3 +4,4 @@ res://scenes/player/pedro.tscn
 res://scenes/UI/stats.tscn
 res://scenes/levels/Start Screen/start_screen.tscn
 res://scenes/items/taco.tscn
+res://scenes/player/pedro.gd

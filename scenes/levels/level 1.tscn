@@ -77,7 +77,7 @@ layer_0/tile_data = PackedInt32Array(655360, 65537, 0, 720896, 1, 1, 786432, 1, 
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Pedro" parent="." instance=ExtResource("4_josbn")]
-position = Vector2(304, 469)
+position = Vector2(304, 476)
 scale = Vector2(1.15731, 0.907039)
 
 [node name="UI" type="Node2D" parent="."]

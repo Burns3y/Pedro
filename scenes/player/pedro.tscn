@@ -1,22 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://61bcos6b4c8a"]
+[gd_scene load_steps=7 format=3 uid="uid://61bcos6b4c8a"]
 
 [ext_resource type="Script" path="res://scenes/player/pedro.gd" id="1_kkii7"]
-[ext_resource type="Texture2D" uid="uid://g4cvkrgjehfy" path="res://assets/Pedro.png" id="3_r3yk8"]
+[ext_resource type="Texture2D" uid="uid://cplg0n10eyuc3" path="res://assets/Anime pedro (tenticle).png" id="2_0ghv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1pm"]
-size = Vector2(28, 44)
+size = Vector2(41, 66)
+
+[sub_resource type="Animation" id="Animation_7diq0"]
+resource_name = "Pedro_walking"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pedroanimation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+}
+
+[sub_resource type="Animation" id="Animation_j6rjc"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pedroanimation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cc1q1"]
+_data = {
+"Pedro_walking": SubResource("Animation_7diq0"),
+"RESET": SubResource("Animation_j6rjc")
+}
 
 [node name="Pedro" type="CharacterBody2D" groups=["Player"]]
 collision_mask = 7
 script = ExtResource("1_kkii7")
 
 [node name="CollisionShapeBody3" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -11)
 shape = SubResource("RectangleShape2D_7u1pm")
-
-[node name="PedroImage" type="Sprite2D" parent="."]
-position = Vector2(11.75, 6.25)
-scale = Vector2(1.335, 1.325)
-texture = ExtResource("3_r3yk8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -24,3 +56,15 @@ limit_top = 0
 limit_right = 6233
 limit_bottom = 720
 position_smoothing_enabled = true
+
+[node name="Pedroanimation" type="Sprite2D" parent="."]
+position = Vector2(1, -22)
+scale = Vector2(0.483349, 0.483349)
+texture = ExtResource("2_0ghv0")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cc1q1")
+}
+autoplay = "Pedro_walking"

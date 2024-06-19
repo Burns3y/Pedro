@@ -54,11 +54,11 @@ func _physics_process(delta):
 
 		#Flipping image depending on direction
 		if direction == -1:
-			$PedroImage.flip_h = true
-			$PedroImage.offset.x = -18
+			$Pedroanimation.flip_h = true
+			$Pedroanimation.offset.x = -18
 		elif direction == 1:
-			$PedroImage.flip_h = false
-			$PedroImage.offset.x = 0
+			$Pedroanimation.flip_h = false
+			$Pedroanimation.offset.x = 0
 			
 		move_and_slide()
 		

@@ -1,15 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718834267
+::res://::1718837567
 icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715723894::1::::<><>::
 README.md::TextFile::-1::1715556632::0::1::::<><>::
 Timer.gd::GDScript::-1::1718235457::0::1::::<>Timer<>::
 timer.tscn::PackedScene::4155893859958310243::1718235457::0::1::::<><>::res://Timer.gd
-::res://assets/::1718761504
+::res://assets/::1718837567
+Anime pedro (tenticle).png::CompressedTexture2D::5848791848166230736::1718837553::1718837568::1::::<><>::
 circle.png::CompressedTexture2D::3301507179259064626::1718761456::1718761504::1::::<><>::
-Pedro.png::CompressedTexture2D::481159504133445134::1716761846::1716762081::1::::<><>::
+pedro animtatititittititiition-1.png.png::CompressedTexture2D::4333929072766024126::1718836699::1718836700::1::::<><>::
 ::res://assets/backgrounds/::1718235457
 orange dessert with cacti.png::CompressedTexture2D::979199603935751591::1718235457::1718235457::1::::<><>::
-::res://assets/enemies/::1718761583
+::res://assets/enemies/::1718837567
 Bear animation working maybe.png::CompressedTexture2D::1438600483917201321::1718761522::1718761525::1::::<><>::
 ::res://assets/items/::1718140162
 taco.png::CompressedTexture2D::5892817019424531040::1717985552::1718140162::1::::<><>::
@@ -19,23 +20,23 @@ file (1).png::CompressedTexture2D::5620943075005483460::1715811920::1716173286::
 desktop.ini::TextFile::-1::1715816362::0::1::::<><>::
 pedro_tiles.png::CompressedTexture2D::3992697112924620511::1716171404::1716171404::1::::<><>::
 ::res://scenes/::1718159396
-::res://scenes/enemies/::1718834251
+::res://scenes/enemies/::1718837146
 border_patrol_guard.gd::GDScript::-1::1716517174::0::1::::<>CharacterBody2D<>::
 enemy.gd::GDScript::-1::1718834251::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::7991142136265741125::1718831895::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://uq4sl83cu4fl::::res://assets/enemies/Bear animation working maybe.png
-::res://scenes/items/::1718831895
+enemy.tscn::PackedScene::7991142136265741125::1718837146::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://uq4sl83cu4fl::::res://assets/enemies/Bear animation working maybe.png
+::res://scenes/items/::1718837146
 taco.gd::GDScript::-1::1718230785::0::1::::<>Area2D<>::
-taco.tscn::PackedScene::7542733002611890796::1718831895::0::1::::<><>::res://scenes/items/taco.gd<>uid://cp7r3nw60km05::::res://assets/items/taco.png
-::res://scenes/levels/::1718831894
+taco.tscn::PackedScene::7542733002611890796::1718837146::0::1::::<><>::res://scenes/items/taco.gd<>uid://cp7r3nw60km05::::res://assets/items/taco.png
+::res://scenes/levels/::1718837146
 level 1.gd::GDScript::-1::1718676572::0::1::::<>Node2D<>::
-level 1.tscn::PackedScene::4302208723476667012::1718831894::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://n7ljlhtjbr6n::::res://assets/backgrounds/orange dessert with cacti.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
-::res://scenes/levels/Start Screen/::1718831894
+level 1.tscn::PackedScene::4302208723476667012::1718837146::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://n7ljlhtjbr6n::::res://assets/backgrounds/orange dessert with cacti.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
+::res://scenes/levels/Start Screen/::1718837146
 file (1).png::CompressedTexture2D::7348703133297401075::1715811999::1715811953::1::::<><>::
 start_screen.gd::GDScript::-1::1718676572::0::1::::<>CanvasLayer<>::
-start_screen.tscn::PackedScene::5285938156543290688::1718831894::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
-::res://scenes/player/::1718831894
-pedro.gd::GDScript::-1::1718761456::0::1::::<>CharacterBody2D<>::
-pedro.tscn::PackedScene::2229593027509493570::1718831894::0::1::::<><>::res://scenes/player/pedro.gd<>uid://g4cvkrgjehfy::::res://assets/Pedro.png
-::res://scenes/UI/::1718831894
+start_screen.tscn::PackedScene::5285938156543290688::1718837146::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+::res://scenes/player/::1718837146
+pedro.gd::GDScript::-1::1718837093::0::1::::<>CharacterBody2D<>::
+pedro.tscn::PackedScene::2229593027509493570::1718837146::0::1::::<><>::res://scenes/player/pedro.gd<>uid://b20ngcramtcmg::::res://assets/pedro animtatititittititiition-1.png.png
+::res://scenes/UI/::1718837146
 stats.gd::GDScript::-1::1718317837::0::1::::<>CanvasLayer<>::
-stats.tscn::PackedScene::6981506424700935880::1718831894::0::1::::<><>::res://scenes/UI/stats.gd
+stats.tscn::PackedScene::6981506424700935880::1718837146::0::1::::<><>::res://scenes/UI/stats.gd
