@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dl377cv5wwebd"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_jrwv4"]
-[ext_resource type="Texture2D" uid="uid://r1pjw57w6v35" path="res://assets/enemies/working bera ranime hentai.png" id="2_te20n"]
+[ext_resource type="Texture2D" uid="uid://uq4sl83cu4fl" path="res://assets/enemies/Bear animation working maybe.png" id="2_of6e6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
 size = Vector2(103, 65)
@@ -14,19 +14,19 @@ size = Vector2(105.5, 63)
 
 [sub_resource type="Animation" id="Animation_ip61q"]
 resource_name = "Bear_walking"
-length = 1.5
+length = 0.9
 loop_mode = 1
 step = 0.2
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("WorkingBeraRanimeHentai:frame")
+tracks/0/path = NodePath("BearAnimationWorkingMaybe:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+"points": PackedFloat32Array(3, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8)
 }
 
 [sub_resource type="Animation" id="Animation_qjnf4"]
@@ -34,7 +34,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("WorkingBeraRanimeHentai:frame")
+tracks/0/path = NodePath("BearAnimationWorkingMaybe:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,10 +78,9 @@ libraries = {
 }
 autoplay = "Bear_walking"
 
-[node name="WorkingBeraRanimeHentai" type="Sprite2D" parent="."]
-position = Vector2(1.90735e-06, 11)
-scale = Vector2(0.079304, 0.079304)
-texture = ExtResource("2_te20n")
+[node name="BearAnimationWorkingMaybe" type="Sprite2D" parent="."]
+position = Vector2(3, 85)
+texture = ExtResource("2_of6e6")
 hframes = 4
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
