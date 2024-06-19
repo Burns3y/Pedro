@@ -14,7 +14,6 @@ size = Vector2(105.5, 63)
 
 [sub_resource type="Animation" id="Animation_ip61q"]
 resource_name = "Bear_walking"
-length = 0.8
 loop_mode = 1
 step = 0.2
 tracks/0/type = "bezier"
@@ -26,7 +25,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
 "points": PackedFloat32Array(3, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8)
 }
 
 [sub_resource type="Animation" id="Animation_qjnf4"]
