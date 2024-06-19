@@ -32,20 +32,21 @@ func _on_start_screen_started():
 	if $Pedro.ended:
 		level = 2
 		$Pedro.ended = false
+		print("Pedro ended")
 	
 	var taco_spawn_points
 	var enemy_spawn_points
 	if level == 1:
 		taco_spawn_points = level_1_taco_spawn_points
 		enemy_spawn_points = level_1_enemy_spawn_points
-		$Lvl1Map.position.y = 0
-		$Lvl2Map.position.y = 870
+		$Tilemaps/Lvl1Map.position.y = 0
+		$Tilemaps/Lvl2Map.position.y = 870
 		
 	elif level == 2:
 		taco_spawn_points = level_2_taco_spawn_points
 		enemy_spawn_points = level_2_enemy_spawn_points
-		$Lvl1Map.position.y = -1180
-		$Lvl2Map.position.y = 0
+		$Tilemaps/Lvl1Map.position.y = -1180
+		$Tilemaps/Lvl2Map.position.y = 0
 		
 		
 	#Spawning Tacos
@@ -81,8 +82,11 @@ func remove_tacos():
 
 func restart():
 	$UI/Start_Screen.SIGNAL = false
-	$UI/Start_Screen/Panel/quit_button.disabled = false
-	$UI/Start_Screen/Panel/start_button.disabled = false
+	#Enable buttons
+	for i in $UI/Start_Screen/Panel.get_children():
+		if i is Button:
+			i.disabled = false
+			
 	call_deferred("remove_enemies")
 	call_deferred("remove_tacos")
 
