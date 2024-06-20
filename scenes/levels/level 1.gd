@@ -7,8 +7,8 @@ signal pause(game_is_paused)
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
 var taco_scene: PackedScene = preload("res://scenes/items/taco.tscn")
 
-var tutorial_taco_spawn_points = [Vector2(475, 1475), Vector2(3975, 180)]
-var tutorial_enemy_spawn_points = [Vector2(1000, 550), Vector2(2000, 550), Vector2(2600, 550)]
+var tutorial_taco_spawn_points = [Vector2(1100, 475), Vector2(4675, 120)]
+var tutorial_enemy_spawn_points = [Vector2(1750, 550), Vector2(2700, 550), Vector2(3300, 550)]
 
 var level_1_taco_spawn_points = [Vector2(875, 437), Vector2(1876, 286), Vector2(2726, 140), Vector2(4975, 221), Vector2(5675, 69)]
 var level_1_enemy_spawn_points = [Vector2(791, 536), Vector2(3000, 500), Vector2(4088, 517)]
@@ -33,7 +33,8 @@ func _process(_delta):
 func _on_start_screen_started():
 	
 	if $Pedro.ended:
-		level = 2
+		if level < 2:
+			level += 1
 		$Pedro.ended = false
 	
 	var taco_spawn_points

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cplg0n10eyuc3" path="res://assets/Anime pedro (tenticle).png" id="2_0ghv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1pm"]
-size = Vector2(41, 66)
+size = Vector2(22, 50)
 
 [sub_resource type="Animation" id="Animation_7diq0"]
 resource_name = "Pedro_walking"
@@ -47,7 +47,6 @@ collision_mask = 7
 script = ExtResource("1_kkii7")
 
 [node name="CollisionShapeBody3" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -11)
 shape = SubResource("RectangleShape2D_7u1pm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -58,8 +57,8 @@ limit_bottom = 720
 position_smoothing_enabled = true
 
 [node name="Pedroanimation" type="Sprite2D" parent="."]
-position = Vector2(1, -22)
-scale = Vector2(0.483349, 0.483349)
+position = Vector2(0, -8)
+scale = Vector2(0.353754, 0.357143)
 texture = ExtResource("2_0ghv0")
 hframes = 4
 
