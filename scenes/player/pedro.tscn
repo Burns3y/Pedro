@@ -50,6 +50,7 @@ script = ExtResource("1_kkii7")
 shape = SubResource("RectangleShape2D_7u1pm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_top = 0
 limit_right = 6233

@@ -18,17 +18,32 @@ func _on_start_screen_started():
 
 
 func _physics_process(delta):
+	#If is in cave
 	if position.y >= 700 and $"..".level == 2:
+		#Changes camera
 		$Camera2D.limit_bottom = 2000
-		$Camera2D.position_smoothing_speed = 1
-
+		$Camera2D.position_smoothing_speed = 2
+		$Camera2D.zoom = Vector2(1.5, 1.5)
+		#Darkens scene
+		while $"../Tilemaps/Lvl2Map/DirectionalLight2D".energy < 0.8:
+			$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
+			await get_tree().create_timer(3.0).timeout
+			
+	#If is in cave
 	elif position.y > 550 and position.x < 600:
+		#Changes camera
 		$Camera2D.limit_bottom = 2000
-		$Camera2D.position_smoothing_speed = 1
-
+		$Camera2D.position_smoothing_speed = 2
+		#Darkens scene
+		$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0.8
+	
+	#If not in cave
 	else:
 		$Camera2D.limit_bottom = 720
 		$Camera2D.position_smoothing_speed = 5
+		$Camera2D.zoom = Vector2(1, 1)
+		#Lightens scene
+		$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0
 	
 	if started and not ended and not $"..".game_is_paused:
 		# Add the gravity.
@@ -63,7 +78,7 @@ func _physics_process(delta):
 			
 		move_and_slide()
 		
-		if position.x > 5714.75 and is_on_floor():
+		if position.x > 5714.4 and is_on_floor():
 			ended = true
 			$"..".restart()
 		elif $"..".level == 0 and position.x > 4712 and is_on_floor():
