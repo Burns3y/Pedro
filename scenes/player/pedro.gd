@@ -63,10 +63,10 @@ func _physics_process(delta):
 			
 		move_and_slide()
 		
-		if position.x > 5714.5 and is_on_floor():
+		if position.x > 5714.75 and is_on_floor():
 			ended = true
 			$"..".restart()
-		elif $"..".level == 0 and position.x > 4700 and is_on_floor():
+		elif $"..".level == 0 and position.x > 4712 and is_on_floor():
 			ended = true
 			$"..".restart()
 

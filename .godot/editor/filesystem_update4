@@ -6,4 +6,3 @@ res://scenes/levels/Start Screen/start_screen.tscn
 res://scenes/enemies/enemy.tscn
 res://scenes/items/taco.tscn
 res://scenes/player/pedro.gd
-res://scenes/levels/level 1.gd
