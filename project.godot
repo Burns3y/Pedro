@@ -21,6 +21,13 @@ window/size/viewport_width=1080
 window/size/viewport_height=720
 window/stretch/mode="viewport"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "blue",
+"res://scenes/": "red"
+}
+
 [input]
 
 jump={

@@ -19,11 +19,17 @@ func starting_game():
 func _on_start_button_pressed():
 	starting_game()
 
+func _on_tutorial_button_pressed():
+	$"../../Pedro".ended = false
+	$"../..".level = 0
+	starting_game()
+	
+	
 func _on_quit_button_pressed():
 	get_tree().quit()
 
-func _on_tutorial_button_pressed():
-	pass # Replace with function body.
+
+	
 
 func _on_level_1_button_pressed():
 	$"../../Pedro".ended = false
@@ -56,3 +62,5 @@ func _process(_delta):
 			if i is Button:
 				i.disabled = false
 		$Panel/start_button.text = "Restart"
+
+

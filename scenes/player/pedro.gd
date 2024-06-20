@@ -49,9 +49,12 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 
 		# Wall jump
-		elif Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
+		if Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
 			velocity.y = JUMP_VELOCITY 
-
+			
+		elif $"..".level == 0 and Input.is_action_just_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 3800:
+			velocity.y = JUMP_VELOCITY
+			
 		#Flipping image depending on direction
 		if direction == -1:
 			$Pedroanimation.flip_h = true
@@ -63,6 +66,9 @@ func _physics_process(delta):
 		move_and_slide()
 		
 		if position.x > 5714.5 and is_on_floor():
+			ended = true
+			$"..".restart()
+		elif $"..".level == 0 and position.x > 4000 and is_on_floor():
 			ended = true
 			$"..".restart()
 
