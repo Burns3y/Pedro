@@ -111,8 +111,8 @@ func player_killed_enemy(enemy_position):
 
 func spawn_taco(taco_position):
 	var new_taco = taco_scene.instantiate()
-	$Items.add_child(new_taco)
 	new_taco.position = taco_position
+	$Items.call_deferred("add_child", new_taco)
 	#Connecting signal
 	new_taco.connect("taco_collected", self._on_taco_collected)
 	new_taco.name = "Taco"

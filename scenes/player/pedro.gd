@@ -26,8 +26,9 @@ func _physics_process(delta):
 		$Camera2D.zoom = Vector2(1.5, 1.5)
 		#Darkens scene
 		while $"../Tilemaps/Lvl2Map/DirectionalLight2D".energy < 0.8:
-			$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
-			await get_tree().create_timer(3.0).timeout
+			if position.y >= 700 and $"..".level == 2:
+				$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
+				await get_tree().create_timer(3.0).timeout
 			
 	#If is in cave
 	elif position.y > 550 and position.x < 600:
@@ -77,10 +78,10 @@ func _physics_process(delta):
 		# Wall jump
 		if Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
 			velocity.y = JUMP_VELOCITY 
-			
+
 		elif $"..".level == 0 and Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 4500:
 			velocity.y = JUMP_VELOCITY
-			
+
 		#Flipping image depending on direction
 		if direction == -1:
 			$Pedroanimation.flip_h = true
@@ -94,7 +95,7 @@ func _physics_process(delta):
 			$PedroIdle.offset.x = 0			
 		move_and_slide()
 		
-		if position.x > 5714.4 and is_on_floor():
+		if position.x > 5711 and is_on_floor():
 			ended = true
 			$"..".restart()
 		elif $"..".level == 0 and position.x > 4712 and is_on_floor():
@@ -105,7 +106,6 @@ func _physics_process(delta):
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false
-
 
 
 #Level 1 pedro cam bottom 720

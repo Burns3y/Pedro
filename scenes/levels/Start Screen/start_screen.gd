@@ -29,8 +29,6 @@ func _on_quit_button_pressed():
 	get_tree().quit()
 
 
-	
-
 func _on_level_1_button_pressed():
 	$"../../Pedro".ended = false
 	$"../..".level = 1
@@ -39,10 +37,11 @@ func _on_level_1_button_pressed():
 
 func _process(_delta):
 
-		
 	if $"../../Pedro".ended:
 		SIGNAL = false
 		$Panel.modulate.a = 1
+		if $"../..".level != 2:
+			$Panel/start_button.text = "Next Level"
 		
 	elif SIGNAL == true and not $"../..".game_is_paused:
 		
@@ -57,7 +56,7 @@ func _process(_delta):
 
 	if $"../..".game_is_paused and not $"../../Pedro".ended:
 		$Panel.modulate.a = 1
-		
+
 		for i in $Panel.get_children():
 			if i is Button:
 				i.disabled = false
