@@ -49,13 +49,22 @@ func _physics_process(delta):
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta + 10
+			$PedroIdle.modulate.a = 0
+			$Pedroanimation.modulate.a = 0
+			$PedroJumping.modulate.a = 1
 
 		## Get the input direction and handle the movement/deceleration.
 		var direction = Input.get_axis("left", "right")
 		if direction and NO_WALL_JUMP == 0:
 			velocity.x = direction * SPEED * delta
+			$PedroIdle.modulate.a = 0
+			$Pedroanimation.modulate.a = 1
+			$PedroJumping.modulate.a = 0
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+			$Pedroanimation.modulate.a = 0
+			$PedroIdle.modulate.a = 1
+			$PedroJumping.modulate.a = 0
 
 
 		#JUMPING MECHANICS
@@ -73,8 +82,10 @@ func _physics_process(delta):
 		#Flipping image depending on direction
 		if direction == -1:
 			$Pedroanimation.flip_h = true
+			$PedroIdle.flip_h = true
 		elif direction == 1:
 			$Pedroanimation.flip_h = false
+			$PedroIdle.flip_h = false
 			
 		move_and_slide()
 		
