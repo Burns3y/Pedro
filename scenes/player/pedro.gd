@@ -108,7 +108,17 @@ func _physics_process(delta):
 		elif $"..".level == 0 and position.x > 4712 and is_on_floor():
 			ended = true
 			$"..".restart()
-
+	
+	#head hitting (speed up when head on roof)
+		var WAS_ON_CEILING = false
+		if is_on_ceiling() == true:
+			SPEED = 30000
+			WAS_ON_CEILING = true
+		elif is_on_ceiling() == false:
+			if WAS_ON_CEILING == true:
+				print("not on ceilingigngin")
+				await get_tree().create_timer(1).timeout
+				SPEED = 13000
 
 func _on_player_died():
 	position = Vector2(304, 469)
