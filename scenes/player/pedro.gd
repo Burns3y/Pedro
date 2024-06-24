@@ -16,14 +16,21 @@ func _on_start_screen_started():
 	started = true
 	position = Vector2(304, 469)
 
-
 func _physics_process(delta):
+	#If player falls off map
+	if position.y > 2000:
+		position = Vector2(304, 469)
+		started = false
+		$"..".restart()
+		$"../UI/Stats".ended = true
+
 	#If is in cave
 	if position.y >= 700 and $"..".level == 2:
 		#Changes camera
 		$Camera2D.limit_bottom = 2000
 		$Camera2D.position_smoothing_speed = 2
 		$Camera2D.zoom = Vector2(1.5, 1.5)
+		
 		#Darkens scene
 		while $"../Tilemaps/Lvl2Map/DirectionalLight2D".energy < 0.8:
 			if position.y >= 700 and $"..".level == 2:
@@ -106,6 +113,3 @@ func _physics_process(delta):
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false
-
-
-#Level 1 pedro cam bottom 720
