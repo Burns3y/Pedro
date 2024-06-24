@@ -14,7 +14,7 @@ loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Pedroanimation:frame")
+tracks/0/path = NodePath("Images/Pedroanimation:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -28,7 +28,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Pedroanimation:frame")
+tracks/0/path = NodePath("Images/Pedroanimation:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -58,25 +58,27 @@ limit_right = 6233
 limit_bottom = 720
 position_smoothing_enabled = true
 
-[node name="Pedroanimation" type="Sprite2D" parent="."]
-position = Vector2(-0.500002, -6.96831)
-scale = Vector2(0.313869, 0.316875)
-texture = ExtResource("2_0ghv0")
-hframes = 4
-
-[node name="PedroJumping" type="Sprite2D" parent="."]
-position = Vector2(-0.500002, -6.96831)
-scale = Vector2(0.313869, 0.316875)
-texture = ExtResource("2_0ghv0")
-hframes = 4
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_cc1q1")
 }
 autoplay = "Pedro_walking"
 
-[node name="PedroIdle" type="Sprite2D" parent="."]
+[node name="Images" type="Node2D" parent="."]
+
+[node name="Pedroanimation" type="Sprite2D" parent="Images"]
+position = Vector2(-0.500002, -6.96831)
+scale = Vector2(0.313869, 0.316875)
+texture = ExtResource("2_0ghv0")
+hframes = 4
+
+[node name="PedroJumping" type="Sprite2D" parent="Images"]
+position = Vector2(-0.500002, -6.96831)
+scale = Vector2(0.313869, 0.316875)
+texture = ExtResource("2_0ghv0")
+hframes = 4
+
+[node name="PedroIdle" type="Sprite2D" parent="Images"]
 position = Vector2(11, 7)
 scale = Vector2(1.21, 1.26)
 texture = ExtResource("3_q5f4o")

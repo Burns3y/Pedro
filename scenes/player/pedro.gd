@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal player_died
 
 var NO_WALL_JUMP = 0
-var SPEED = 13000
+@export var SPEED = 13000
 const JUMP_VELOCITY = -600
 var started: bool = false
 var ended: bool = false
@@ -57,24 +57,24 @@ func _physics_process(delta):
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta + 10
-			$PedroIdle.modulate.a = 0
-			$Pedroanimation.modulate.a = 0
-			$PedroJumping.modulate.a = 1
+			$Images/PedroIdle.modulate.a = 0
+			$Images/Pedroanimation.modulate.a = 0
+			$Images/PedroJumping.modulate.a = 1
 
 		## Get the input direction and handle the movement/deceleration.
 		var direction = Input.get_axis("left", "right")
 		if direction and NO_WALL_JUMP == 0:
 			velocity.x = direction * SPEED * delta
 			if is_on_floor():
-				$PedroIdle.modulate.a = 0
-				$Pedroanimation.modulate.a = 1
-				$PedroJumping.modulate.a = 0
+				$Images/PedroIdle.modulate.a = 0
+				$Images/Pedroanimation.modulate.a = 1
+				$Images/PedroJumping.modulate.a = 0
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			if is_on_floor():
-				$Pedroanimation.modulate.a = 0
-				$PedroIdle.modulate.a = 1
-				$PedroJumping.modulate.a = 0
+				$Images/Pedroanimation.modulate.a = 0
+				$Images/PedroIdle.modulate.a = 1
+				$Images/PedroJumping.modulate.a = 0
 
 
 		#JUMPING MECHANICS
@@ -91,15 +91,15 @@ func _physics_process(delta):
 
 		#Flipping image depending on direction
 		if direction == -1:
-			$Pedroanimation.flip_h = true
-			$PedroIdle.flip_h = true
-			$PedroJumping.flip_h = true
-			$PedroIdle.offset.x = -15
+			for image in $Images.get_children():
+				image.flip_h = true
+			$Images/PedroIdle.offset.x = -15
+
 		elif direction == 1:
-			$Pedroanimation.flip_h = false
-			$PedroIdle.flip_h = false
-			$PedroJumping.flip_h = false
-			$PedroIdle.offset.x = 0			
+			for image in $Images.get_children():
+				image.flip_h = false
+			$Images/PedroIdle.offset.x = 0
+
 		move_and_slide()
 		
 		if position.x > 5711 and is_on_floor():
