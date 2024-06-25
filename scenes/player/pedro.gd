@@ -8,6 +8,8 @@ const JUMP_VELOCITY = -600
 var started: bool = false
 var ended: bool = false
 var is_paused: bool = false
+var WAS_ON_CEILING = false
+var ceiling_calc
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -108,17 +110,19 @@ func _physics_process(delta):
 		elif $"..".level == 0 and position.x > 4712 and is_on_floor():
 			ended = true
 			$"..".restart()
-	
+			
 	#head hitting (speed up when head on roof)
-		var WAS_ON_CEILING = false
-		if is_on_ceiling() == true:
+		if is_on_ceiling_only():
 			SPEED = 30000
 			WAS_ON_CEILING = true
-		elif is_on_ceiling() == false:
+			print(WAS_ON_CEILING)
+		else:
+			print("not on ceilingigngin")
 			if WAS_ON_CEILING == true:
-				print("not on ceilingigngin")
 				await get_tree().create_timer(1).timeout
-				SPEED = 13000
+				if WAS_ON_CEILING == true:
+					SPEED = 13000
+					WAS_ON_CEILING = false
 
 func _on_player_died():
 	position = Vector2(304, 469)
