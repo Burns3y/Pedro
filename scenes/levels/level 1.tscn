@@ -1121,11 +1121,6 @@ position = Vector2(3109, 353)
 scale = Vector2(1.08619, 1.08619)
 texture = ExtResource("2_nkett")
 
-[node name="OrangeDessertWithCacti4" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(999, 1046)
-scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_nkett")
-
 [node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(5191, 353)
 scale = Vector2(1.08619, 1.08619)
@@ -1339,20 +1334,67 @@ position = Vector2(0, 602)
 energy = 0.0
 blend_mode = 1
 
-[node name="Torch" parent="Tilemaps/Lvl2Map" instance=ExtResource("4_hyl5j")]
+[node name="Torches" type="Node2D" parent="Tilemaps/Lvl2Map"]
+
+[node name="Torch" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
 position = Vector2(2040, 1950)
 
-[node name="Torch2" parent="Tilemaps/Lvl2Map" instance=ExtResource("4_hyl5j")]
+[node name="Torch2" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
 position = Vector2(2696, 1950)
 
-[node name="Torch4" parent="Tilemaps/Lvl2Map" instance=ExtResource("4_hyl5j")]
+[node name="Torch4" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
 position = Vector2(2696, 1756)
 
-[node name="Torch3" parent="Tilemaps/Lvl2Map" instance=ExtResource("4_hyl5j")]
+[node name="Torch3" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
 position = Vector2(2040, 1758)
 
-[node name="Torch5" parent="Tilemaps/Lvl2Map" instance=ExtResource("4_hyl5j")]
+[node name="Torch5" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
 position = Vector2(1360, 1762)
+
+[node name="Torch6" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(1360, 1948)
+
+[node name="Torch7" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(156, 1948)
+
+[node name="Torch8" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(156, 1156)
+
+[node name="Torch9" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(776, 1372)
+
+[node name="Torch10" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(3138, 1848)
+
+[node name="Torch11" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(4000, 1594)
+
+[node name="Torch12" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(4906, 1684)
+
+[node name="Torch13" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(5608, 1950)
+
+[node name="Torch14" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(7668, 1938)
+
+[node name="Torch15" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(8356, 1942)
+
+[node name="Torch16" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(9106, 1942)
+
+[node name="Torch17" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(9840, 1694)
+
+[node name="Torch18" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(10382, 1694)
+
+[node name="Torch19" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(10104, 2060)
+
+[node name="Torch20" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_hyl5j")]
+position = Vector2(11252, 1938)
 
 [node name="Enemies" type="Node2D" parent="."]
 

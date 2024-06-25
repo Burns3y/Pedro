@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://w238iqcsjng6"]
+[gd_scene load_steps=4 format=3 uid="uid://w238iqcsjng6"]
 
 [ext_resource type="Texture2D" uid="uid://c3sbyr1335kv7" path="res://assets/items/torch_unanimated.png" id="1_3hvgm"]
+[ext_resource type="Script" path="res://scenes/items/torch.gd" id="2_54bti"]
 [ext_resource type="Texture2D" uid="uid://bnbjlucgpjgxu" path="res://assets/circle.png" id="2_lj4dq"]
 
 [node name="Torch" type="Sprite2D"]
 position = Vector2(5, 1)
 scale = Vector2(0.92, 0.92)
 texture = ExtResource("1_3hvgm")
+script = ExtResource("2_54bti")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-5.43478, -15.2174)
-color = Color(0.976471, 0.862745, 0.478431, 1)
+color = Color(0.980392, 0.898039, 0.615686, 1)
 energy = 1.2
 shadow_enabled = true
 texture = ExtResource("2_lj4dq")

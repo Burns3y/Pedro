@@ -105,7 +105,7 @@ func restart():
 	call_deferred("remove_tacos")
 
 func player_killed_enemy(enemy_position):
-	#Spawns a taco when the enemy dies
+	#Spawns a taco then the enemy dies
 	spawn_taco(enemy_position)
 
 
