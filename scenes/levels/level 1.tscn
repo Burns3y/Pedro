@@ -1,10 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=31 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_cfhtt"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="2_ibqr6"]
 [ext_resource type="Texture2D" uid="uid://n7ljlhtjbr6n" path="res://assets/backgrounds/orange dessert with cacti.png" id="2_nkett"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_6idkb"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_josbn"]
+[ext_resource type="PackedScene" uid="uid://b87up5nptn1rj" path="res://scenes/items/torch.tscn" id="4_uxhqi"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="7_wjxst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf8v0"]
@@ -1345,6 +1346,95 @@ layer_0/tile_data = PackedInt32Array(655360, 65537, 0, 720896, 1, 1, 786432, 1, 
 position = Vector2(0, 602)
 energy = 0.0
 blend_mode = 1
+
+[node name="Torches" type="Node2D" parent="Tilemaps/Lvl2Map"]
+
+[node name="Torch" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(3502, 1598)
+
+[node name="Torch2" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(2956, 1746)
+
+[node name="Torch3" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(2356, 1746)
+
+[node name="Torch4" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(1756, 1746)
+
+[node name="Torch5" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(1156, 1746)
+
+[node name="Torch6" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(892, 1498)
+
+[node name="Torch7" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(690, 1298)
+
+[node name="Torch8" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(246, 1150)
+
+[node name="Torch9" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(146, 1856)
+
+[node name="Torch10" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(650, 1956)
+
+[node name="Torch11" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(1250, 1956)
+
+[node name="Torch12" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(1850, 1956)
+
+[node name="Torch13" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(2450, 1956)
+
+[node name="Torch14" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(3050, 1956)
+
+[node name="Torch15" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(3802, 1804)
+
+[node name="Torch16" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(3988, 1600)
+
+[node name="Torch17" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(4744, 1600)
+
+[node name="Torch18" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(4948, 1800)
+
+[node name="Torch19" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(5130, 1906)
+
+[node name="Torch20" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(6350, 1954)
+
+[node name="Torch21" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(5750, 1954)
+
+[node name="Torch22" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(6950, 1954)
+
+[node name="Torch23" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(7652, 1860)
+
+[node name="Torch24" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(8696, 1860)
+
+[node name="Torch25" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(9858, 1706)
+
+[node name="Torch26" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(10350, 1706)
+
+[node name="Torch27" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(9670, 2060)
+
+[node name="Torch28" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(10518, 2060)
+
+[node name="Torch29" parent="Tilemaps/Lvl2Map/Torches" instance=ExtResource("4_uxhqi")]
+position = Vector2(11252, 1938)
 
 [node name="Enemies" type="Node2D" parent="."]
 
