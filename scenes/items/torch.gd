@@ -24,5 +24,4 @@ func _process(_delta):
 	Tween.interpolate_value(initial_colour, new_flicker_colour,5 , 16, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	initial_colour = new_flicker_colour
 	$PointLight2D.color = new_flicker_colour
-	print("INTERPOLATED VALUE AAAAAA\nInitial colour:", initial_colour, "\nNew flicker colour:", new_flicker_colour)
 	await get_tree().create_timer(10.0).timeout

@@ -62,6 +62,9 @@ func _physics_process(delta):
 			$PedroIdle.modulate.a = 0
 			$Pedroanimation.modulate.a = 0
 			$PedroJumping.modulate.a = 1
+			
+		if is_on_ceiling_only():
+			head_hitting()
 
 		## Get the input direction and handle the movement/deceleration.
 		var direction = Input.get_axis("left", "right")
@@ -112,8 +115,6 @@ func _physics_process(delta):
 			$"..".restart()
 			
 			#WAS_ON_CEILING = true
-		if is_on_ceiling():
-			head_hitting()
 			#ceiling_calc = 1
 		#else:
 			#ceiling_calc = 0
@@ -121,24 +122,24 @@ func _physics_process(delta):
 			#if ceiling_calc == 0:
 				#SPEED = 13000
 func head_hitting():
-		#head hitting (speed up when head on roof)
-		#if is_on_ceiling():
-		WAS_ON_CEILING = true
-		if WAS_ON_CEILING:
-			SPEED = 30000
-			ceiling_calc = 0
-			for i in range(10):
-				while ceiling_calc != 10:
-					await get_tree().create_timer(0.5).timeout
-					ceiling_calc += 1
-					print(ceiling_calc)
-					if ceiling_calc == 10:
-						print(ceiling_calc)
-						SPEED = 13000
-						break
-					if is_on_ceiling():
-						print("broken")
-						break
+	if true:
+		print("IN THE FUNC")
+		for i in range(500):
+			if ceiling_calc < 50:
+				SPEED = 30000
+				await get_tree().create_timer(0.05).timeout
+				ceiling_calc += 1
+				print(ceiling_calc)
+			if ceiling_calc == 50:
+				SPEED = 13000
+				ceiling_calc = 0
+				break
+			if is_on_ceiling():
+				ceiling_calc = 0
+				break
+			if ceiling_calc > 50:
+				ceiling_calc = 0
+				break
 
 func _on_player_died():
 	position = Vector2(304, 469)
