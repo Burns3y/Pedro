@@ -9,7 +9,7 @@ var started: bool = false
 var ended: bool = false
 var is_paused: bool = false
 var WAS_ON_CEILING = false
-var ceiling_calc
+var ceiling_calc = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -111,18 +111,34 @@ func _physics_process(delta):
 			ended = true
 			$"..".restart()
 			
-	#head hitting (speed up when head on roof)
-		if is_on_ceiling_only():
+			#WAS_ON_CEILING = true
+		if is_on_ceiling():
+			head_hitting()
+			#ceiling_calc = 1
+		#else:
+			#ceiling_calc = 0
+			#await get_tree().create_timer(1).timeout
+			#if ceiling_calc == 0:
+				#SPEED = 13000
+func head_hitting():
+		#head hitting (speed up when head on roof)
+		#if is_on_ceiling():
+		WAS_ON_CEILING = true
+		if WAS_ON_CEILING:
 			SPEED = 30000
-			WAS_ON_CEILING = true
-			print(WAS_ON_CEILING)
-		else:
-			print("not on ceilingigngin")
-			if WAS_ON_CEILING == true:
-				await get_tree().create_timer(1).timeout
-				if WAS_ON_CEILING == true:
-					SPEED = 13000
-					WAS_ON_CEILING = false
+			ceiling_calc = 0
+			for i in range(10):
+				while ceiling_calc != 10:
+					await get_tree().create_timer(0.5).timeout
+					ceiling_calc += 1
+					print(ceiling_calc)
+					if ceiling_calc == 10:
+						print(ceiling_calc)
+						SPEED = 13000
+						break
+					if is_on_ceiling():
+						print("broken")
+						break
 
 func _on_player_died():
 	position = Vector2(304, 469)
