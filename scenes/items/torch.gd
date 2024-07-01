@@ -19,17 +19,23 @@ func _ready():
 
 
 func start_torch_flicker(flicker_colour):
+	var random_time = randi() % 20 + 1
+	random_time = float(random_time)
 	var tween = get_tree().create_tween()
-	tween.tween_property($PointLight2D, "color", flicker_colour, 1)
+	#var energy_changing = -0.5
+	tween.tween_property($PointLight2D, "color", flicker_colour, random_time / 5)
+	#tween.parallel()
+	#tween.tween_property($PointLight2D, "energy", $PointLight2D.energy + energy_changing, random_time)
+	$Timer.wait_time = random_time / 5
 	$Timer.start()
+
+
+func _on_timer_timeout():
+	flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
+	start_torch_flicker(flicker_colour)
+
 
 
 func _process(_delta):
 	if self == $"../Torch28":
 		print($PointLight2D.color)
-
-
-func _on_timer_timeout():
-	print("Timer ended")
-	flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
-	start_torch_flicker(flicker_colour)
