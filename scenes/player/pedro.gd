@@ -123,21 +123,19 @@ func _physics_process(delta):
 				#SPEED = 13000
 func head_hitting():
 	if true:
-		print("IN THE FUNC")
 		for i in range(500):
-			if ceiling_calc < 50:
+			if ceiling_calc < 20:
 				SPEED = 30000
 				await get_tree().create_timer(0.05).timeout
 				ceiling_calc += 1
-				print(ceiling_calc)
-			if ceiling_calc == 50:
+			if ceiling_calc == 20:
 				SPEED = 13000
 				ceiling_calc = 0
 				break
 			if is_on_ceiling():
 				ceiling_calc = 0
 				break
-			if ceiling_calc > 50:
+			if ceiling_calc > 20:
 				ceiling_calc = 0
 				break
 

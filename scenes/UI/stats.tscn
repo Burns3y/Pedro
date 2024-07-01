@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6p5nj1fodfa3"]
+[gd_scene load_steps=3 format=3 uid="uid://c6p5nj1fodfa3"]
 
 [ext_resource type="Script" path="res://scenes/UI/stats.gd" id="1_uama8"]
+[ext_resource type="PackedScene" uid="uid://ci2s8cmcpmkln" path="res://shop.tscn" id="2_l2bja"]
 
 [node name="Stats" type="CanvasLayer"]
 script = ExtResource("1_uama8")
@@ -13,13 +14,105 @@ offset_bottom = 33.0
 text = "Timer: 0 : 0 : 0"
 
 [node name="ScoreText" type="Label" parent="."]
-offset_left = 992.0
-offset_top = 10.0
-offset_right = 1072.0
-offset_bottom = 33.0
+offset_left = 975.0
+offset_top = 14.0
+offset_right = 1055.0
+offset_bottom = 37.0
 text = "Score: 0"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
 
+[node name="Shop" type="Button" parent="."]
+offset_left = 713.0
+offset_top = 420.0
+offset_right = 809.0
+offset_bottom = 451.0
+text = "Shop"
+flat = true
+icon_alignment = 1
+
+[node name="Node2D" parent="." instance=ExtResource("2_l2bja")]
+position = Vector2(-43, 9)
+
+[node name="total_tacos" type="TextEdit" parent="Node2D"]
+offset_left = 600.0
+offset_top = 167.0
+offset_right = 961.0
+offset_bottom = 263.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0139131, 9.8124e-05, 7.7859e-05, 1)
+theme_override_colors/font_selected_color = Color(0.0471824, 0.0179824, 0.0579755, 1)
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.986752, 0.986752, 0.986752, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/current_line_color = Color(0.977937, 0.977937, 0.977937, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tacos: "
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="Nitght time" type="Button" parent="Node2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 265.0
+offset_top = 313.0
+offset_right = 841.0
+offset_bottom = 392.0
+theme_override_font_sizes/font_size = 30
+text = "Night Time Background   -  20 Tacos"
+flat = true
+alignment = 0
+expand_icon = true
+
+[node name="Jump Boost" type="Button" parent="Node2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 267.0
+offset_top = 378.0
+offset_right = 907.0
+offset_bottom = 457.0
+theme_override_font_sizes/font_size = 30
+text = "Jump Boost                         - 20 Tacos"
+flat = true
+alignment = 0
+icon_alignment = 1
+expand_icon = true
+
+[node name="Taco Multiplier" type="Button" parent="Node2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 263.0
+offset_top = 449.0
+offset_right = 903.0
+offset_bottom = 528.0
+theme_override_font_sizes/font_size = 30
+text = "Taco Mulitplier                   - 20 Tacos"
+flat = true
+alignment = 0
+icon_alignment = 1
+expand_icon = true
+
+[node name="Back" type="Button" parent="Node2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 941.0
+offset_top = 648.0
+offset_right = 1581.0
+offset_bottom = 727.0
+theme_override_font_sizes/font_size = 30
+text = "Go Back"
+flat = true
+alignment = 0
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Node2D/Back" to="." method="_on_back_pressed"]

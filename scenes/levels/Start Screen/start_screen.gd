@@ -36,7 +36,6 @@ func _on_level_1_button_pressed():
 
 
 func _process(_delta):
-
 	if $"../../Pedro".ended:
 		SIGNAL = false
 		$Panel.modulate.a = 1
@@ -61,5 +60,3 @@ func _process(_delta):
 			if i is Button:
 				i.disabled = false
 		$Panel/start_button.text = "Restart"
-
-
