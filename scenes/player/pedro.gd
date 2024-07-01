@@ -10,7 +10,7 @@ var ended: bool = false
 var is_paused: bool = false
 var WAS_ON_CEILING = false
 var ceiling_calc = 0
-var head_hit_time = 7
+var head_hit_time = 20
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
