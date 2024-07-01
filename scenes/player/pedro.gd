@@ -10,7 +10,7 @@ var ended: bool = false
 var is_paused: bool = false
 var WAS_ON_CEILING = false
 var ceiling_calc = 0
-var just_hit_head = false
+var head_hit_time = 7
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -66,11 +66,6 @@ func _physics_process(delta):
 			
 		if is_on_ceiling_only():
 			head_hitting()
-			
-		elif not is_on_floor() and not just_hit_head:
-			SPEED = 14000
-		elif not just_hit_head:
-			SPEED = 13000
 
 		## Get the input direction and handle the movement/deceleration.
 		var direction = Input.get_axis("left", "right")
@@ -119,28 +114,21 @@ func _physics_process(delta):
 		elif $"..".level == 0 and position.x > 4712 and is_on_floor():
 			ended = true
 			$"..".restart()
-			
-			#WAS_ON_CEILING = true
-			#ceiling_calc = 1
-		#else:
-			#ceiling_calc = 0
-			#await get_tree().create_timer(1).timeout
-			#if ceiling_calc == 0:
-				#SPEED = 13000
+
 func head_hitting():
 	for i in range(500):
-		if ceiling_calc < 20:
-			SPEED = 30000
+		if ceiling_calc < head_hit_time:
+			SPEED *= 1.5
 			await get_tree().create_timer(0.05).timeout
 			ceiling_calc += 1
-		if ceiling_calc == 20:
+		if ceiling_calc == head_hit_time:
 			SPEED = 13000
 			ceiling_calc = 0
 			break
 		if is_on_ceiling():
 			ceiling_calc = 0
 			break
-		if ceiling_calc > 20:
+		if ceiling_calc > head_hit_time:
 			ceiling_calc = 0
 			break
 func _on_player_died():
