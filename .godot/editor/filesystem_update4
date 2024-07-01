@@ -6,4 +6,4 @@ res://scenes/enemies/enemy.tscn
 res://scenes/items/taco.tscn
 res://scenes/player/pedro.tscn
 res://scenes/items/torch.tscn
-res://scenes/items/torch.gd
+res://scenes/UI/stats.gd
