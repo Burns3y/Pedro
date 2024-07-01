@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfp0yfnkd2pbg"]
+[gd_scene load_steps=6 format=3 uid="uid://dfp0yfnkd2pbg"]
 
 [ext_resource type="Script" path="res://scenes/items/taco.gd" id="1_mihe7"]
-[ext_resource type="Texture2D" uid="uid://cp7r3nw60km05" path="res://assets/items/taco.png" id="1_tlh3q"]
+[ext_resource type="Texture2D" uid="uid://bwvi7c5e0wtv0" path="res://assets/Taco image with centering.png" id="2_3r878"]
+
+[sub_resource type="Animation" id="Animation_wuq1r"]
+resource_name = "Taco animated"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TacoImageWithCentering:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_uvbtg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TacoImageWithCentering:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bki64"]
+_data = {
+"RESET": SubResource("Animation_uvbtg"),
+"Taco animated": SubResource("Animation_wuq1r")
+}
 
 [node name="Taco" type="Area2D"]
 script = ExtResource("1_mihe7")
@@ -10,8 +48,16 @@ script = ExtResource("1_mihe7")
 scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(32, -1, -37, -1, -37, -6, -36, -10, -28, -18, -24, -20, -11, -24, 4, -24, 15, -22, 19, -20, 23, -18, 31, -9)
 
-[node name="TacoImage" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_tlh3q")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bki64")
+}
+autoplay = "Taco animated"
+
+[node name="TacoImageWithCentering" type="Sprite2D" parent="."]
+position = Vector2(-1.655, -3.25)
+scale = Vector2(0.1275, 0.1275)
+texture = ExtResource("2_3r878")
+hframes = 4
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
