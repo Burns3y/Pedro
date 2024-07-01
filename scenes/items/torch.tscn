@@ -1,18 +1,66 @@
-[gd_scene load_steps=4 format=3 uid="uid://b87up5nptn1rj"]
+[gd_scene load_steps=7 format=3 uid="uid://b87up5nptn1rj"]
 
-[ext_resource type="Texture2D" uid="uid://cdw7hshd7tukc" path="res://assets/items/torch_unanimated.png" id="1_aptsl"]
 [ext_resource type="Script" path="res://scenes/items/torch.gd" id="2_5wkv2"]
 [ext_resource type="Texture2D" uid="uid://bnbjlucgpjgxu" path="res://assets/circle.png" id="2_ssxau"]
+[ext_resource type="Texture2D" uid="uid://bjq16dkhpt622" path="res://assets/items/Blake_torches-jpeg-svg-gif.png" id="4_yqid1"]
+
+[sub_resource type="Animation" id="Animation_qm4fl"]
+resource_name = "Flicker"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_o60sk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2dgx"]
+_data = {
+"Flicker": SubResource("Animation_qm4fl"),
+"RESET": SubResource("Animation_o60sk")
+}
 
 [node name="Torch" type="Sprite2D"]
-position = Vector2(7, 5)
+position = Vector2(1, 5)
 scale = Vector2(1.12, 1.12)
-texture = ExtResource("1_aptsl")
+texture = ExtResource("4_yqid1")
+hframes = 4
 script = ExtResource("2_5wkv2")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-5.35716, -14.2857)
+position = Vector2(-0.892857, -7.14286)
 energy = 1.3
 texture = ExtResource("2_ssxau")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e2dgx")
+}
+autoplay = "Flicker"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
