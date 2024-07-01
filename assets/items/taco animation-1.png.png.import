@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwvi7c5e0wtv0"
-path="res://.godot/imported/Taco image with centering.png-6f24059106138dd4c7420e56eaf28214.ctex"
+uid="uid://d2xx6g33ll5hs"
+path="res://.godot/imported/taco animation-1.png.png-919738eb9320c4a70bb763ea7c1a8044.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Taco image with centering.png"
-dest_files=["res://.godot/imported/Taco image with centering.png-6f24059106138dd4c7420e56eaf28214.ctex"]
+source_file="res://assets/items/taco animation-1.png.png"
+dest_files=["res://.godot/imported/taco animation-1.png.png-919738eb9320c4a70bb763ea7c1a8044.ctex"]
 
 [params]
 
