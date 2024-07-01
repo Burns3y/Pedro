@@ -128,39 +128,21 @@ func _physics_process(delta):
 			#if ceiling_calc == 0:
 				#SPEED = 13000
 func head_hitting():
-<<<<<<< HEAD
-	if true:
-		for i in range(500):
-			if ceiling_calc < 20:
-				SPEED = 30000
-				await get_tree().create_timer(0.05).timeout
-				ceiling_calc += 1
-			if ceiling_calc == 20:
-				SPEED = 13000
-				ceiling_calc = 0
-				break
-			if is_on_ceiling():
-				ceiling_calc = 0
-				break
-			if ceiling_calc > 20:
-				ceiling_calc = 0
-				break
-=======
-	just_hit_head = true
-	while just_hit_head:
-		if ceiling_calc < 10:
-			SPEED = 18000
+	for i in range(500):
+		if ceiling_calc < 20:
+			SPEED = 30000
 			await get_tree().create_timer(0.05).timeout
 			ceiling_calc += 1
-		if ceiling_calc >= 10:
+		if ceiling_calc == 20:
 			SPEED = 13000
 			ceiling_calc = 0
-			just_hit_head = false
+			break
 		if is_on_ceiling():
 			ceiling_calc = 0
-			just_hit_head = false
->>>>>>> 6125021722d8c8b9b4ac250a18517abfee40121c
-
+			break
+		if ceiling_calc > 20:
+			ceiling_calc = 0
+			break
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false

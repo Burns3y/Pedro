@@ -34,6 +34,7 @@ scale = Vector2(0.411765, 0.411765)
 texture = ExtResource("1_nlhww")
 
 [node name="TextEdit" type="TextEdit" parent="TextEdit2"]
+layout_mode = 0
 offset_left = 260.0
 offset_top = 176.0
 offset_right = 621.0
