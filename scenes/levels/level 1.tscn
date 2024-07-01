@@ -1126,8 +1126,13 @@ script = ExtResource("1_cfhtt")
 [node name="Backgrounds" type="Node2D" parent="."]
 position = Vector2(0, -30)
 
+[node name="CaveBG" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(3128.31, 1975)
+scale = Vector2(4.97728, 2.77728)
+texture = ExtResource("3_a85j2")
+
 [node name="OrangeDessertWithCacti" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(1036, 353)
+position = Vector2(1036, 361)
 scale = Vector2(1.08619, 1.08619)
 texture = ExtResource("2_nkett")
 
@@ -1137,14 +1142,9 @@ scale = Vector2(1.08619, 1.08619)
 texture = ExtResource("2_nkett")
 
 [node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(5191, 353)
+position = Vector2(5191, 363)
 scale = Vector2(1.08619, 1.08619)
 texture = ExtResource("2_nkett")
-
-[node name="CaveBG" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(3127.31, 1977)
-scale = Vector2(4.97728, 2.77728)
-texture = ExtResource("3_a85j2")
 
 [node name="BackWall" type="StaticBody2D" parent="."]
 position = Vector2(-30, 1)
