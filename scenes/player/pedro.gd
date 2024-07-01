@@ -20,7 +20,6 @@ func _on_start_screen_started():
 	position = Vector2(304, 469)
 
 func _physics_process(delta):
-	print(SPEED)
 	#If player falls off map
 	if position.y > 2000:
 		position = Vector2(304, 469)

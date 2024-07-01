@@ -10,18 +10,26 @@ Color(0.973, 0.847, 0.424),
 Color(0.98, 0.898, 0.616)
 ]
 
-var new_flicker_colour
-var initial_colour
-# Called when the node enters the scene tree for the first time.
+var flicker_colour
+var ended_flicker
+
 func _ready():
-	initial_colour = fire_rgbs[randi() % fire_rgbs.size()]
+	flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
+	start_torch_flicker(flicker_colour)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func start_torch_flicker(flicker_colour):
+	var tween = get_tree().create_tween()
+	tween.tween_property($PointLight2D, "color", flicker_colour, 1)
+	$Timer.start()
+
+
 func _process(_delta):
-	new_flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
-	#$PointLight2D.color = flicker_colour
-	Tween.interpolate_value(initial_colour, new_flicker_colour,5 , 16, Tween.TRANS_LINEAR, Tween.EASE_IN)
-	initial_colour = new_flicker_colour
-	$PointLight2D.color = new_flicker_colour
-	await get_tree().create_timer(10.0).timeout
+	if self == $"../Torch28":
+		print($PointLight2D.color)
+
+
+func _on_timer_timeout():
+	print("Timer ended")
+	flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
+	start_torch_flicker(flicker_colour)
