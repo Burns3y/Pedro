@@ -1,9 +1,6 @@
-<<<<<<< HEAD
+Timer
 TextEdit
 Panel
-=======
-Timer
->>>>>>> 6125021722d8c8b9b4ac250a18517abfee40121c
 Node2D
 PointLight2D
 Sprite2D
@@ -15,4 +12,3 @@ TileMap
 AnimatedSprite2D
 CanvasLayer
 CollisionPolygon2D
-Area2D
