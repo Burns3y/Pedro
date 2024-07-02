@@ -40,6 +40,6 @@ func start_torch_flicker(flicker_colour):
 func _on_timer_timeout():
 	var flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
 	start_torch_flicker(flicker_colour)
-	if randi() % 2 == 1:
+	if randi() % 3 == 1:
 		$CPUParticles2D.emitting = true
 

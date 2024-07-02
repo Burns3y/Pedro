@@ -7,6 +7,4 @@ res://scenes/enemies/enemy.tscn
 res://scenes/items/taco.tscn
 res://scenes/player/pedro.tscn
 res://scenes/items/torch.tscn
-res://scenes/levels/level 1.gd
-res://scenes/player/pedro.gd
 res://scenes/items/torch.gd

@@ -39,6 +39,14 @@ func _physics_process(delta):
 			if position.y >= 700 and $"..".level == 2:
 				$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
 				await get_tree().create_timer(3.0).timeout
+			
+	#If is in cave
+	elif position.y > 550 and position.x < 600:
+		#Changes camera
+		$Camera2D.limit_bottom = 2000
+		$Camera2D.position_smoothing_speed = 2
+		#Darkens scene
+		$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0.8
 	
 	#If not in cave
 	else:

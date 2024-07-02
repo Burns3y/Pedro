@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719954487
+::res://::1719873922
 icon.svg::CompressedTexture2D::1929323658878216135::1716705158::1716705158::1::::<><>::
 README.md::TextFile::-1::1718846739::0::1::::<><>::
-shop.tscn::PackedScene::5391242276614485819::1719875302::0::1::::<><>::uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+shop.tscn::PackedScene::5391242276614485819::1719872676::0::1::::<><>::uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
 Timer.gd::GDScript::-1::1718852790::0::1::::<>Timer<>::
 timer.tscn::PackedScene::4155893859958310243::1718315227::0::1::::<><>::res://Timer.gd
 ::res://assets/::1719868792
@@ -28,25 +28,25 @@ file (1).png::CompressedTexture2D::5620943075005483460::1716705158::1716705158::
 desktop.ini::TextFile::-1::1716705158::0::1::::<><>::
 pedro_tiles.png::CompressedTexture2D::3992697112924620511::1716705158::1716705158::1::::<><>::
 ::res://scenes/::1718352096
-::res://scenes/enemies/::1719875302
+::res://scenes/enemies/::1719873867
 border_patrol_guard.gd::GDScript::-1::1716807663::0::1::::<>CharacterBody2D<>::
 enemy.gd::GDScript::-1::1718845817::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::7991142136265741125::1719875302::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://uq4sl83cu4fl::::res://assets/enemies/Bear animation working maybe.png
-::res://scenes/items/::1719875303
+enemy.tscn::PackedScene::7991142136265741125::1719873867::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://uq4sl83cu4fl::::res://assets/enemies/Bear animation working maybe.png
+::res://scenes/items/::1719872676
 taco.gd::GDScript::-1::1718852790::0::1::::<>Area2D<>::
-taco.tscn::PackedScene::7542733002611890796::1719875302::0::1::::<><>::res://scenes/items/taco.gd<>uid://bwvi7c5e0wtv0::::res://assets/items/Taco image with centering.png
-torch.gd::GDScript::-1::1719874893::0::1::::<>Sprite2D<>::
-torch.tscn::PackedScene::4769955335132410347::1719875303::0::1::::<><>::res://scenes/items/torch.gd<>uid://bnbjlucgpjgxu::::res://assets/circle.png<>uid://bjq16dkhpt622::::res://assets/items/Blake_torches-jpeg-svg-gif.png
-::res://scenes/levels/::1719875302
+taco.tscn::PackedScene::7542733002611890796::1719872676::0::1::::<><>::res://scenes/items/taco.gd<>uid://bwvi7c5e0wtv0::::res://assets/items/Taco image with centering.png
+torch.gd::GDScript::-1::1719867898::0::1::::<>Sprite2D<>::
+torch.tscn::PackedScene::4769955335132410347::1719872676::0::1::::<><>::res://scenes/items/torch.gd<>uid://bnbjlucgpjgxu::::res://assets/circle.png<>uid://bjq16dkhpt622::::res://assets/items/Blake_torches-jpeg-svg-gif.png
+::res://scenes/levels/::1719872675
 level 1.gd::GDScript::-1::1719350989::0::1::::<>Node2D<>::
-level 1.tscn::PackedScene::4302208723476667012::1719875302::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://n7ljlhtjbr6n::::res://assets/backgrounds/orange dessert with cacti.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://d0mlrwye28jju::::res://assets/backgrounds/Screenshot 2024-06-29 at 1.32.38 PM.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://b87up5nptn1rj::::res://scenes/items/torch.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
-::res://scenes/levels/Start Screen/::1719875302
+level 1.tscn::PackedScene::4302208723476667012::1719872675::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://n7ljlhtjbr6n::::res://assets/backgrounds/orange dessert with cacti.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://d0mlrwye28jju::::res://assets/backgrounds/Screenshot 2024-06-29 at 1.32.38 PM.png<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://b87up5nptn1rj::::res://scenes/items/torch.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
+::res://scenes/levels/Start Screen/::1719872676
 file (1).png::CompressedTexture2D::7348703133297401075::1717018183::1717018183::1::::<><>::
 start_screen.gd::GDScript::-1::1719797924::0::1::::<>CanvasLayer<>::
-start_screen.tscn::PackedScene::5285938156543290688::1719875302::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
-::res://scenes/player/::1719886532
-pedro.gd::GDScript::-1::1719886532::0::1::::<>CharacterBody2D<>::
-pedro.tscn::PackedScene::2229593027509493570::1719875302::0::1::::<><>::res://scenes/player/pedro.gd<>uid://cplg0n10eyuc3::::res://assets/Anime pedro (tenticle).png<>uid://do7co6b4ftmnv::::res://assets/pedro idle.png
-::res://scenes/UI/::1719875302
-stats.gd::GDScript::-1::1719873926::0::1::::<>CanvasLayer<>::
-stats.tscn::PackedScene::6981506424700935880::1719875302::0::1::::<><>::res://scenes/UI/stats.gd<>uid://ci2s8cmcpmkln::::res://shop.tscn
+start_screen.tscn::PackedScene::5285938156543290688::1719872676::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+::res://scenes/player/::1719873899
+pedro.gd::GDScript::-1::1719873899::0::1::::<>CharacterBody2D<>::
+pedro.tscn::PackedScene::2229593027509493570::1719872676::0::1::::<><>::res://scenes/player/pedro.gd<>uid://cplg0n10eyuc3::::res://assets/Anime pedro (tenticle).png<>uid://do7co6b4ftmnv::::res://assets/pedro idle.png
+::res://scenes/UI/::1719872676
+stats.gd::GDScript::-1::1719872561::0::1::::<>CanvasLayer<>::
+stats.tscn::PackedScene::6981506424700935880::1719872676::0::1::::<><>::res://scenes/UI/stats.gd<>uid://ci2s8cmcpmkln::::res://shop.tscn
