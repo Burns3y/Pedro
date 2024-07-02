@@ -7,7 +7,7 @@ signal player_killed_enemy(position)
 var is_paused: bool = false
 
 #Creates movement variables
-const SPEED = 150.0
+const SPEED = 125.0
 var direction = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var frame = 0
@@ -30,9 +30,11 @@ func _physics_process(delta):
 		
 		#Changes icon direction when it hits a wall so character points in the right direction
 		if direction.x == -1:
-			$BearAnimationWorkingMaybe.flip_h = false
+			$BearWithoutFloating.flip_h = false
+			$BearWithoutFloating.offset.x = 0
 		elif direction.x == 1:
-			$BearAnimationWorkingMaybe.flip_h = true
+			$BearWithoutFloating.flip_h = true
+			$BearWithoutFloating.offset.x = -9
 
 
 		move_and_slide()
