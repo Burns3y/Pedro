@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dfp0yfnkd2pbg"]
 
 [ext_resource type="Script" path="res://scenes/items/taco.gd" id="1_mihe7"]
-[ext_resource type="Texture2D" uid="uid://bwvi7c5e0wtv0" path="res://assets/items/Taco image with centering.png" id="2_3r878"]
+[ext_resource type="Texture2D" uid="uid://bwvi7c5e0wtv0" path="res://assets/items/Taco image with centering.png" id="2_jenfi"]
 
 [sub_resource type="Animation" id="Animation_uvbtg"]
 length = 0.001
@@ -57,7 +57,7 @@ autoplay = "Taco animated"
 [node name="TacoImageWithCentering" type="Sprite2D" parent="."]
 position = Vector2(-1.655, -3.25)
 scale = Vector2(0.1275, 0.1275)
-texture = ExtResource("2_3r878")
+texture = ExtResource("2_jenfi")
 hframes = 4
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

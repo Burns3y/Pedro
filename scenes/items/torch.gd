@@ -27,9 +27,10 @@ func start_torch_flicker(flicker_colour):
 	#$AnimationPlayer.play("Flicker")
 	#self.frame = 0
 	tween.tween_property($PointLight2D, "color", flicker_colour, random_time / 5)
-	print("Flickered")
 	#tween.parallel()
 	#tween.tween_property($PointLight2D, "energy", $PointLight2D.energy + energy_changing, random_time)
+	
+	
 	
 	#Setting up timer
 	$Timer.wait_time = random_time / 5
@@ -39,4 +40,6 @@ func start_torch_flicker(flicker_colour):
 func _on_timer_timeout():
 	var flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
 	start_torch_flicker(flicker_colour)
+	if randi() % 3 == 1:
+		$CPUParticles2D.emitting = true
 
