@@ -10,7 +10,7 @@ var ended: bool = false
 var is_paused: bool = false
 var WAS_ON_CEILING = false
 var ceiling_calc = 0
-var head_hit_time = 20
+var head_hit_time = 5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -118,7 +118,10 @@ func _physics_process(delta):
 func head_hitting():
 	for i in range(500):
 		if ceiling_calc < head_hit_time:
-			SPEED *= 1.5
+			while SPEED != 20000:
+				SPEED += 1
+				if is_on_ceiling():
+					break
 			await get_tree().create_timer(0.05).timeout
 			ceiling_calc += 1
 		if ceiling_calc == head_hit_time:
