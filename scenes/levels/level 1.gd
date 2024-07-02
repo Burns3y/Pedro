@@ -16,7 +16,7 @@ var level_1_enemy_spawn_points = [Vector2(791, 536), Vector2(3000, 500), Vector2
 var level_2_taco_spawn_points = [Vector2(220, 978), Vector2(670, 978), Vector2(1120, 978), Vector2(1570, 978), Vector2(2150, 776), Vector2(2550, 978), Vector2(3050, 978), Vector2(3600, 978), Vector2(4350, 915), Vector2(4725, 979), Vector2(5050, 875), Vector2(1027, 468), Vector2(1457, 468), Vector2(2125, 503), Vector2(2925, 268), Vector2(3475, 418), Vector2(4125, 418), Vector2(4800, 323), Vector2(5675, 69)]
 var level_2_enemy_spawn_points = [Vector2(1189, 540), Vector2(1964, 645), Vector2(3460, 548), Vector2(4111, 556), Vector2(2911, 448), Vector2(5041, 1029), Vector2(5269, 384)]
 
-
+#<600 >1200
 func _on_taco_collected():
 	$UI/Stats.increase_score()
 
