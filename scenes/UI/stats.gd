@@ -30,14 +30,13 @@ func _process(_delta):
 	if ($Timer.is_stopped() and $"../Start_Screen".SIGNAL) or $"../../Pedro".ended:
 		$Shop.modulate.a = 1
 		if not $"../..".game_is_paused:
-			$Shop.modulate.a = 0
 			$Timer.start()
+			$Shop.modulate.a = 0
 	
 	if $"../Start_Screen".SIGNAL:
 		score_added = false
 	
 	if $"../../Pedro".ended:
-		$Shop.modulate.a = 1
 		if score_added == false:
 			total_score += score
 			$Node2D/total_tacos.text = "Tacos: " + str(total_score)
