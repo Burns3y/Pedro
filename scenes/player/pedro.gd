@@ -20,41 +20,47 @@ func _on_start_screen_started():
 	position = Vector2(304, 469)
 
 func _physics_process(delta):
+	'''Tutorial level only'''
+	if level == 0:
+		print()
+	
+	'''Level 1 only'''
+	if level == 1:
+		print()
+	
+
+	
+	'''Level 2 only'''
+	if level == 2:
+		#If is in cave
+		if position.y >= 700 and $"..".level == 2:
+			#Changes camera
+			$Camera2D.limit_bottom = 2000
+			$Camera2D.position_smoothing_speed = 2
+			$Camera2D.zoom = Vector2(1.5, 1.5)
+			
+			#Darkens scene
+			while $"../Tilemaps/Lvl2Map/DirectionalLight2D".energy < 0.8:
+				if position.y >= 700 and $"..".level == 2:
+					$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
+					await get_tree().create_timer(3.0).timeout
+		
+		#If not in cave
+		else:
+			$Camera2D.limit_bottom = 720
+			$Camera2D.position_smoothing_speed = 5
+			$Camera2D.zoom = Vector2(1, 1)
+			#Lightens scene
+			$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0
+	
+	
+	'''Everything'''
 	#If player falls off map
 	if position.y > 2000:
 		position = Vector2(304, 469)
 		started = false
 		$"..".restart()
 		$"../UI/Stats".ended = true
-
-	#If is in cave
-	if position.y >= 700 and $"..".level == 2:
-		#Changes camera
-		$Camera2D.limit_bottom = 2000
-		$Camera2D.position_smoothing_speed = 2
-		$Camera2D.zoom = Vector2(1.5, 1.5)
-		
-		#Darkens scene
-		while $"../Tilemaps/Lvl2Map/DirectionalLight2D".energy < 0.8:
-			if position.y >= 700 and $"..".level == 2:
-				$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
-				await get_tree().create_timer(3.0).timeout
-			
-	#If is in cave
-	elif position.y > 550 and position.x < 600:
-		#Changes camera
-		$Camera2D.limit_bottom = 2000
-		$Camera2D.position_smoothing_speed = 2
-		#Darkens scene
-		$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0.8
-	
-	#If not in cave
-	else:
-		$Camera2D.limit_bottom = 720
-		$Camera2D.position_smoothing_speed = 5
-		$Camera2D.zoom = Vector2(1, 1)
-		#Lightens scene
-		$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0
 	
 	if started and not ended and not $"..".game_is_paused:
 		# Add the gravity.
@@ -81,6 +87,9 @@ func _physics_process(delta):
 				$Pedroanimation.modulate.a = 0
 				$PedroIdle.modulate.a = 1
 				$PedroJumping.modulate.a = 0
+	
+
+	
 
 
 		#JUMPING MECHANICS
@@ -105,7 +114,7 @@ func _physics_process(delta):
 			$Pedroanimation.flip_h = false
 			$PedroIdle.flip_h = false
 			$PedroJumping.flip_h = false
-			$PedroIdle.offset.x = 0			
+			$PedroIdle.offset.x = 0
 		move_and_slide()
 		
 		if position.x > 5711 and is_on_floor():
@@ -134,6 +143,9 @@ func head_hitting():
 		if ceiling_calc > head_hit_time:
 			ceiling_calc = 0
 			break
+			
+			
+			
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false

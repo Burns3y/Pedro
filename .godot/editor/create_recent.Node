@@ -1,9 +1,9 @@
+Node2D
 CPUParticles2D
 AnimationPlayer
 Timer
 TextEdit
 Panel
-Node2D
 PointLight2D
 Sprite2D
 DirectionalLight2D
@@ -12,4 +12,3 @@ LightOccluder2D
 TileMap
 AnimatedSprite2D
 CanvasLayer
-CollisionPolygon2D
