@@ -21,7 +21,7 @@ func _on_start_button_pressed():
 
 func _on_tutorial_button_pressed():
 	$"../../Pedro".ended = false
-	$"../..".level = 0
+	$"../..".current_level = 0
 	starting_game()
 	
 	
@@ -31,7 +31,7 @@ func _on_quit_button_pressed():
 
 func _on_level_1_button_pressed():
 	$"../../Pedro".ended = false
-	$"../..".level = 1
+	$"../..".current_level = 1
 	starting_game()
 
 
@@ -39,9 +39,9 @@ func _process(_delta):
 	if $"../../Pedro".ended:
 		SIGNAL = false
 		$Panel.modulate.a = 1
-		if $"../..".level != 2:
+		if $"../..".current_level < 2:
 			$Panel/start_button.text = "Next Level"
-		
+
 	elif SIGNAL == true and not $"../..".game_is_paused:
 		
 		while $Panel.modulate.a > 0:

@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://0tb148akuhqh"]
+[gd_scene load_steps=25 format=3 uid="uid://0tb148akuhqh"]
 
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="1_2ufin"]
+[ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_dylo1"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="2_2s3mx"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="3_h5n62"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="4_5x40a"]
@@ -1102,6 +1103,7 @@ default_font = SubResource("FontFile_i6hbe")
 default_font_size = 35
 
 [node name="Tutorial" type="Node2D"]
+script = ExtResource("1_dylo1")
 
 [node name="TutorialMap" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)

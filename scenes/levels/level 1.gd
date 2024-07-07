@@ -1,7 +1,7 @@
 extends Node2D
 
 var game_is_paused: bool = false
-var level = 1
+var current_level: int = 1
 signal pause(game_is_paused)
 
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
@@ -13,8 +13,11 @@ var tutorial_enemy_spawn_points = [Vector2(1750, 550), Vector2(2700, 550), Vecto
 var level_1_taco_spawn_points = [Vector2(875, 437), Vector2(1876, 286), Vector2(2726, 140), Vector2(4975, 221), Vector2(5675, 69)]
 var level_1_enemy_spawn_points = [Vector2(791, 536), Vector2(3000, 500), Vector2(4088, 517)]
 
-var level_2_taco_spawn_points = [Vector2(220, 978), Vector2(670, 978), Vector2(1120, 978), Vector2(1570, 978), Vector2(2150, 776), Vector2(2550, 978), Vector2(3050, 978), Vector2(3600, 978), Vector2(4350, 915), Vector2(4725, 979), Vector2(5050, 875), Vector2(1027, 468), Vector2(1457, 468), Vector2(2125, 503), Vector2(2925, 268), Vector2(3475, 418), Vector2(4125, 418), Vector2(4800, 323), Vector2(5675, 69)]
-var level_2_enemy_spawn_points = [Vector2(1189, 540), Vector2(1964, 645), Vector2(3460, 548), Vector2(4111, 556), Vector2(2911, 448), Vector2(5041, 1029), Vector2(5269, 384)]
+var level_2_taco_spawn_points = []
+var level_2_enemy_spawn_points = []
+
+var taco_spawn_points = [Vector2(1, 1)]
+var enemy_spawn_points = [Vector2(1, 1)]
 
 
 func _on_taco_collected():
@@ -33,35 +36,28 @@ func _process(_delta):
 func _on_start_screen_started():
 		
 	'''Tutorial level only'''
-	if level == 0:
+	if current_level == 0:
 		taco_spawn_points = tutorial_taco_spawn_points
 		enemy_spawn_points = tutorial_enemy_spawn_points
 		get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
-		$Tilemaps/TutorialMap.position.y = 0
-		$Tilemaps/Lvl1Map.position.y = -1180
-		$Tilemaps/Lvl2Map.position.y = 870
 	
 	
 		'''Level 1 only'''
-	elif level == 1:
+	elif current_level == 1:
 		get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 		taco_spawn_points = level_1_taco_spawn_points
 		enemy_spawn_points = level_1_enemy_spawn_points
-		$Tilemaps/Lvl1Map.position.y = 0
-		$Tilemaps/Lvl2Map.position.y = 870
-		$Tilemaps/TutorialMap.position.y = -1180
 	
 	
 	
 		'''Level 2 only'''
-	elif level == 2:
+	elif current_level == 2:
+		for child in $Level2EnemySpawnPoints.get_children():
+			if child.position not in level_2_enemy_spawn_points:
+				level_2_enemy_spawn_points.append(child.position)
 		get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
 		taco_spawn_points = level_2_taco_spawn_points
 		enemy_spawn_points = level_2_enemy_spawn_points
-		$Tilemaps/TutorialMap.position.y = -1180
-		$Tilemaps/Lvl1Map.position.y = -1180
-		$Tilemaps/Lvl2Map.position.y = 0
-	
 	
 	
 	'''Everything'''
@@ -69,12 +65,9 @@ func _on_start_screen_started():
 	
 	
 	if $Pedro.ended:
-		if level < 2:
-			level += 1
+		if current_level < 2:
+			current_level += 1
 		$Pedro.ended = false
-	
-	var taco_spawn_points
-	var enemy_spawn_points
 	
 		
 		
@@ -134,3 +127,7 @@ func spawn_taco(taco_position):
 	#Connecting signal
 	new_taco.connect("taco_collected", self._on_taco_collected)
 	new_taco.name = "Taco"
+
+
+func create_spawn_points():
+	pass
