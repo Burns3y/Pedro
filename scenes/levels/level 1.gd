@@ -34,14 +34,14 @@ func _process(_delta):
 
 
 func _on_start_screen_started():
-		
+
 	'''Tutorial level only'''
 	if current_level == 0:
+		get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
 		taco_spawn_points = tutorial_taco_spawn_points
 		enemy_spawn_points = tutorial_enemy_spawn_points
-		get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
-	
-	
+
+
 		'''Level 1 only'''
 	elif current_level == 1:
 		get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
@@ -52,9 +52,9 @@ func _on_start_screen_started():
 	
 		'''Level 2 only'''
 	elif current_level == 2:
-		for child in $Level2EnemySpawnPoints.get_children():
-			if child.position not in level_2_enemy_spawn_points:
-				level_2_enemy_spawn_points.append(child.position)
+		#for child in $Level2EnemySpawnPoints.get_children():
+			#if child.position not in level_2_enemy_spawn_points:
+				#level_2_enemy_spawn_points.append(child.position)
 		get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
 		taco_spawn_points = level_2_taco_spawn_points
 		enemy_spawn_points = level_2_enemy_spawn_points
@@ -63,23 +63,20 @@ func _on_start_screen_started():
 	'''Everything'''
 	
 	
-	
+	#Changes level up
 	if $Pedro.ended:
 		if current_level < 2:
 			current_level += 1
 		$Pedro.ended = false
-	
-		
-		
-		
-		
-		
+
+
 	#Spawning Tacos
 	for taco_position in taco_spawn_points:
 		spawn_taco(taco_position)
 
 	#Spawning enemies
 	for enemy_position in enemy_spawn_points:
+		#Creates a variable called new_enemy
 		var new_enemy = enemy_scene.instantiate() as CharacterBody2D
 		new_enemy.position = enemy_position
 		$Enemies.add_child(new_enemy)
@@ -103,15 +100,16 @@ func remove_enemies():
 func remove_tacos():
 	for taco in $Items.get_children():
 		$Items.remove_child(taco)
-	
+
 
 func restart():
+	print("restarted")
 	$UI/Start_Screen.SIGNAL = false
 	#Enable buttons
 	for i in $UI/Start_Screen/Panel.get_children():
 		if i is Button:
 			i.disabled = false
-			
+
 	call_deferred("remove_enemies")
 	call_deferred("remove_tacos")
 
