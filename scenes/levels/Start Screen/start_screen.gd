@@ -6,7 +6,7 @@ signal started
 
 #Removes all enemies and tacos, disables the buttons, unpauses the game
 func starting_game():
-	print($"../..".current_level)
+	print("Current level from starting_game: ", $"../..".current_level, "\nLevel to change to from starting game: ", $"../..".level_to_change_to)
 	$"../..".remove_enemies()
 	$"../..".remove_tacos()
 	SIGNAL = true
@@ -23,34 +23,33 @@ func _on_start_button_pressed():
 
 func _on_tutorial_button_pressed():
 	$"../../Pedro".ended = false
-	$"../..".current_level = 0
+	$"../..".level_to_change_to = 0
 	starting_game()
 
 
 func _on_level_1_button_pressed():
 	$"../../Pedro".ended = false
-	$"../..".current_level = 1
-	call_deferred("starting_game")
+	$"../..".level_to_change_to = 1
+	starting_game()
 
 
 func _on_quit_button_pressed():
 	get_tree().quit()
 
 
-func _process(_delta):
+func _process(delta):
 	if $"../../Pedro".ended:
-		print("Ended is true")
+		#print("Ended is true")
 		SIGNAL = false
 		$Panel.modulate.a = 1
 		if $"../..".current_level < 2:
 			$Panel/start_button.text = "Next Level"
 
 	elif SIGNAL == true and not $"../..".game_is_paused:
-		print("started and not paused")
+		#print("started and not paused")
 		
-		while $Panel.modulate.a > 0:
-			$Panel.modulate.a -= 0.05
-			await get_tree().create_timer(3.0).timeout
+		if $Panel.modulate.a > 0:
+			$Panel.modulate.a -= 2 * delta
 		$Panel/start_button.text = "Start Game"
 
 	elif $Panel.modulate.a < 1:
@@ -60,7 +59,7 @@ func _process(_delta):
 
 	if $"../..".game_is_paused and not $"../../Pedro".ended:
 		$Panel.modulate.a = 1
-		print("paused")
+		#print("paused")
 
 		for i in $Panel.get_children():
 			if i is Button:
