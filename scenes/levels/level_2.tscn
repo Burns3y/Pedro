@@ -293,6 +293,4 @@ position = Vector2(5176, 925)
 
 [node name="Level2EnemySpawnPoints" type="Node2D" parent="."]
 
-[connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
-[connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="UI/Stats" method="_on_start_screen_started"]

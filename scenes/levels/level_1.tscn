@@ -87,7 +87,6 @@ scale = Vector2(1.15731, 0.907039)
 [node name="Start_Screen" parent="UI" instance=ExtResource("7_ijmcg")]
 
 [node name="Stats" parent="UI" instance=ExtResource("8_e07a8")]
-visible = false
 
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
