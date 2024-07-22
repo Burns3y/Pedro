@@ -31,42 +31,6 @@ func _process(_delta):
 
 
 func _on_start_screen_started():
-		
-	'''Tutorial level only'''
-	if level == 0:
-		taco_spawn_points = tutorial_taco_spawn_points
-		enemy_spawn_points = tutorial_enemy_spawn_points
-		get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
-		$Tilemaps/TutorialMap.position.y = 0
-		$Tilemaps/Lvl1Map.position.y = -1180
-		$Tilemaps/Lvl2Map.position.y = 870
-	
-	
-		'''Level 1 only'''
-	elif level == 1:
-		get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
-		taco_spawn_points = level_1_taco_spawn_points
-		enemy_spawn_points = level_1_enemy_spawn_points
-		$Tilemaps/Lvl1Map.position.y = 0
-		$Tilemaps/Lvl2Map.position.y = 870
-		$Tilemaps/TutorialMap.position.y = -1180
-	
-	
-	
-		'''Level 2 only'''
-	elif level == 2:
-		get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
-		taco_spawn_points = level_2_taco_spawn_points
-		enemy_spawn_points = level_2_enemy_spawn_points
-		$Tilemaps/TutorialMap.position.y = -1180
-		$Tilemaps/Lvl1Map.position.y = -1180
-		$Tilemaps/Lvl2Map.position.y = 0
-	
-	
-	
-	'''Everything'''
-	
-	
 	
 	if $Pedro.ended:
 		if level < 2:
@@ -76,8 +40,26 @@ func _on_start_screen_started():
 	var taco_spawn_points
 	var enemy_spawn_points
 	
+	if level == 0:
+		taco_spawn_points = tutorial_taco_spawn_points
+		enemy_spawn_points = tutorial_enemy_spawn_points
+		$Tilemaps/TutorialMap.position.y = 0
+		$Tilemaps/Lvl1Map.position.y = -1180
+		$Tilemaps/Lvl2Map.position.y = 870
 		
+	elif level == 1:
+		taco_spawn_points = level_1_taco_spawn_points
+		enemy_spawn_points = level_1_enemy_spawn_points
+		$Tilemaps/Lvl1Map.position.y = 0
+		$Tilemaps/Lvl2Map.position.y = 870
+		$Tilemaps/TutorialMap.position.y = -1180
 		
+	elif level == 2:
+		taco_spawn_points = level_2_taco_spawn_points
+		enemy_spawn_points = level_2_enemy_spawn_points
+		$Tilemaps/TutorialMap.position.y = -1180
+		$Tilemaps/Lvl1Map.position.y = -1180
+		$Tilemaps/Lvl2Map.position.y = 0
 		
 		
 		
