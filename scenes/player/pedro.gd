@@ -11,6 +11,7 @@ var is_paused: bool = false
 var WAS_ON_CEILING = false
 var ceiling_calc = 0
 var head_hit_time = 5
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -19,32 +20,40 @@ func _on_start_screen_started():
 	position = Vector2(304, 469)
 
 func _physics_process(delta):
+	'''Tutorial level only'''
+	if level == 0:
+		print()
+	
+	'''Level 1 only'''
+	if level == 1:
+		print()
+	
 
 	
 	'''Level 2 only'''
-	#if $"..".current_level == 2:
-		##If is in cave
-		#if position.y >= 700 and $"..".current_level == 2:
-			##Changes camera
-			#$Camera2D.limit_bottom = 2000
-			#$Camera2D.position_smoothing_speed = 2
-			#$Camera2D.zoom = Vector2(1.5, 1.5)
-			#
-			##Darkens scene
-			#while $"../Tilemaps/Lvl2Map/DirectionalLight2D".energy < 0.8:
-				#if position.y >= 700 and $"..".current_level == 2:
-					#$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
-					#await get_tree().create_timer(3.0).timeout
-		#
-		##If not in cave
-		#else:
-			#$Camera2D.limit_bottom = 720
-			#$Camera2D.position_smoothing_speed = 5
-			#$Camera2D.zoom = Vector2(1, 1)
-			##Lightens scene
-			#$"../Lvl2Map/DirectionalLight2D".energy = 0
-	#
-	#
+	if level == 2:
+		#If is in cave
+		if position.y >= 700 and $"..".level == 2:
+			#Changes camera
+			$Camera2D.limit_bottom = 2000
+			$Camera2D.position_smoothing_speed = 2
+			$Camera2D.zoom = Vector2(1.5, 1.5)
+			
+			#Darkens scene
+			while $"../Tilemaps/Lvl2Map/DirectionalLight2D".energy < 0.8:
+				if position.y >= 700 and $"..".level == 2:
+					$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy += 0.1
+					await get_tree().create_timer(3.0).timeout
+		
+		#If not in cave
+		else:
+			$Camera2D.limit_bottom = 720
+			$Camera2D.position_smoothing_speed = 5
+			$Camera2D.zoom = Vector2(1, 1)
+			#Lightens scene
+			$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0
+	
+	
 	'''Everything'''
 	#If player falls off map
 	if position.y > 2000:
@@ -92,7 +101,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
 			velocity.y = JUMP_VELOCITY 
 
-		elif $"..".current_level == 0 and Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 4500:
+		elif $"..".level == 0 and Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 4500:
 			velocity.y = JUMP_VELOCITY
 
 		#Flipping image depending on direction
@@ -111,7 +120,7 @@ func _physics_process(delta):
 		if position.x > 5711 and is_on_floor():
 			ended = true
 			$"..".restart()
-		elif $"..".current_level == 0 and position.x > 4712 and is_on_floor():
+		elif $"..".level == 0 and position.x > 4712 and is_on_floor():
 			ended = true
 			$"..".restart()
 

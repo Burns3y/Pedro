@@ -163,134 +163,132 @@ scale = Vector2(1.15731, 0.907039)
 
 [node name="Stats" parent="UI" instance=ExtResource("6_bf1m1")]
 
-[node name="Level2TacoSpawnPoints" type="Node2D" parent="."]
+[node name="TacoSpawnPoints" type="Node2D" parent="."]
 
-[node name="TacoSpawnPoint" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1025, 473)
 
-[node name="TacoSpawnPoint2" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint2" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1474, 473)
 
-[node name="TacoSpawnPoint3" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint3" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2427, 409)
 
-[node name="TacoSpawnPoint4" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint4" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2926, 266)
 
-[node name="TacoSpawnPoint5" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint5" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(3475, 419)
 
-[node name="TacoSpawnPoint6" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint6" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(4124, 419)
 
-[node name="TacoSpawnPoint7" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint7" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(4524, 362)
 
-[node name="TacoSpawnPoint8" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint8" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(5675, 70)
 
-[node name="TacoSpawnPoint9" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint9" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1822, 870)
 
-[node name="TacoSpawnPoint10" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint10" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1223, 923)
 
-[node name="TacoSpawnPoint11" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint11" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(626, 923)
 
-[node name="TacoSpawnPoint12" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint12" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(523, 821)
 
-[node name="TacoSpawnPoint13" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint13" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(85, 1174)
 
-[node name="TacoSpawnPoint14" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint14" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(650, 1320)
 
-[node name="TacoSpawnPoint15" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint15" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(900, 1320)
 
-[node name="TacoSpawnPoint16" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint16" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1150, 1320)
 
-[node name="TacoSpawnPoint17" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint17" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1275, 1272)
 
-[node name="TacoSpawnPoint18" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint18" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1470, 1174)
 
-[node name="TacoSpawnPoint19" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint19" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1670, 1174)
 
-[node name="TacoSpawnPoint20" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint20" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1868, 1174)
 
-[node name="TacoSpawnPoint21" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint21" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2072, 1174)
 
-[node name="TacoSpawnPoint22" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint22" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2272, 1174)
 
-[node name="TacoSpawnPoint23" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint23" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2473, 1127)
 
-[node name="TacoSpawnPoint24" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint24" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2572, 1076)
 
-[node name="TacoSpawnPoint25" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint25" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2251, 874)
 
-[node name="TacoSpawnPoint26" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint26" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2077, 928)
 
-[node name="TacoSpawnPoint27" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint27" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2021, 977)
 
-[node name="TacoSpawnPoint28" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint28" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1974, 1026)
 
-[node name="TacoSpawnPoint29" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint29" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1929, 1026)
 
-[node name="TacoSpawnPoint30" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint30" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1929, 1026)
 
-[node name="TacoSpawnPoint31" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint31" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1974, 977)
 
-[node name="TacoSpawnPoint32" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint32" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1929, 977)
 
-[node name="TacoSpawnPoint33" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint33" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1974, 928)
 
-[node name="TacoSpawnPoint34" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint34" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2723, 973)
 
-[node name="TacoSpawnPoint35" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint35" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2921, 973)
 
-[node name="TacoSpawnPoint36" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint36" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(3124, 973)
 
-[node name="TacoSpawnPoint37" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint37" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(3322, 973)
 
-[node name="TacoSpawnPoint38" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint38" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(3525, 973)
 
-[node name="TacoSpawnPoint39" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint39" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(3826, 887)
 
-[node name="TacoSpawnPoint40" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint40" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(4124, 973)
 
-[node name="TacoSpawnPoint41" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint41" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(4926, 925)
 
-[node name="TacoSpawnPoint42" type="Node2D" parent="Level2TacoSpawnPoints"]
+[node name="TacoSpawnPoint42" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(5176, 925)
-
-[node name="Level2EnemySpawnPoints" type="Node2D" parent="."]
 
 [connection signal="started" from="UI/Start_Screen" to="UI/Stats" method="_on_start_screen_started"]
