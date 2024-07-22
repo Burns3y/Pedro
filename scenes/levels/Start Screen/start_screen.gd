@@ -5,13 +5,14 @@ signal started
 
 #Removes all enemies and tacos, disables the buttons, unpauses the game
 func starting_game():
+	$"../../Pedro".ended = false
 	$"../..".remove_enemies()
 	$"../..".remove_tacos()
 	SIGNAL = true
 	$"../..".game_is_paused = false
-	for i in $Panel.get_children():
-		if i is Button:
-			i.disabled = true
+	for button in $Panel.get_children():
+		if button is Button:
+			button.disabled = true
 	
 	#Emits started() signal
 	started.emit()
@@ -20,22 +21,21 @@ func _on_start_button_pressed():
 	starting_game()
 
 func _on_tutorial_button_pressed():
-	$"../../Pedro".ended = false
 	$"../..".level = 0
 	starting_game()
-	
-	
+
+
 func _on_quit_button_pressed():
 	get_tree().quit()
 
 
 func _on_level_1_button_pressed():
-	$"../../Pedro".ended = false
 	$"../..".level = 1
 	starting_game()
 
 
 func _process(_delta):
+	print(SIGNAL)
 	if $"../../Pedro".ended:
 		SIGNAL = false
 		$Panel.modulate.a = 1

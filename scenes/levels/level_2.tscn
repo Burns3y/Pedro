@@ -291,4 +291,6 @@ position = Vector2(4926, 925)
 [node name="TacoSpawnPoint42" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(5176, 925)
 
+[connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
+[connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="UI/Stats" method="_on_start_screen_started"]
