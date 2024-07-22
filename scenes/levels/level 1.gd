@@ -1,8 +1,7 @@
 extends Node2D
 
 var game_is_paused: bool = false
-var current_level: int
-var level_to_change_to: int 
+var current_level: int = 1
 signal pause(game_is_paused)
 
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
@@ -35,37 +34,28 @@ func _process(_delta):
 
 
 func _on_start_screen_started():
-	print("Current level from level node: ", current_level, "\nLevel to change to from level node: ", level_to_change_to)
 
 	'''Tutorial level only'''
-	if level_to_change_to == 0:
-		current_level = 0
-		if current_level != 0:
-			get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
-		print("Lvl0 Current level + level to change to: ", current_level, level_to_change_to)
+	if current_level == 0:
+		get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
 		taco_spawn_points = tutorial_taco_spawn_points
-		enemy_spawn_points = tutorial_enemy_spawn_points	
+		enemy_spawn_points = tutorial_enemy_spawn_points
 
 
 		'''Level 1 only'''
-	elif level_to_change_to == 1:
-		current_level = 1
-		if current_level != 1:
-			get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
-		print("Lvl1 Current level + level to change to: ", current_level, level_to_change_to)
+	elif current_level == 1:
+		get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 		taco_spawn_points = level_1_taco_spawn_points
 		enemy_spawn_points = level_1_enemy_spawn_points
 	
 	
+	
 		'''Level 2 only'''
-	elif level_to_change_to == 2:
+	elif current_level == 2:
 		#for child in $Level2EnemySpawnPoints.get_children():
 			#if child.position not in level_2_enemy_spawn_points:
 				#level_2_enemy_spawn_points.append(child.position)
-		current_level = 2
-		if current_level != 2:
-			get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
-		print("Lvl2 Current level + level to change to: ", current_level, level_to_change_to)
+		get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
 		taco_spawn_points = level_2_taco_spawn_points
 		enemy_spawn_points = level_2_enemy_spawn_points
 	
@@ -75,7 +65,6 @@ func _on_start_screen_started():
 	
 	#Changes level up
 	if $Pedro.ended:
-		print("Increasing level")
 		if current_level < 2:
 			current_level += 1
 		$Pedro.ended = false
