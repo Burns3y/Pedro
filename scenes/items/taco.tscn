@@ -52,7 +52,7 @@ polygon = PackedVector2Array(32, -1, -37, -1, -37, -6, -36, -10, -28, -18, -24, 
 libraries = {
 "": SubResource("AnimationLibrary_bki64")
 }
-autoplay = "Taco animated"
+autoplay = "RESET"
 
 [node name="TacoImageWithCentering" type="Sprite2D" parent="."]
 position = Vector2(-1.655, -3.25)

@@ -44,7 +44,7 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 7
 sources/1 = SubResource("TileSetAtlasSource_1xq0u")
 
-[node name="Level 2" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource("1_esan4")
 
 [node name="Backgrounds" type="Node2D" parent="."]

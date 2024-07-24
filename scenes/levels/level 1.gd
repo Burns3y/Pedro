@@ -1,7 +1,7 @@
 extends Node2D
 
 var game_is_paused: bool = false
-var level = 1
+var level
 signal pause(game_is_paused)
 
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
@@ -16,6 +16,11 @@ var level_2_enemy_spawn_points = [Vector2(1189, 540), Vector2(1964, 645), Vector
 
 func _on_taco_collected():
 	$UI/Stats.increase_score()
+	
+func _ready():
+	var scene_name = str(get_tree().get_current_scene().get_name())
+	level = int(scene_name[scene_name.length() - 1])
+	
 
 func _process(_delta):
 	if Input.is_action_just_pressed("pause") and not game_is_paused and not $Pedro.ended:
@@ -25,25 +30,37 @@ func _process(_delta):
 	elif Input.is_action_just_pressed("pause") and game_is_paused:
 		game_is_paused = false
 		pause.emit(game_is_paused)
+	
 
 
 func _on_start_screen_started():
+	print("Signal from level.gd: ", $UI/Start_Screen.SIGNAL)
 	var taco_spawn_points
 	var enemy_spawn_points
+	var scene_name = str(get_tree().get_current_scene().get_name())
+	var current_level = int(scene_name[scene_name.length() - 1])
 		
+	if $Pedro.ended:
+		if level < 2:
+			level += 1
+		$Pedro.ended = false
+
 	'''Tutorial level only'''
 	if level == 0:
-		get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
+		if current_level != level:
+			get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
 		enemy_spawn_points = level_0_enemy_spawn_points
 
 		'''Level 1 only'''
 	elif level == 1:
-		get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
+		if current_level != level:
+			get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 		enemy_spawn_points = level_1_enemy_spawn_points
 
 		'''Level 2 only'''
 	elif level == 2:
-		get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
+		if current_level != level:
+			get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
 		enemy_spawn_points = level_2_enemy_spawn_points
 	
 	
@@ -51,10 +68,7 @@ func _on_start_screen_started():
 	'''Everything'''
 
 
-	if $Pedro.ended:
-		if level < 2:
-			level += 1
-		$Pedro.ended = false
+
 
 
 	#Spawning Tacos
@@ -89,11 +103,10 @@ func remove_tacos():
 	
 
 func restart():
+	print("restarting")
 	$UI/Start_Screen.SIGNAL = false
 	#Enable buttons
-	for i in $UI/Start_Screen/Panel.get_children():
-		if i is Button:
-			i.disabled = false
+	$UI/Start_Screen.disable_buttons(false)
 			
 	call_deferred("remove_enemies")
 	call_deferred("remove_tacos")

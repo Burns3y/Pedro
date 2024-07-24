@@ -16,12 +16,15 @@ var head_hit_time = 5
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _on_start_screen_started():
+	if position.x > 4500:
+		ended = true
 	started = true
 	position = Vector2(304, 469)
 
 func _physics_process(delta):
 	#If is in cave
-	if position.y >= 700:
+	#If is in level 2
+	if position.y >= 700 and $"..".level == 2:
 		#Changes camera
 		$Camera2D.limit_bottom = 2000
 		$Camera2D.position_smoothing_speed = 2

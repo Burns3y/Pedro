@@ -1,5 +1,5 @@
 extends CanvasLayer
-var SIGNAL: bool = false
+var SIGNAL: bool
 
 signal started
 
@@ -8,11 +8,8 @@ func starting_game():
 	$"../../Pedro".ended = false
 	$"../..".remove_enemies()
 	$"../..".remove_tacos()
-	SIGNAL = true
 	$"../..".game_is_paused = false
-	for button in $Panel.get_children():
-		if button is Button:
-			button.disabled = true
+	SIGNAL = true
 	
 	#Emits started() signal
 	started.emit()
@@ -34,29 +31,45 @@ func _on_level_1_button_pressed():
 	starting_game()
 
 
-func _process(_delta):
-	print(SIGNAL)
+func _process(delta):
+	#print("Ended: ", $"../../Pedro".ended)
+	#print("Game is paused: ", $"../..".game_is_paused)
+	#print(SIGNAL)
+	
+	for button in $Panel.get_children():
+		if button is Button:
+			print(button.name, button.disabled)
+	get
+	
+	
 	if $"../../Pedro".ended:
+		print("ended")
 		SIGNAL = false
 		$Panel.modulate.a = 1
 		if $"../..".level != 2:
 			$Panel/start_button.text = "Next Level"
 		
 	elif SIGNAL == true and not $"../..".game_is_paused:
-		
-		while $Panel.modulate.a > 0:
-			$Panel.modulate.a -= 0.05
-			await get_tree().create_timer(3.0).timeout
+		print("Game started")
+		if $Panel.modulate.a > 0:
+			$Panel.modulate.a -= 1.5 * delta
 		$Panel/start_button.text = "Start Game"
 
 	elif $Panel.modulate.a < 1:
+		print("Modulating to full")
 
 		$Panel.modulate.a = 1
 
 	if $"../..".game_is_paused and not $"../../Pedro".ended:
 		$Panel.modulate.a = 1
+		print("Paused")
 
 		for i in $Panel.get_children():
 			if i is Button:
 				i.disabled = false
 		$Panel/start_button.text = "Restart"
+
+func disable_buttons(enable_or_disable):
+	for button in $Panel.get_children():
+		if button is Button:
+			button.disabled = enable_or_disable
