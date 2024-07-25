@@ -219,20 +219,11 @@ position = Vector2(1275, 1272)
 [node name="TacoSpawnPoint18" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1470, 1174)
 
-[node name="TacoSpawnPoint19" type="Node2D" parent="TacoSpawnPoints"]
-position = Vector2(1670, 1174)
-
 [node name="TacoSpawnPoint20" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(1868, 1174)
 
-[node name="TacoSpawnPoint21" type="Node2D" parent="TacoSpawnPoints"]
-position = Vector2(2072, 1174)
-
 [node name="TacoSpawnPoint22" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2272, 1174)
-
-[node name="TacoSpawnPoint23" type="Node2D" parent="TacoSpawnPoints"]
-position = Vector2(2473, 1127)
 
 [node name="TacoSpawnPoint24" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2572, 1076)
@@ -267,14 +258,8 @@ position = Vector2(1974, 928)
 [node name="TacoSpawnPoint34" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(2723, 973)
 
-[node name="TacoSpawnPoint35" type="Node2D" parent="TacoSpawnPoints"]
-position = Vector2(2921, 973)
-
 [node name="TacoSpawnPoint36" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(3124, 973)
-
-[node name="TacoSpawnPoint37" type="Node2D" parent="TacoSpawnPoints"]
-position = Vector2(3322, 973)
 
 [node name="TacoSpawnPoint38" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(3525, 973)
@@ -290,6 +275,29 @@ position = Vector2(4926, 925)
 
 [node name="TacoSpawnPoint42" type="Node2D" parent="TacoSpawnPoints"]
 position = Vector2(5176, 925)
+
+[node name="EnemySpawnPoints" type="Node2D" parent="."]
+
+[node name="EnemySpawnPoint" type="Node2D" parent="EnemySpawnPoints"]
+position = Vector2(1202, 523)
+
+[node name="EnemySpawnPoint2" type="Node2D" parent="EnemySpawnPoints"]
+position = Vector2(2131, 568)
+
+[node name="EnemySpawnPoint3" type="Node2D" parent="EnemySpawnPoints"]
+position = Vector2(2904, 430)
+
+[node name="EnemySpawnPoint4" type="Node2D" parent="EnemySpawnPoints"]
+position = Vector2(3473, 547)
+
+[node name="EnemySpawnPoint5" type="Node2D" parent="EnemySpawnPoints"]
+position = Vector2(4126, 550)
+
+[node name="EnemySpawnPoint6" type="Node2D" parent="EnemySpawnPoints"]
+position = Vector2(5169, 376)
+
+[node name="EnemySpawnPoint7" type="Node2D" parent="EnemySpawnPoints"]
+position = Vector2(5169, 1075)
 
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]

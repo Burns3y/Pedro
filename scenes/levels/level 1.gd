@@ -35,8 +35,6 @@ func _process(_delta):
 
 func _on_start_screen_started():
 	print("Signal from level.gd: ", $UI/Start_Screen.SIGNAL)
-	var taco_spawn_points
-	var enemy_spawn_points
 	var scene_name = str(get_tree().get_current_scene().get_name())
 	var current_level = int(scene_name[scene_name.length() - 1])
 
@@ -45,19 +43,16 @@ func _on_start_screen_started():
 	if level == 0:
 		if current_level != level:
 			get_tree().change_scene_to_file("res://scenes/levels/tutorial_level.tscn")
-		enemy_spawn_points = level_0_enemy_spawn_points
 
 		'''Level 1 only'''
 	elif level == 1:
 		if current_level != level:
 			get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
-		enemy_spawn_points = level_1_enemy_spawn_points
 
 		'''Level 2 only'''
 	elif level == 2:
 		if current_level != level:
 			get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
-		enemy_spawn_points = level_2_enemy_spawn_points
 	
 	
 	
@@ -70,12 +65,14 @@ func _on_start_screen_started():
 	#Spawning Tacos
 	for taco in $TacoSpawnPoints.get_children():
 		spawn_taco(taco.position)
-
+		
 	#Spawning enemies
-	for enemy_position in enemy_spawn_points:
+	for enemy in $EnemySpawnPoints.get_children():
 		var new_enemy = enemy_scene.instantiate() as CharacterBody2D
-		new_enemy.position = enemy_position
+		new_enemy.position = enemy.position
 		$Enemies.add_child(new_enemy)
+
+
 		
 		#Connecting signals
 		new_enemy.connect("player_died", $Pedro._on_player_died)

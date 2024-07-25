@@ -40,7 +40,6 @@ func _process(delta):
 	for button in $Panel.get_children():
 		if button is Button:
 			print(button.name, button.disabled)
-	get
 	
 	
 	if $"../../Pedro".ended:
