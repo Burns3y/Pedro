@@ -24,7 +24,10 @@ func _on_start_screen_started():
 func _physics_process(delta):
 	#If is in cave
 	#If is in level 2
-	if position.y >= 700 and $"..".level == 2:
+	var scene_name = str(get_tree().get_current_scene().get_name())
+	var current_level = int(scene_name[scene_name.length() - 1])
+	
+	if position.y >= 700 and current_level == 2:
 		#Changes camera
 		$Camera2D.limit_bottom = 2000
 		$Camera2D.position_smoothing_speed = 2
@@ -33,16 +36,16 @@ func _physics_process(delta):
 		
 		
 		#Darkens scene
-		$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0.8
+		$"../Lvl2Map/DirectionalLight2D".energy = 0.8
 	
 	#If not in cave
 	else:
 		$Camera2D.limit_bottom = 720
 		$Camera2D.position_smoothing_speed = 5
 		$Camera2D.zoom = Vector2(1, 1)
-		if $"..".level == 2:
-			#Lightens scene
-			$"../Tilemaps/Lvl2Map/DirectionalLight2D".energy = 0
+		#Lightens scene
+		if current_level == 2:
+			$"../Lvl2Map/DirectionalLight2D".energy = 0
 
 	#If player falls off map
 	if position.y > 2000:
