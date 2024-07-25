@@ -10,6 +10,7 @@ func starting_game():
 	$"../..".remove_tacos()
 	$"../..".game_is_paused = false
 	SIGNAL = true
+	disable_buttons(true)
 	
 	#Emits started() signal
 	started.emit()
@@ -43,11 +44,17 @@ func _process(delta):
 	
 	
 	if $"../../Pedro".ended:
-		print("ended")
+		if $"../../Pedro".ended:
+			if $"../..".level < 2:
+				$"../..".level += 1
+				print("Increased level")
+		$"../../Pedro".ended = false
+		
 		SIGNAL = false
 		$Panel.modulate.a = 1
 		if $"../..".level != 2:
 			$Panel/start_button.text = "Next Level"
+		
 		
 	elif SIGNAL == true and not $"../..".game_is_paused:
 		print("Game started")

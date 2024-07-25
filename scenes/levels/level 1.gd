@@ -39,11 +39,7 @@ func _on_start_screen_started():
 	var enemy_spawn_points
 	var scene_name = str(get_tree().get_current_scene().get_name())
 	var current_level = int(scene_name[scene_name.length() - 1])
-		
-	if $Pedro.ended:
-		if level < 2:
-			level += 1
-		$Pedro.ended = false
+
 
 	'''Tutorial level only'''
 	if level == 0:
