@@ -84,7 +84,6 @@ scale = Vector2(1.15731, 0.907039)
 [node name="Start_Screen" parent="UI" instance=ExtResource("7_ijmcg")]
 
 [node name="Stats" parent="UI" instance=ExtResource("8_e07a8")]
-visible = false
 
 [node name="TacoSpawnPoints" type="Node2D" parent="."]
 

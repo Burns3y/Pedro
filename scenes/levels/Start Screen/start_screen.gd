@@ -44,6 +44,7 @@ func _process(delta):
 	
 	
 	if $"../../Pedro".ended:
+		disable_buttons(false)
 		if $"../../Pedro".ended:
 			if $"../..".level < 2:
 				$"../..".level += 1
