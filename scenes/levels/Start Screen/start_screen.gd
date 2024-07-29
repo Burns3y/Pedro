@@ -36,9 +36,9 @@ func _process(delta):
 	
 	if $"../../Pedro".ended:
 		disable_buttons(false)
-		if $"../../Pedro".ended:
-			if $"../..".level < 2:
-				$"../..".level += 1
+
+		if $"../..".level < 2:
+			$"../..".level += 1
 		$"../../Pedro".ended = false
 		
 		SIGNAL = false
@@ -58,9 +58,7 @@ func _process(delta):
 	if $"../..".game_is_paused and not $"../../Pedro".ended:
 		$Panel.modulate.a = 1
 
-		for i in $Panel.get_children():
-			if i is Button:
-				i.disabled = false
+		disable_buttons(true)
 		$Panel/start_button.text = "Restart"
 
 func disable_buttons(enable_or_disable):

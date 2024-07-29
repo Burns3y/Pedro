@@ -53,8 +53,7 @@ func _on_start_screen_started():
 		if current_level != level:
 			get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
 	
-	
-	
+
 	'''Everything'''
 
 

@@ -78,6 +78,7 @@ libraries = {
 "": SubResource("AnimationLibrary_rkowf")
 }
 autoplay = "Bear_walking"
+speed_scale = 0.5
 
 [node name="BearWithoutFloating" type="Sprite2D" parent="."]
 position = Vector2(4, 12)

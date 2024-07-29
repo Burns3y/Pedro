@@ -1110,7 +1110,6 @@ default_font_size = 35
 script = ExtResource("1_8h2wq")
 
 [node name="Backgrounds" type="Node2D" parent="."]
-position = Vector2(0, -42)
 
 [node name="OrangeDessertWithCacti" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(1036, 361)

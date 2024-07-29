@@ -56,6 +56,7 @@ func _on_start_screen_started():
 	$TimerText.text = "Timer: 0 : 0 : 0"
 	$ScoreText.text = "Score: 0"
 	
+	
 	$Timer.start()
 	$Timer.one_shot = false
 	
