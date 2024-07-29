@@ -58,7 +58,7 @@ func _process(delta):
 	if $"../..".game_is_paused and not $"../../Pedro".ended:
 		$Panel.modulate.a = 1
 
-		disable_buttons(true)
+		disable_buttons(false)
 		$Panel/start_button.text = "Restart"
 
 func disable_buttons(enable_or_disable):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1nolie43sr3"]
+[gd_scene load_steps=15 format=3 uid="uid://b1nolie43sr3"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_esan4"]
 [ext_resource type="Texture2D" uid="uid://d0mlrwye28jju" path="res://assets/backgrounds/Screenshot 2024-06-29 at 1.32.38 PM.png" id="2_1qd78"]
@@ -43,6 +43,9 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 7
 sources/1 = SubResource("TileSetAtlasSource_1xq0u")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uivij"]
+size = Vector2(40, 507)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_esan4")
@@ -148,6 +151,14 @@ position = Vector2(11060, 2074)
 
 [node name="Torch32" parent="Lvl2Map/Torches" instance=ExtResource("3_8oc5u")]
 position = Vector2(11082, 2574)
+
+[node name="BackWall" type="StaticBody2D" parent="Lvl2Map"]
+position = Vector2(96, -282)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lvl2Map/BackWall"]
+position = Vector2(10, 243.5)
+shape = SubResource("RectangleShape2D_uivij")
 
 [node name="Enemies" type="Node2D" parent="."]
 
