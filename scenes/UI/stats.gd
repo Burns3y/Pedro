@@ -10,10 +10,11 @@ var total_score: int = 0
 var score_added = false
 
 func _process(_delta):
+
 	if shop_pressed == false:
 		$Node2D.scale.x = 0.00001
 	
-	if $"../..".game_is_paused:
+	if $"../..".game_is_paused or $"../../Pedro".ended:
 		$Timer.one_shot = true
 	else:
 		$Timer.one_shot = false
@@ -24,13 +25,11 @@ func _process(_delta):
 	if s > 60:
 		m += 1
 		s = 0
-		
-		get_tree()
+
 
 	if ($Timer.is_stopped() and $"../Start_Screen".SIGNAL) or $"../../Pedro".ended:
 		$Shop.modulate.a = 1
 		if not $"../..".game_is_paused:
-			$Timer.start()
 			$Shop.modulate.a = 0
 	
 	if $"../Start_Screen".SIGNAL:
@@ -56,6 +55,9 @@ func _on_start_screen_started():
 	score = 0
 	$TimerText.text = "Timer: 0 : 0 : 0"
 	$ScoreText.text = "Score: 0"
+	
+	$Timer.start()
+	$Timer.one_shot = false
 	
 func increase_score():
 	score += 1

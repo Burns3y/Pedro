@@ -34,7 +34,6 @@ func _process(_delta):
 
 
 func _on_start_screen_started():
-	print("Signal from level.gd: ", $UI/Start_Screen.SIGNAL)
 	var scene_name = str(get_tree().get_current_scene().get_name())
 	var current_level = int(scene_name[scene_name.length() - 1])
 
@@ -61,7 +60,6 @@ func _on_start_screen_started():
 
 
 
-
 	#Spawning Tacos
 	for taco in $TacoSpawnPoints.get_children():
 		spawn_taco(taco.position)
@@ -71,8 +69,6 @@ func _on_start_screen_started():
 		var new_enemy = enemy_scene.instantiate() as CharacterBody2D
 		new_enemy.position = enemy.position
 		$Enemies.add_child(new_enemy)
-
-
 		
 		#Connecting signals
 		new_enemy.connect("player_died", $Pedro._on_player_died)
@@ -96,7 +92,6 @@ func remove_tacos():
 	
 
 func restart():
-	print("restarting")
 	$UI/Start_Screen.SIGNAL = false
 	#Enable buttons
 	$UI/Start_Screen.disable_buttons(false)

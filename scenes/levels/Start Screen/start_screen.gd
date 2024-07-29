@@ -33,21 +33,12 @@ func _on_level_1_button_pressed():
 
 
 func _process(delta):
-	#print("Ended: ", $"../../Pedro".ended)
-	#print("Game is paused: ", $"../..".game_is_paused)
-	#print(SIGNAL)
-	
-	for button in $Panel.get_children():
-		if button is Button:
-			print(button.name, button.disabled)
-	
 	
 	if $"../../Pedro".ended:
 		disable_buttons(false)
 		if $"../../Pedro".ended:
 			if $"../..".level < 2:
 				$"../..".level += 1
-				print("Increased level")
 		$"../../Pedro".ended = false
 		
 		SIGNAL = false
@@ -57,19 +48,15 @@ func _process(delta):
 		
 		
 	elif SIGNAL == true and not $"../..".game_is_paused:
-		print("Game started")
 		if $Panel.modulate.a > 0:
 			$Panel.modulate.a -= 1.5 * delta
 		$Panel/start_button.text = "Start Game"
 
 	elif $Panel.modulate.a < 1:
-		print("Modulating to full")
-
 		$Panel.modulate.a = 1
 
 	if $"../..".game_is_paused and not $"../../Pedro".ended:
 		$Panel.modulate.a = 1
-		print("Paused")
 
 		for i in $Panel.get_children():
 			if i is Button:

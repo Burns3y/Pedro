@@ -22,11 +22,12 @@ func _on_start_screen_started():
 	position = Vector2(304, 469)
 
 func _physics_process(delta):
-	#If is in cave
-	#If is in level 2
+	#Checks current scene
 	var scene_name = str(get_tree().get_current_scene().get_name())
 	var current_level = int(scene_name[scene_name.length() - 1])
 	
+	#If is in cave
+	#If is in level 2
 	if position.y >= 700 and current_level == 2:
 		#Changes camera
 		$Camera2D.limit_bottom = 2000
