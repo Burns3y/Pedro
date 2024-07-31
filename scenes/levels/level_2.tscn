@@ -153,7 +153,7 @@ position = Vector2(11060, 2074)
 position = Vector2(11082, 2574)
 
 [node name="BackWall" type="StaticBody2D" parent="Lvl2Map"]
-position = Vector2(96, -282)
+position = Vector2(-60, 6)
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lvl2Map/BackWall"]

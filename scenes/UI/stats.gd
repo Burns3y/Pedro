@@ -10,9 +10,6 @@ var total_score: int = 0
 var score_added = false
 
 func _process(_delta):
-	
-	print("Game is paused: ", $"../..".game_is_paused)
-	print("Ended: ", $"../../Pedro".ended)
 
 	if shop_pressed == false:
 		$Node2D.scale.x = 0.00001
@@ -20,7 +17,6 @@ func _process(_delta):
 	#Stops timer if the game is paused or ended
 	if $"../..".game_is_paused or $"../../Pedro".ended:
 		$Timer.one_shot = true
-		print("One shot")
 	else:
 		$Timer.one_shot = false
 		if $Timer.is_stopped():
@@ -68,7 +64,8 @@ func _on_start_screen_started():
 	
 	$Timer.start()
 	$Timer.one_shot = false
-	
+
+
 func increase_score():
 	score += 1
 	$ScoreText.text = "Score: " + str(score)
@@ -78,6 +75,7 @@ func _on_shop_pressed():
 	shop_pressed = true
 	if shop_pressed == true:
 		$Node2D.scale.x = 1
+
 
 func _on_back_pressed():
 	shop_pressed = false

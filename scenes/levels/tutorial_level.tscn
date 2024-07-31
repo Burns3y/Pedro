@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="1_2ufin"]
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_8h2wq"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="2_2s3mx"]
-[ext_resource type="Texture2D" uid="uid://bfygpopqsx1i" path="res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (1).png" id="2_aeqih"]
+[ext_resource type="Texture2D" uid="uid://51nxjq1cgwlo" path="res://assets/backgrounds/backgroundhill.png" id="2_7xjo3"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="3_h5n62"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="4_5x40a"]
 
@@ -1115,19 +1115,19 @@ script = ExtResource("1_8h2wq")
 [node name="Backgrounds" type="Node2D" parent="."]
 
 [node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(4437, 355)
+position = Vector2(4438, 355)
 scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_aeqih")
+texture = ExtResource("2_7xjo3")
 
 [node name="OrangeDessertWithCacti2" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(2662.5, 355)
 scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_aeqih")
+texture = ExtResource("2_7xjo3")
 
 [node name="OrangeDessertWithCacti" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(887.503, 355)
 scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_aeqih")
+texture = ExtResource("2_7xjo3")
 
 [node name="TutorialMap" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)

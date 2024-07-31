@@ -39,7 +39,6 @@ func _process(delta):
 
 		if $"../..".level < 2:
 			$"../..".level += 1
-		$"../../Pedro".ended = false
 		
 		SIGNAL = false
 		$Panel.modulate.a = 1
