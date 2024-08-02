@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b1nolie43sr3"]
+[gd_scene load_steps=16 format=3 uid="uid://b1nolie43sr3"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_esan4"]
 [ext_resource type="Texture2D" uid="uid://d0mlrwye28jju" path="res://assets/backgrounds/Screenshot 2024-06-29 at 1.32.38 PM.png" id="2_1qd78"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_aofvl"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="5_8e7yl"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="6_bf1m1"]
+[ext_resource type="AudioStream" uid="uid://wbbv7fqpsgug" path="res://assets/music/Finished pedro start screen%3F.mp3" id="9_f6krl"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k3fbx"]
 polygon = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
@@ -309,6 +310,9 @@ position = Vector2(5169, 376)
 
 [node name="EnemySpawnPoint7" type="Node2D" parent="EnemySpawnPoints"]
 position = Vector2(5169, 1075)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_f6krl")
 
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
