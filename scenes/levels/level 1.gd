@@ -23,6 +23,8 @@ func _ready():
 	
 
 func _process(_delta):
+	if $AudioStreamPlayer.playing == false:
+		$AudioStreamPlayer.play()
 	if Input.is_action_just_pressed("pause") and not game_is_paused and not $Pedro.ended:
 		game_is_paused = true
 		pause.emit(game_is_paused)

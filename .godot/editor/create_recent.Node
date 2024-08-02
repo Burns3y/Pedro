@@ -1,3 +1,4 @@
+AudioStreamPlayer
 CPUParticles2D
 AnimationPlayer
 Timer
@@ -12,4 +13,3 @@ LightOccluder2D
 TileMap
 AnimatedSprite2D
 CanvasLayer
-CollisionPolygon2D
