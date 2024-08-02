@@ -1,11 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722390557
+::res://::1722566122
 icon.svg::CompressedTexture2D::1929323658878216135::1715556632::1715723894::1::::<><>::
 README.md::TextFile::-1::1718852848::0::1::::<><>::
 shop.tscn::PackedScene::5391242276614485819::1721771879::0::1::::<><>::uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
 Timer.gd::GDScript::-1::1718235457::0::1::::<>Timer<>::
 timer.tscn::PackedScene::4155893859958310243::1718235457::0::1::::<><>::res://Timer.gd
-::res://assets/::1722390557
+::res://assets/::1722566122
 Anime pedro (tenticle).png::CompressedTexture2D::5848791848166230736::1718837553::1718837568::1::::<><>::
 circle.png::CompressedTexture2D::3301507179259064626::1718761456::1718761504::1::::<><>::
 pedro idle.png::CompressedTexture2D::8208114016335599815::1718937422::1718937428::1::::<><>::
@@ -27,8 +27,8 @@ taco animation-1.png.png::CompressedTexture2D::9103293727776216192::1719872268::
 Taco image with centering.png::CompressedTexture2D::3974470209519027439::1719872268::1719872334::1::::<><>::
 taco.png::CompressedTexture2D::5892817019424531040::1717985552::1718140162::1::::<><>::
 torch_unanimated.png::CompressedTexture2D::5030780609629248222::1719370718::1719370718::1::::<><>::
-::res://assets/music/::1722390557
-Pedro damn its bad.mp3::AudioStreamMP3::2136878427817880655::1722390531::1722390557::1::::<><>::
+::res://assets/music/::1722566122
+Finished pedro start screen%3F.mp3::AudioStreamMP3::1546318845674495110::1722566118::1722566123::1::::<><>::
 ::res://assets/start screen/::1716173286
 file (1).png::CompressedTexture2D::5620943075005483460::1715811920::1716173286::1::::<><>::
 ::res://assets/tiles/::1718666288
