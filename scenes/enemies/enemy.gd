@@ -11,6 +11,7 @@ const SPEED = 125.0
 var direction = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var frame = 0
+var dying = false
 
 
 func _ready():
@@ -19,7 +20,7 @@ func _ready():
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_paused:
+	if not is_paused and not dying:
 		if not is_on_floor():
 			velocity.y += gravity * delta
 			
@@ -30,28 +31,39 @@ func _physics_process(delta):
 		
 		#Changes icon direction when it hits a wall so character points in the right direction
 		if direction.x == -1:
-			$BearWithoutFloating.flip_h = false
-			$BearWithoutFloating.offset.x = 0
+			$FullBearAnim.flip_h = false
+			$FullBearAnim.offset.x = 0
 		elif direction.x == 1:
-			$BearWithoutFloating.flip_h = true
-			$BearWithoutFloating.offset.x = -9
-
-
+			$FullBearAnim.flip_h = true
+			$FullBearAnim.offset.x = -9
+		
+		
 		move_and_slide()
+		
+	if $FullBearAnim.modulate.a == 0:
+		queue_free()
 
 #Emits a signal when the player hits the side, connects to the player through the level scene
 func _on_player_dies_hitbox_body_entered(body):
 	if body.is_in_group("Player"):
 		player_died.emit()
-
+ 
 #When the player jumps on the head of the enemy, the enemy dies.
 func _on_head_jump_region_body_entered(body):
 	if body.is_in_group("Player"):
-		queue_free()
+		dying = true
 		player_killed_enemy.emit(position)
+		
+		#Remove hitboxes so Pedro doesn't stand on invisible bear
+		for hitbox in $".".get_children():
+			if hitbox is CollisionShape2D or hitbox is Area2D:
+				hitbox.queue_free()
+		
+		#Makes the bear squish and fade out
+		$AnimationPlayer.play("Bear_dying")
+		var tween = get_tree().create_tween()
+		tween.tween_property($FullBearAnim, "modulate", Color(0.439, 0.306, 0.231, 0), 2)
 
-#If the level is paused or unpaused, it emits a signal.
-#When the signal is recieved it's either true (paused) or false (unpaused)
-#Makes the true or false variable the same as one that's already in game.
+
 func pause(game_is_paused):
 	is_paused = game_is_paused
