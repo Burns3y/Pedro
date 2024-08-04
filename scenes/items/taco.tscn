@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bwvi7c5e0wtv0" path="res://assets/items/Taco image with centering.png" id="2_jenfi"]
 
 [sub_resource type="Animation" id="Animation_uvbtg"]
-length = 0.001
+length = 0.6
+loop_mode = 1
+step = 0.15
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -12,10 +14,10 @@ tracks/0/path = NodePath("TacoImageWithCentering:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_wuq1r"]
@@ -53,6 +55,7 @@ libraries = {
 "": SubResource("AnimationLibrary_bki64")
 }
 autoplay = "RESET"
+speed_scale = 0.7
 
 [node name="TacoImageWithCentering" type="Sprite2D" parent="."]
 position = Vector2(-1.655, -3.25)
