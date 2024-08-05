@@ -113,11 +113,10 @@ func _physics_process(delta):
 			
 			#Ends game if Pedro's position is past the ending barrier
 			if position.x > 5711 and is_on_floor():
-				ended = true
-				$"..".restart()
+				end_level()
+				
 			elif $"..".level == 0 and position.x > 4712 and is_on_floor():
-				ended = true
-				$"..".restart()
+				end_level()
 
 func head_hitting():
 	for i in range(500):
@@ -144,3 +143,12 @@ func head_hitting():
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false
+
+
+func end_level():
+	#Ends and restarts game
+	ended = true
+	$"..".restart()
+	#Increases level
+	if $"..".level < 2:
+		$"..".level += 1
