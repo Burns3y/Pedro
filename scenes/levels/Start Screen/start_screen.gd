@@ -36,9 +36,6 @@ func _process(delta):
 	
 	if $"../../Pedro".ended:
 		disable_buttons(false)
-
-		if $"../..".level < 2:
-			$"../..".level += 1
 		
 		SIGNAL = false
 		$Panel.modulate.a = 1

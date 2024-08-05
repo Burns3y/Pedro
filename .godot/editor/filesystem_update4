@@ -10,3 +10,6 @@ res://scenes/player/pedro.tscn
 res://scenes/items/torch.tscn
 res://scenes/levels/tutorial_level.tscn
 res://scenes/items/torch.gd
+res://scenes/items/taco.gd
+res://scenes/levels/Start Screen/start_screen.gd
+res://scenes/player/pedro.gd
