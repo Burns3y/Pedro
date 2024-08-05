@@ -8,7 +8,6 @@ var ended: bool = false
 var score: int = 0
 var total_score: int = 0
 var score_added = false
-
 func _process(_delta):
 
 	if shop_pressed == false:
@@ -31,10 +30,10 @@ func _process(_delta):
 		s = 0
 
 
-	if ($Timer.is_stopped() and $"../Start_Screen".SIGNAL) or $"../../Pedro".ended:
+	if ($Timer.is_stopped()) or $"../../Pedro".started == false:
 		$Shop.modulate.a = 1
-		if not $"../..".game_is_paused:
-			$Shop.modulate.a = 0
+	else:
+		$Shop.modulate.a = 0
 
 	if $"../Start_Screen".SIGNAL:
 		score_added = false

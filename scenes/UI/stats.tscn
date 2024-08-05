@@ -20,9 +20,6 @@ offset_right = 1055.0
 offset_bottom = 37.0
 text = "Score: 0"
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
-
 [node name="Shop" type="Button" parent="."]
 offset_left = 713.0
 offset_top = 420.0
@@ -31,6 +28,9 @@ offset_bottom = 451.0
 text = "Shop"
 flat = true
 icon_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
 
 [node name="Node2D" parent="." instance=ExtResource("2_l2bja")]
 position = Vector2(-43, 9)
@@ -113,6 +113,6 @@ alignment = 0
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Shop" to="." method="_on_shop_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Node2D/Back" to="." method="_on_back_pressed"]
