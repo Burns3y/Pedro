@@ -39,7 +39,7 @@ func _on_timer_timeout():
 	#Changes the colour of the torch flicker
 	var flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
 	#Changes the energy of the torches, so they get slightly brighter or darker
-	var energy_changing = (randi() % 3 + 1) / 10
+	var energy_changing = float((randi() % 3 + 1) / 10)
 	if randi() % 2 == 0:
 		energy_changing *= -1
 	
