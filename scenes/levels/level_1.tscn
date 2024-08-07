@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=12 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_a6t2t"]
 [ext_resource type="Texture2D" uid="uid://n7ljlhtjbr6n" path="res://assets/backgrounds/orange dessert with cacti.png" id="3_bgxu3"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_qoa61"]
+[ext_resource type="PackedScene" uid="uid://dnh6nxe84y4lp" path="res://power_up_block.tscn" id="5_hd6qa"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="6_posip"]
 [ext_resource type="AudioStream" uid="uid://wbbv7fqpsgug" path="res://assets/music/Finished pedro start screen%3F.mp3" id="7_5x6ud"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="7_ijmcg"]
@@ -80,6 +81,10 @@ shape = SubResource("RectangleShape2D_lf8v0")
 position = Vector2(304, 476)
 scale = Vector2(1.15731, 0.907039)
 
+[node name="Power up" parent="." instance=ExtResource("5_hd6qa")]
+position = Vector2(3014, 420)
+scale = Vector2(0.402345, 0.402345)
+
 [node name="UI" type="Node2D" parent="."]
 
 [node name="Start_Screen" parent="UI" instance=ExtResource("7_ijmcg")]
@@ -123,6 +128,7 @@ position = Vector2(3747, 614)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_5x6ud")
 
+[connection signal="player_power_up" from="Power up" to="Pedro" method="_on_power_up_player_power_up"]
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="UI/Stats" method="_on_start_screen_started"]

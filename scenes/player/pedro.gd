@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
 signal player_died
+signal player_power_up
 
 var NO_WALL_JUMP = 0
 var SPEED = 13000
-const JUMP_VELOCITY = -600
+var JUMP_VELOCITY = -600
 var started: bool = false
 var ended: bool
 var is_paused: bool = false
@@ -144,7 +145,6 @@ func _on_player_died():
 	position = Vector2(304, 469)
 	started = false
 
-
 func end_level():
 	#Ends and restarts game
 	ended = true
@@ -152,3 +152,7 @@ func end_level():
 	#Increases level
 	if $"..".level < 2:
 		$"..".level += 1
+
+func _on_power_up_player_power_up():
+	print("power up")
+	JUMP_VELOCITY = -1000
