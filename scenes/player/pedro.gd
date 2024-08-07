@@ -93,7 +93,7 @@ func _physics_process(delta):
 				velocity.y = JUMP_VELOCITY
 
 			# Wall jump
-			if Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5500:
+			if Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5525:
 				velocity.y = JUMP_VELOCITY 
 
 			elif $"..".level == 0 and Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 4500:
