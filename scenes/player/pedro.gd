@@ -155,4 +155,5 @@ func end_level():
 
 func _on_power_up_player_power_up():
 	print("power up")
-	JUMP_VELOCITY = -1000
+	JUMP_VELOCITY = -700
+	SPEED = 20000
