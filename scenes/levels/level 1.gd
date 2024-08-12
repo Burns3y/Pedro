@@ -17,6 +17,7 @@ var level_2_enemy_spawn_points = [Vector2(1189, 540), Vector2(1964, 645), Vector
 func _on_taco_collected():
 	$UI/Stats.increase_score()
 	Global.total_tacos += 1
+	$AudioStreamPlayer_taco.play()
 	
 func _ready():
 	var scene_name = str(get_tree().get_current_scene().get_name())
@@ -24,8 +25,8 @@ func _ready():
 	
 
 func _process(_delta):
-	if $AudioStreamPlayer.playing == false:
-		$AudioStreamPlayer.play()
+	if $AudioStreamPlayer_music.playing == false:
+		$AudioStreamPlayer_music.play()
 	if Input.is_action_just_pressed("pause") and not game_is_paused and not $Pedro.ended:
 		game_is_paused = true
 		pause.emit(game_is_paused)

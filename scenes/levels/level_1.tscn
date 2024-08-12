@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=14 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_a6t2t"]
 [ext_resource type="Texture2D" uid="uid://bfygpopqsx1i" path="res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (1).png" id="2_4mmx3"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://wbbv7fqpsgug" path="res://assets/music/Finished pedro start screen%3F.mp3" id="7_5x6ud"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="7_ijmcg"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="8_e07a8"]
+[ext_resource type="AudioStream" uid="uid://de4fbap5ifonm" path="res://assets/items/chomp.mp3" id="9_7fphh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cr8l7"]
 texture = ExtResource("3_qoa61")
@@ -126,8 +127,11 @@ position = Vector2(2743, 614)
 [node name="EnemySpawnPoint3" type="Node2D" parent="EnemySpawnPoints"]
 position = Vector2(3747, 614)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_5x6ud")
+
+[node name="AudioStreamPlayer_taco" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_7fphh")
 
 [connection signal="player_power_up" from="Power up" to="Pedro" method="_on_power_up_player_power_up"]
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]

@@ -22,6 +22,7 @@ func _on_start_screen_started():
 		ended = true
 	started = true
 	position = Vector2(304, 469)
+	power_up = false	
 
 func _physics_process(delta):
 	#Checks current scene
@@ -75,6 +76,7 @@ func _physics_process(delta):
 				SPEED = 20000
 			else:
 				SPEED = 13000
+				JUMP_VELOCITY = -600
 				
 			## Get the input direction and handle the movement/deceleration.
 			var direction = Input.get_axis("left", "right")
