@@ -73,6 +73,9 @@ func _physics_process(delta):
 			if power_up == true:
 				JUMP_VELOCITY = -700
 				SPEED = 20000
+			else:
+				SPEED = 13000
+				
 			## Get the input direction and handle the movement/deceleration.
 			var direction = Input.get_axis("left", "right")
 			if direction and NO_WALL_JUMP == 0:
@@ -149,6 +152,7 @@ func head_hitting():
 func _on_player_died():
 	position = Vector2(304, 469)
 	started = false
+	power_up = false	
 
 func end_level():
 	#Ends and restarts game
