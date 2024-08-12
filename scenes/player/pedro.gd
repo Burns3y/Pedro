@@ -12,6 +12,7 @@ var is_paused: bool = false
 var WAS_ON_CEILING = false
 var ceiling_calc = 0
 var head_hit_time = 5
+var power_up = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -67,7 +68,11 @@ func _physics_process(delta):
 				
 			if is_on_ceiling_only():
 				head_hitting()
-
+			
+			#power up code (increases jump and speed)
+			if power_up == true:
+				JUMP_VELOCITY = -700
+				SPEED = 20000
 			## Get the input direction and handle the movement/deceleration.
 			var direction = Input.get_axis("left", "right")
 			if direction and NO_WALL_JUMP == 0:
@@ -154,6 +159,4 @@ func end_level():
 		$"..".level += 1
 
 func _on_power_up_player_power_up():
-	print("power up")
-	JUMP_VELOCITY = -700
-	SPEED = 20000
+	power_up = true
