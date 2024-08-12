@@ -31,16 +31,16 @@ func _physics_process(delta):
 		
 		#Changes icon direction when it hits a wall so character points in the right direction
 		if direction.x == -1:
-			$FullBearAnim.flip_h = false
-			$FullBearAnim.offset.x = 0
+			$"Bear-more-frames-edited".flip_h = false
+			#$"Bear-more-frames-edited".offset.x = 0
 		elif direction.x == 1:
-			$FullBearAnim.flip_h = true
-			$FullBearAnim.offset.x = -9
+			$"Bear-more-frames-edited".flip_h = true
+			#$"Bear-more-frames-edited".offset.x = -9
 		
 		
 		move_and_slide()
 		
-	if $FullBearAnim.modulate.a == 0:
+	if $"Bear-more-frames-edited".modulate.a == 0:
 		queue_free()
 
 #Emits a signal when the player hits the side, connects to the player through the level scene
@@ -62,7 +62,7 @@ func _on_head_jump_region_body_entered(body):
 		#Makes the bear squish and fade out
 		$AnimationPlayer.play("Bear_dying")
 		var tween = get_tree().create_tween()
-		tween.tween_property($FullBearAnim, "modulate", Color(0.439, 0.306, 0.231, 0), 2)
+		tween.tween_property($"Bear-more-frames-edited", "modulate", Color(0.439, 0.306, 0.231, 0), 2)
 
 
 func pause(game_is_paused):
