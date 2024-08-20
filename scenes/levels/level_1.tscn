@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_a6t2t"]
-[ext_resource type="Texture2D" uid="uid://cwmqjwtrk7a2k" path="res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (2).png" id="2_aq0go"]
+[ext_resource type="Texture2D" uid="uid://51nxjq1cgwlo" path="res://assets/backgrounds/backgroundhill.png" id="2_wdh3a"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_qoa61"]
 [ext_resource type="PackedScene" uid="uid://dnh6nxe84y4lp" path="res://power_up_block.tscn" id="5_hd6qa"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="6_posip"]
@@ -44,20 +44,25 @@ script = ExtResource("1_a6t2t")
 [node name="Backgrounds" type="Node2D" parent="."]
 position = Vector2(0, -30)
 
+[node name="OrangeDessertWithCacti4" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(5680, 361)
+scale = Vector2(0.883015, 1.08562)
+texture = ExtResource("2_wdh3a")
+
+[node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(4247, 361)
+scale = Vector2(0.883015, 1.08562)
+texture = ExtResource("2_wdh3a")
+
+[node name="OrangeDessertWithCacti2" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(2641, 362)
+scale = Vector2(1.08619, 1.08619)
+texture = ExtResource("2_wdh3a")
+
 [node name="OrangeDessertWithCacti" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(874, 361)
 scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_aq0go")
-
-[node name="OrangeDessertWithCacti2" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(2918, 361)
-scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_aq0go")
-
-[node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(5403.08, 360.353)
-scale = Vector2(0.883015, 1.08562)
-texture = ExtResource("2_aq0go")
+texture = ExtResource("2_wdh3a")
 
 [node name="Lvl1Map" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -82,8 +87,8 @@ position = Vector2(304, 476)
 scale = Vector2(1.15731, 0.907039)
 
 [node name="Power up" parent="." instance=ExtResource("5_hd6qa")]
-position = Vector2(3014, 420)
-scale = Vector2(0.402345, 0.402345)
+position = Vector2(3080, 420)
+scale = Vector2(0.981176, 1.00117)
 
 [node name="UI" type="Node2D" parent="."]
 
