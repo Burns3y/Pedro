@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/items/taco.gd" id="1_mihe7"]
 [ext_resource type="Texture2D" uid="uid://bwvi7c5e0wtv0" path="res://assets/items/Taco image with centering.png" id="2_jenfi"]
-[ext_resource type="AudioStream" uid="uid://de4fbap5ifonm" path="res://assets/items/chomp.mp3" id="3_nwwok"]
+[ext_resource type="AudioStream" uid="uid://de4fbap5ifonm" path="res://assets/items/chomp.mp3" id="3_msoad"]
 
 [sub_resource type="Animation" id="Animation_uvbtg"]
 length = 0.6
@@ -65,7 +65,7 @@ texture = ExtResource("2_jenfi")
 hframes = 4
 
 [node name="AudioStreamPlayer_taco" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_nwwok")
+stream = ExtResource("3_msoad")
 
 [node name="Timer" type="Timer" parent="."]
 

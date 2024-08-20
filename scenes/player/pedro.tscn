@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://61bcos6b4c8a"]
+[gd_scene load_steps=10 format=3 uid="uid://61bcos6b4c8a"]
 
 [ext_resource type="Script" path="res://scenes/player/pedro.gd" id="1_kkii7"]
 [ext_resource type="Texture2D" uid="uid://cplg0n10eyuc3" path="res://assets/Anime pedro (tenticle).png" id="2_0ghv0"]
 [ext_resource type="Texture2D" uid="uid://c8mjyfttqbc1x" path="res://assets/Pedro Jump Frame.png" id="3_827nw"]
 [ext_resource type="Texture2D" uid="uid://do7co6b4ftmnv" path="res://assets/pedro idle.png" id="3_q5f4o"]
+[ext_resource type="AudioStream" uid="uid://s3dtxnamqq6" path="res://assets/music/Level_done.mp3" id="5_l2dbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1pm"]
 size = Vector2(22, 44)
@@ -82,3 +83,6 @@ autoplay = "Pedro_walking"
 position = Vector2(11, 7)
 scale = Vector2(1.21, 1.26)
 texture = ExtResource("3_q5f4o")
+
+[node name="AudioStreamPlayer_level_complete" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_l2dbr")

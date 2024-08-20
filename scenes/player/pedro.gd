@@ -158,6 +158,8 @@ func _on_player_died():
 
 func end_level():
 	#Ends and restarts game
+	$"../AudioStreamPlayer_music".stop()
+	$AudioStreamPlayer_level_complete.play()
 	ended = true
 	$"..".restart()
 	#Increases level
