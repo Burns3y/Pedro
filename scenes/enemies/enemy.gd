@@ -60,6 +60,7 @@ func _on_head_jump_region_body_entered(body):
 				hitbox.queue_free()
 		
 		#Makes the bear squish and fade out
+		$Timer.start()
 		$AnimationPlayer.play("Bear_dying")
 		var tween = get_tree().create_tween()
 		tween.tween_property($"Bear-more-frames-edited", "modulate", Color(0.439, 0.306, 0.231, 0), 2)
@@ -67,3 +68,7 @@ func _on_head_jump_region_body_entered(body):
 
 func pause(game_is_paused):
 	is_paused = game_is_paused
+
+
+func _on_timer_timeout():
+	queue_free()

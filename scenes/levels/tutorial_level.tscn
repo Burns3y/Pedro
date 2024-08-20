@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c6eh46p2m74tl"]
+[gd_scene load_steps=28 format=3 uid="uid://c6eh46p2m74tl"]
 
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="1_2ufin"]
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_8h2wq"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="3_h5n62"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="4_5x40a"]
 [ext_resource type="AudioStream" uid="uid://wbbv7fqpsgug" path="res://assets/music/Finished pedro start screen%3F.mp3" id="7_2xef2"]
-[ext_resource type="AudioStream" uid="uid://de4fbap5ifonm" path="res://assets/items/chomp.mp3" id="8_2os52"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqecp"]
 texture = ExtResource("1_2ufin")
@@ -1360,9 +1359,6 @@ position = Vector2(3317, 529)
 
 [node name="AudioStreamPlayer_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_2xef2")
-
-[node name="AudioStreamPlayer_taco" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_2os52")
 
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]
 [connection signal="started" from="UI/Start_Screen" to="Pedro" method="_on_start_screen_started"]
