@@ -68,7 +68,6 @@ texture = ExtResource("2_0ghv0")
 hframes = 4
 
 [node name="PedroJumping" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(5, 13.4311)
 scale = Vector2(0.32, 0.337156)
 texture = ExtResource("3_827nw")
@@ -80,7 +79,6 @@ libraries = {
 autoplay = "Pedro_walking"
 
 [node name="PedroIdle" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(11, 7)
 scale = Vector2(1.21, 1.26)
 texture = ExtResource("3_q5f4o")

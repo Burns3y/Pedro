@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2ka0p8hqghii"]
+[gd_scene load_steps=12 format=3 uid="uid://b2ka0p8hqghii"]
 
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_a6t2t"]
-[ext_resource type="Texture2D" uid="uid://bfygpopqsx1i" path="res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (1).png" id="2_4mmx3"]
-[ext_resource type="Texture2D" uid="uid://n7ljlhtjbr6n" path="res://assets/backgrounds/orange dessert with cacti.png" id="3_bgxu3"]
+[ext_resource type="Texture2D" uid="uid://cwmqjwtrk7a2k" path="res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (2).png" id="2_aq0go"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_qoa61"]
 [ext_resource type="PackedScene" uid="uid://dnh6nxe84y4lp" path="res://power_up_block.tscn" id="5_hd6qa"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="6_posip"]
@@ -46,19 +45,19 @@ script = ExtResource("1_a6t2t")
 position = Vector2(0, -30)
 
 [node name="OrangeDessertWithCacti" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(1036, 361)
+position = Vector2(874, 361)
 scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_4mmx3")
+texture = ExtResource("2_aq0go")
 
 [node name="OrangeDessertWithCacti2" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(2918, 361)
 scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("2_4mmx3")
+texture = ExtResource("2_aq0go")
 
 [node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(5105.17, 376.391)
-scale = Vector2(1.3043, 1.60357)
-texture = ExtResource("3_bgxu3")
+position = Vector2(5403.08, 360.353)
+scale = Vector2(0.883015, 1.08562)
+texture = ExtResource("2_aq0go")
 
 [node name="Lvl1Map" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)

@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_esan4"]
 [ext_resource type="Texture2D" uid="uid://d0mlrwye28jju" path="res://assets/backgrounds/Screenshot 2024-06-29 at 1.32.38 PM.png" id="2_1qd78"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="2_cfcpq"]
+[ext_resource type="Texture2D" uid="uid://cwmqjwtrk7a2k" path="res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (2).png" id="3_3xic4"]
 [ext_resource type="PackedScene" uid="uid://b87up5nptn1rj" path="res://scenes/items/torch.tscn" id="3_8oc5u"]
-[ext_resource type="Texture2D" uid="uid://n7ljlhtjbr6n" path="res://assets/backgrounds/orange dessert with cacti.png" id="3_gmv5m"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="4_aofvl"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="5_8e7yl"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="6_bf1m1"]
@@ -55,24 +55,39 @@ script = ExtResource("1_esan4")
 position = Vector2(0, -30)
 
 [node name="CaveBG" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(3150, 1966)
+position = Vector2(3150, 2105)
 scale = Vector2(4.97728, 2.77728)
 texture = ExtResource("2_1qd78")
 
-[node name="OrangeDessertWithCacti" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(1036, 361)
-scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("3_gmv5m")
-
 [node name="OrangeDessertWithCacti2" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(3109, 362)
-scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("3_gmv5m")
+position = Vector2(1670, -1137)
+scale = Vector2(0.61691, 0.61691)
+texture = ExtResource("3_3xic4")
+
+[node name="OrangeDessertWithCacti4" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(2334.65, 422.175)
+scale = Vector2(0.616673, 0.616672)
+texture = ExtResource("3_3xic4")
 
 [node name="OrangeDessertWithCacti3" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(5191, 363)
-scale = Vector2(1.08619, 1.08619)
-texture = ExtResource("3_gmv5m")
+position = Vector2(756.645, 422.175)
+scale = Vector2(0.61691, 0.61691)
+texture = ExtResource("3_3xic4")
+
+[node name="OrangeDessertWithCacti5" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(5468.65, 422.175)
+scale = Vector2(0.616673, 0.616672)
+texture = ExtResource("3_3xic4")
+
+[node name="OrangeDessertWithCacti6" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(3904.65, 422.175)
+scale = Vector2(0.616673, 0.616672)
+texture = ExtResource("3_3xic4")
+
+[node name="OrangeDessertWithCacti7" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(7040.65, 422.175)
+scale = Vector2(0.616673, 0.616672)
+texture = ExtResource("3_3xic4")
 
 [node name="Lvl2Map" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -88,7 +103,7 @@ blend_mode = 1
 [node name="Torches" type="Node2D" parent="Lvl2Map"]
 
 [node name="Torch3" parent="Lvl2Map/Torches" instance=ExtResource("3_8oc5u")]
-position = Vector2(3124, 1808)
+position = Vector2(1459.29, 4926.35)
 
 [node name="Torch6" parent="Lvl2Map/Torches" instance=ExtResource("3_8oc5u")]
 position = Vector2(146, 1550)
