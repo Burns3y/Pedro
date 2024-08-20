@@ -101,13 +101,16 @@ func _physics_process(delta):
 			# Handle jump.
 			if Input.is_action_pressed("jump") and is_on_floor():
 				velocity.y = JUMP_VELOCITY
+				$AudioStreamPlayer_jump.play()
 
 			# Wall jump
 			if Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5525:
-				velocity.y = JUMP_VELOCITY 
+				velocity.y = JUMP_VELOCITY
+				$AudioStreamPlayer_jump.play()
 
 			elif $"..".level == 0 and Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 4500:
 				velocity.y = JUMP_VELOCITY
+				$AudioStreamPlayer_jump.play()
 
 			#Flipping image depending on direction
 			if direction == -1:
@@ -152,6 +155,7 @@ func head_hitting():
 			
 			
 func _on_player_died():
+	$AudioStreamPlayer_death.play()
 	position = Vector2(304, 469)
 	started = false
 	power_up = false	
