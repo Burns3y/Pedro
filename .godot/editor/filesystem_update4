@@ -13,3 +13,5 @@ res://scenes/items/taco.tscn
 res://scenes/items/torch.tscn
 res://shop.tscn
 res://scenes/levels/level 1.gd
+res://scenes/levels/Start Screen/start_screen.gd
+res://scenes/enemies/enemy.gd

@@ -39,11 +39,11 @@ func _process(delta):
 		
 		SIGNAL = false
 		$Panel.modulate.a = 1
-		if $"../..".level != 2:
+		if $"../..".level != 2 and $"../../Pedro".ended:
 			$Panel/start_button.text = "Next Level"
 		
 		
-	elif SIGNAL == true and not $"../..".game_is_paused:
+	elif SIGNAL == true and not $"../..".game_is_paused and not $"../../Pedro".ended:
 		if $Panel.modulate.a > 0:
 			$Panel.modulate.a -= 1.5 * delta
 		$Panel/start_button.text = "Start Game"
