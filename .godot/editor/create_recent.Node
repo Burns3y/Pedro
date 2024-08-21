@@ -1,4 +1,7 @@
+Panel
+Button
 AudioStreamPlayer2D
+Node2D
 Timer
 AudioStreamPlayer
 CollisionShape2D
@@ -6,9 +9,6 @@ CharacterBody2D
 Area2D
 Sprite2D
 StaticBody2D
-Node2D
 CPUParticles2D
 AnimationPlayer
 TextEdit
-Panel
-PointLight2D

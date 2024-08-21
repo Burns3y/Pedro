@@ -132,7 +132,8 @@ position = Vector2(3747, 614)
 
 [node name="AudioStreamPlayer_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_5x6ud")
-volume_db = -0.2
+volume_db = -4.0
+bus = &"Music"
 
 [connection signal="player_power_up" from="Power up" to="Pedro" method="_on_power_up_player_power_up"]
 [connection signal="started" from="UI/Start_Screen" to="." method="_on_start_screen_started"]

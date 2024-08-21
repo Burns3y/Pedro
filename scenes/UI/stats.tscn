@@ -22,4 +22,18 @@ text = "Score: 0"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
 
+[node name="Mute_Music" type="Button" parent="."]
+offset_left = 401.0
+offset_right = 499.0
+offset_bottom = 31.0
+text = "Mute Music"
+
+[node name="Mute_SFX" type="Button" parent="."]
+offset_left = 501.0
+offset_right = 581.0
+offset_bottom = 31.0
+text = "Mute SFX"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Mute_Music" to="." method="_on_mute_music_pressed"]
+[connection signal="pressed" from="Mute_SFX" to="." method="_on_mute_sfx_pressed"]

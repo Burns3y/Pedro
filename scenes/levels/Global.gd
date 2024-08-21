@@ -1,3 +1,4 @@
 extends Node
 
-var total_tacos: int
+var music_muted: bool = false
+var sfx_muted: bool = false

@@ -49,10 +49,21 @@ func _on_start_screen_started():
 	$ScoreText.text = "Score: 0"
 	
 	
-	$Timer.start()
-	$Timer.one_shot = false
+	if $Timer:
+		$Timer.start()
+		$Timer.one_shot = false
 
 
 func increase_score():
 	score += 1
 	$ScoreText.text = "Score: " + str(score)
+
+
+func _on_mute_sfx_pressed():
+	var sfx_bus_index = AudioServer.get_bus_index("SFX")
+	AudioServer.set_bus_mute(sfx_bus_index, !AudioServer.is_bus_mute(sfx_bus_index))
+
+
+func _on_mute_music_pressed():
+	var music_bus_index = AudioServer.get_bus_index("Music")
+	AudioServer.set_bus_mute(music_bus_index, !AudioServer.is_bus_mute(music_bus_index))

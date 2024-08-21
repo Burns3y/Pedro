@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://61bcos6b4c8a"]
+[gd_scene load_steps=13 format=3 uid="uid://61bcos6b4c8a"]
 
 [ext_resource type="Script" path="res://scenes/player/pedro.gd" id="1_kkii7"]
 [ext_resource type="Texture2D" uid="uid://cplg0n10eyuc3" path="res://assets/Anime pedro (tenticle).png" id="2_0ghv0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://do7co6b4ftmnv" path="res://assets/pedro idle.png" id="3_q5f4o"]
 [ext_resource type="AudioStream" uid="uid://s3dtxnamqq6" path="res://assets/music/Level_done.mp3" id="5_l2dbr"]
 [ext_resource type="AudioStream" uid="uid://baeybt05ck2bb" path="res://assets/music/Pedro_Jump.mp3" id="6_ph38n"]
+[ext_resource type="AudioStream" uid="uid://blvqwpmix6cw5" path="res://assets/music/Footsteps.mp3" id="7_76368"]
 [ext_resource type="AudioStream" uid="uid://dn7bkrdikvht6" path="res://assets/music/Dying_scream.mp3" id="7_w7djg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1pm"]
@@ -86,12 +87,22 @@ position = Vector2(11, 7)
 scale = Vector2(1.21, 1.26)
 texture = ExtResource("3_q5f4o")
 
-[node name="AudioStreamPlayer_level_complete" type="AudioStreamPlayer2D" parent="."]
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer_level_complete" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("5_l2dbr")
+bus = &"SFX"
 
-[node name="AudioStreamPlayer_jump" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer_jump" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("6_ph38n")
+bus = &"SFX"
 
-[node name="AudioStreamPlayer_death" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer_footsteps" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("7_76368")
+volume_db = 20.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer_death" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("7_w7djg")
 volume_db = 3.0
+bus = &"SFX"

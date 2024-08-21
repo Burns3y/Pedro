@@ -16,7 +16,6 @@ var level_2_enemy_spawn_points = [Vector2(1189, 540), Vector2(1964, 645), Vector
 
 func _on_taco_collected():
 	$UI/Stats.increase_score()
-	Global.total_tacos += 1
 	
 func _ready():
 	var scene_name = str(get_tree().get_current_scene().get_name())

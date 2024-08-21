@@ -54,6 +54,9 @@ func _physics_process(delta):
 
 		#If player falls off map
 		if position.y > 2000:
+			#Plays death sound
+			$Audio/AudioStreamPlayer_death.play()
+			#Restarts
 			position = Vector2(304, 469)
 			started = false
 			$"..".restart()
@@ -83,10 +86,17 @@ func _physics_process(delta):
 			if direction and NO_WALL_JUMP == 0:
 				velocity.x = direction * SPEED * delta
 				if is_on_floor():
+					if not $Audio/AudioStreamPlayer_footsteps.playing:
+						$Audio/AudioStreamPlayer_footsteps.play()
 					$PedroIdle.modulate.a = 0
 					$Pedroanimation.modulate.a = 1
 					$PedroJumping.modulate.a = 0
+				else:
+					if $Audio/AudioStreamPlayer_footsteps.playing:
+						$Audio/AudioStreamPlayer_footsteps.stop()
 			else:
+				if $Audio/AudioStreamPlayer_footsteps.playing:
+					$Audio/AudioStreamPlayer_footsteps.stop()
 				velocity.x = move_toward(velocity.x, 0, SPEED)
 				if is_on_floor():
 					$Pedroanimation.modulate.a = 0
@@ -101,16 +111,16 @@ func _physics_process(delta):
 			# Handle jump.
 			if Input.is_action_pressed("jump") and is_on_floor():
 				velocity.y = JUMP_VELOCITY
-				$AudioStreamPlayer_jump.play()
+				$Audio/AudioStreamPlayer_jump.play()
 
 			# Wall jump
 			if Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 5525:
 				velocity.y = JUMP_VELOCITY
-				$AudioStreamPlayer_jump.play()
+				$Audio/AudioStreamPlayer_jump.play()
 
 			elif $"..".level == 0 and Input.is_action_pressed("jump") and is_on_wall_only() and velocity.y >= -200 and position.x >= 4500:
 				velocity.y = JUMP_VELOCITY
-				$AudioStreamPlayer_jump.play()
+				$Audio/AudioStreamPlayer_jump.play()
 
 			#Flipping image depending on direction
 			if direction == -1:
@@ -155,7 +165,9 @@ func head_hitting():
 			
 			
 func _on_player_died():
-	$AudioStreamPlayer_death.play()
+	#Plays death sound
+	$Audio/AudioStreamPlayer_death.play()
+	#Resets position
 	position = Vector2(304, 469)
 	started = false
 	power_up = false
@@ -163,7 +175,7 @@ func _on_player_died():
 func end_level():
 	#Ends and restarts game
 	$"../AudioStreamPlayer_music".stop()
-	$AudioStreamPlayer_level_complete.play()
+	$Audio/AudioStreamPlayer_level_complete.play()
 	ended = true
 	$"..".restart()
 	#Increases level
