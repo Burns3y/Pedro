@@ -13,3 +13,4 @@ res://scenes/levels/level_2.tscn
 res://scenes/levels/tutorial_level.tscn
 res://shop.tscn
 res://scenes/levels/level 1.gd
+res://scenes/enemies/enemy.gd

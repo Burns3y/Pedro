@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dl377cv5wwebd"]
+[gd_scene load_steps=11 format=3 uid="uid://dl377cv5wwebd"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_jrwv4"]
 [ext_resource type="Texture2D" uid="uid://4t3fek5jspea" path="res://assets/enemies/Bear-more-frames-edited.png" id="3_72etq"]
+[ext_resource type="AudioStream" uid="uid://b6t3dlwwds7ub" path="res://assets/music/Bear_death.mp3" id="3_wrg7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqisi"]
 size = Vector2(110, 61)
@@ -107,6 +108,9 @@ vframes = 2
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="AudioStreamPlayer_death_bear" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wrg7r")
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
 [connection signal="body_entered" from="PlayerDiesHitbox" to="." method="_on_player_dies_hitbox_body_entered"]

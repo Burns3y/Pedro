@@ -54,11 +54,6 @@ script = ExtResource("1_esan4")
 [node name="Backgrounds" type="Node2D" parent="."]
 position = Vector2(0, -30)
 
-[node name="CaveBG" type="Sprite2D" parent="Backgrounds"]
-position = Vector2(3150, 2105)
-scale = Vector2(4.97728, 2.77728)
-texture = ExtResource("2_1qd78")
-
 [node name="OrangeDessertWithCacti2" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(1670, -1137)
 scale = Vector2(0.61691, 0.61691)
@@ -88,6 +83,11 @@ texture = ExtResource("3_3xic4")
 position = Vector2(7040.65, 422.175)
 scale = Vector2(0.616673, 0.616672)
 texture = ExtResource("3_3xic4")
+
+[node name="CaveBG" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(3150, 2001)
+scale = Vector2(4.97728, 2.77728)
+texture = ExtResource("2_1qd78")
 
 [node name="Lvl2Map" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)

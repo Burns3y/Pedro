@@ -158,7 +158,7 @@ func _on_player_died():
 	$AudioStreamPlayer_death.play()
 	position = Vector2(304, 469)
 	started = false
-	power_up = false	
+	power_up = false
 
 func end_level():
 	#Ends and restarts game
