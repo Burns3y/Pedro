@@ -33,7 +33,6 @@ func _on_level_1_button_pressed():
 
 
 func _process(delta):
-	print($"../../Pedro".ended)
 	if $"../../Pedro".ended:
 		disable_buttons(false)
 		
