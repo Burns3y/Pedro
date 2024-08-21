@@ -22,7 +22,7 @@ func _on_start_screen_started():
 		ended = true
 	started = true
 	position = Vector2(304, 469)
-	power_up = false	
+	power_up = false
 
 func _physics_process(delta):
 	#Checks current scene

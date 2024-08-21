@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724201199
+::res://::1724206986
 export_presets.cfg::TextFile::-1::1723156127::0::1::::<><>::
 icon.svg::CompressedTexture2D::1929323658878216135::1716705158::1716705158::1::::<><>::
 power_up.gd::GDScript::-1::1724192224::0::1::::<>Sprite2D<>::
 power_up.tscn::PackedScene::1283607769402961491::1723072958::0::1::::<><>::uid://2qtxcw6rkddv::::res://icon.svg<>res://power_up.gd
 power_up_block.gd::GDScript::-1::1724192224::0::1::::<>Sprite2D<>::
-power_up_block.tscn::PackedScene::8088074320504037545::1724201196::0::1::::<><>::uid://bb7dhqho1lrex::::res://assets/Power up block.png<>res://power_up_block.gd
+power_up_block.tscn::PackedScene::8088074320504037545::1724206985::0::1::::<><>::uid://bb7dhqho1lrex::::res://assets/Power up block.png<>res://power_up_block.gd
 README.md::TextFile::-1::1718846739::0::1::::<><>::
-shop.tscn::PackedScene::5391242276614485819::1724201199::0::1::::<><>::uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+shop.tscn::PackedScene::5391242276614485819::1724206986::0::1::::<><>::uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
 Timer.gd::GDScript::-1::1724192186::0::1::::<>Timer<>::
 timer.tscn::PackedScene::4155893859958310243::1718315227::0::1::::<><>::res://Timer.gd
 ::res://assets/::1724193709
@@ -38,8 +38,9 @@ taco animation-1.png.png::CompressedTexture2D::9103293727776216192::1719803281::
 Taco image with centering.png::CompressedTexture2D::3974470209519027439::1719803281::1719868785::1::::<><>::
 taco.png::CompressedTexture2D::5892817019424531040::1718315226::1718315226::1::::<><>::
 torch_unanimated.png::CompressedTexture2D::5030780609629248222::1719351488::1719351488::1::::<><>::
-::res://assets/music/::1724206407
+::res://assets/music/::1724208004
 Bear_death.mp3::AudioStreamMP3::4603204059725298601::1724206407::1724206408::1::::<><>::
+Bear_death_final.mp3::AudioStreamMP3::4684111228297625971::1724208004::1724208005::1::::<><>::
 Dying_scream.mp3::AudioStreamMP3::8137856579344499017::1724192571::1724192571::1::::<><>::
 Finished pedro start screen%3F.mp3::AudioStreamMP3::1546318845674495110::1722566424::1722566550::1::::<><>::
 Level_done.mp3::AudioStreamMP3::38865266817557183::1724192571::1724192571::1::::<><>::
@@ -53,29 +54,29 @@ Bear dying.png::CompressedTexture2D::2325309530971182214::1722566431::1722566431
 desktop.ini::TextFile::-1::1716705158::0::1::::<><>::
 pedro_tiles.png::CompressedTexture2D::3992697112924620511::1716705158::1716705158::1::::<><>::
 ::res://scenes/::1718352096
-::res://scenes/enemies/::1724201196
+::res://scenes/enemies/::1724206985
 border_patrol_guard.gd::GDScript::-1::1716807663::0::1::::<>CharacterBody2D<>::
-enemy.gd::GDScript::-1::1724192185::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::7991142136265741125::1724201196::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://4t3fek5jspea::::res://assets/enemies/Bear-more-frames-edited.png
-::res://scenes/items/::1724201198
+enemy.gd::GDScript::-1::1724206489::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::7991142136265741125::1724206985::0::1::::<><>::res://scenes/enemies/enemy.gd<>uid://4t3fek5jspea::::res://assets/enemies/Bear-more-frames-edited.png<>uid://b6t3dlwwds7ub::::res://assets/music/Bear_death.mp3
+::res://scenes/items/::1724206985
 taco.gd::GDScript::-1::1724192425::0::1::::<>Area2D<>::
-taco.tscn::PackedScene::7542733002611890796::1724201196::0::1::::<><>::res://scenes/items/taco.gd<>uid://bwvi7c5e0wtv0::::res://assets/items/Taco image with centering.png<>uid://de4fbap5ifonm::::res://assets/items/chomp.mp3
+taco.tscn::PackedScene::7542733002611890796::1724206985::0::1::::<><>::res://scenes/items/taco.gd<>uid://bwvi7c5e0wtv0::::res://assets/items/Taco image with centering.png<>uid://de4fbap5ifonm::::res://assets/items/chomp.mp3
 torch.gd::GDScript::-1::1724192186::0::1::::<>Sprite2D<>::
-torch.tscn::PackedScene::4769955335132410347::1724201198::0::1::::<><>::res://scenes/items/torch.gd<>uid://bnbjlucgpjgxu::::res://assets/circle.png<>uid://bjq16dkhpt622::::res://assets/items/Blake_torches-jpeg-svg-gif.png
-::res://scenes/levels/::1724201199
+torch.tscn::PackedScene::4769955335132410347::1724206985::0::1::::<><>::res://scenes/items/torch.gd<>uid://bnbjlucgpjgxu::::res://assets/circle.png<>uid://bjq16dkhpt622::::res://assets/items/Blake_torches-jpeg-svg-gif.png
+::res://scenes/levels/::1724206986
 Global.gd::GDScript::-1::1724188090::0::1::::<>Node<>::
 level 1.gd::GDScript::-1::1724193715::0::1::::<>Node2D<>::
 level 1.tscn::PackedScene::-1::1722293189::0::1::::<><>::
-level_1.tscn::PackedScene::4302208723476667012::1724201195::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://51nxjq1cgwlo::::res://assets/backgrounds/backgroundhill.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://dnh6nxe84y4lp::::res://power_up_block.tscn<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://wbbv7fqpsgug::::res://assets/music/Finished pedro start screen%3F.mp3<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
-level_2.tscn::PackedScene::124677577601123414::1724201198::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://d0mlrwye28jju::::res://assets/backgrounds/Screenshot 2024-06-29 at 1.32.38 PM.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://cwmqjwtrk7a2k::::res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (2).png<>uid://b87up5nptn1rj::::res://scenes/items/torch.tscn<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn<>uid://wbbv7fqpsgug::::res://assets/music/Finished pedro start screen%3F.mp3
-tutorial_level.tscn::PackedScene::6957431490794057445::1724201199::0::1::::<><>::uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>res://scenes/levels/level 1.gd<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://51nxjq1cgwlo::::res://assets/backgrounds/backgroundhill.png<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn<>uid://wbbv7fqpsgug::::res://assets/music/Finished pedro start screen%3F.mp3
-::res://scenes/levels/Start Screen/::1724201196
+level_1.tscn::PackedScene::4302208723476667012::1724206985::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://51nxjq1cgwlo::::res://assets/backgrounds/backgroundhill.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://dnh6nxe84y4lp::::res://power_up_block.tscn<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://wbbv7fqpsgug::::res://assets/music/Finished pedro start screen%3F.mp3<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn
+level_2.tscn::PackedScene::124677577601123414::1724206986::0::1::::<><>::res://scenes/levels/level 1.gd<>uid://d0mlrwye28jju::::res://assets/backgrounds/Screenshot 2024-06-29 at 1.32.38 PM.png<>uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>uid://cwmqjwtrk7a2k::::res://assets/backgrounds/night background 2024-07-24 at 10.17.51 AM (2).png<>uid://b87up5nptn1rj::::res://scenes/items/torch.tscn<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn<>uid://wbbv7fqpsgug::::res://assets/music/Finished pedro start screen%3F.mp3
+tutorial_level.tscn::PackedScene::6957431490794057445::1724206986::0::1::::<><>::uid://bw5dexwiyucm6::::res://assets/tiles/pedro_tiles.png<>res://scenes/levels/level 1.gd<>uid://61bcos6b4c8a::::res://scenes/player/pedro.tscn<>uid://51nxjq1cgwlo::::res://assets/backgrounds/backgroundhill.png<>uid://chksvnkh4bye7::::res://scenes/levels/Start Screen/start_screen.tscn<>uid://c6p5nj1fodfa3::::res://scenes/UI/stats.tscn<>uid://wbbv7fqpsgug::::res://assets/music/Finished pedro start screen%3F.mp3
+::res://scenes/levels/Start Screen/::1724206985
 file (1).png::CompressedTexture2D::7348703133297401075::1717018183::1717018183::1::::<><>::
 start_screen.gd::GDScript::-1::1724192185::0::1::::<>CanvasLayer<>::
-start_screen.tscn::PackedScene::5285938156543290688::1724201196::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
-::res://scenes/player/::1724201198
-pedro.gd::GDScript::-1::1724194387::0::1::::<>CharacterBody2D<>::
-pedro.tscn::PackedScene::2229593027509493570::1724201198::0::1::::<><>::res://scenes/player/pedro.gd<>uid://cplg0n10eyuc3::::res://assets/Anime pedro (tenticle).png<>uid://c8mjyfttqbc1x::::res://assets/Pedro Jump Frame.png<>uid://do7co6b4ftmnv::::res://assets/pedro idle.png<>uid://s3dtxnamqq6::::res://assets/music/Level_done.mp3<>uid://baeybt05ck2bb::::res://assets/music/Pedro_Jump.mp3<>uid://dn7bkrdikvht6::::res://assets/music/Dying_scream.mp3
-::res://scenes/UI/::1724201195
+start_screen.tscn::PackedScene::5285938156543290688::1724206985::0::1::::<><>::res://scenes/levels/Start Screen/start_screen.gd<>uid://cmc3d1tg8mw81::::res://assets/start screen/file (1).png
+::res://scenes/player/::1724207017
+pedro.gd::GDScript::-1::1724207017::0::1::::<>CharacterBody2D<>::
+pedro.tscn::PackedScene::2229593027509493570::1724207017::0::1::::<><>::res://scenes/player/pedro.gd<>uid://cplg0n10eyuc3::::res://assets/Anime pedro (tenticle).png<>uid://c8mjyfttqbc1x::::res://assets/Pedro Jump Frame.png<>uid://do7co6b4ftmnv::::res://assets/pedro idle.png<>uid://s3dtxnamqq6::::res://assets/music/Level_done.mp3<>uid://baeybt05ck2bb::::res://assets/music/Pedro_Jump.mp3<>uid://dn7bkrdikvht6::::res://assets/music/Dying_scream.mp3
+::res://scenes/UI/::1724206985
 stats.gd::GDScript::-1::1724192425::0::1::::<>CanvasLayer<>::
-stats.tscn::PackedScene::6981506424700935880::1724201195::0::1::::<><>::res://scenes/UI/stats.gd
+stats.tscn::PackedScene::6981506424700935880::1724206985::0::1::::<><>::res://scenes/UI/stats.gd
