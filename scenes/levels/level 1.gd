@@ -3,6 +3,7 @@ extends Node2D
 var game_is_paused: bool = false
 var level
 signal pause(game_is_paused)
+var current_level
 
 var enemy_scene: PackedScene = preload("res://scenes/enemies/enemy.tscn")
 var taco_scene: PackedScene = preload("res://scenes/items/taco.tscn")
@@ -38,7 +39,7 @@ func _process(_delta):
 
 func _on_start_screen_started():
 	var scene_name = str(get_tree().get_current_scene().get_name())
-	var current_level = int(scene_name[scene_name.length() - 1])
+	current_level = int(scene_name[scene_name.length() - 1])
 
 
 	'''Tutorial level only'''

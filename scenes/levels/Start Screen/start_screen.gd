@@ -33,17 +33,17 @@ func _on_level_1_button_pressed():
 
 
 func _process(delta):
-	
+	print($"../../Pedro".ended)
 	if $"../../Pedro".ended:
 		disable_buttons(false)
 		
 		SIGNAL = false
 		$Panel.modulate.a = 1
-		if $"../..".level != 2 and $"../../Pedro".ended:
+		if $"../..".current_level != 2:
 			$Panel/start_button.text = "Next Level"
 		
 		
-	elif SIGNAL == true and not $"../..".game_is_paused and not $"../../Pedro".ended:
+	elif SIGNAL == true and not $"../..".game_is_paused:
 		if $Panel.modulate.a > 0:
 			$Panel.modulate.a -= 1.5 * delta
 		$Panel/start_button.text = "Start Game"

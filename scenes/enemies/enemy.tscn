@@ -112,6 +112,7 @@ one_shot = true
 [node name="AudioStreamPlayer_death_bear" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_i3yyf")
 volume_db = 5.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="HeadJumpRegion" to="." method="_on_head_jump_region_body_entered"]
 [connection signal="body_entered" from="PlayerDiesHitbox" to="." method="_on_player_dies_hitbox_body_entered"]

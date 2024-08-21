@@ -36,7 +36,6 @@ func _physics_process(delta):
 		elif direction.x == 1:
 			$"Bear-more-frames-edited".flip_h = true
 			$"Bear-more-frames-edited".offset.x = -18
-			print("Direction 1")
 		
 		
 		move_and_slide()

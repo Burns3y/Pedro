@@ -104,5 +104,5 @@ bus = &"SFX"
 
 [node name="AudioStreamPlayer_death" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("7_w7djg")
-volume_db = 3.0
+volume_db = 10.0
 bus = &"SFX"
