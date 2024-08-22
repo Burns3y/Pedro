@@ -1317,6 +1317,7 @@ text = "Press ESC to Pause or Play!"
 autowrap_mode = 2
 
 [node name="ESCToPause" type="Panel" parent="TutorialMap/ESCToPause"]
+layout_mode = 0
 offset_left = 7820.0
 offset_top = 644.0
 offset_right = 8276.0
@@ -1349,6 +1350,7 @@ text = "Press ESC to Pause or Play!"
 autowrap_mode = 2
 
 [node name="ESCToPause" type="Panel" parent="TutorialMap/ESCToPause2"]
+layout_mode = 0
 offset_left = 7820.0
 offset_top = 644.0
 offset_right = 8276.0
@@ -1381,6 +1383,7 @@ text = "Touch the power up block"
 autowrap_mode = 2
 
 [node name="ESCToPause" type="Panel" parent="TutorialMap/ESCToPause3"]
+layout_mode = 0
 offset_left = 7820.0
 offset_top = 644.0
 offset_right = 8276.0

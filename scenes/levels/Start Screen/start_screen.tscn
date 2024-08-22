@@ -54,16 +54,6 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Settings" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 292.0
-offset_top = 412.0
-offset_right = 388.0
-offset_bottom = 443.0
-text = "Settings"
-flat = true
-icon_alignment = 1
-
 [node name="Logo" type="Sprite2D" parent="Panel"]
 modulate = Color(0.67471, 1, 0.594779, 1)
 position = Vector2(589, 189)
