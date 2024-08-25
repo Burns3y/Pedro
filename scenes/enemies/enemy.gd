@@ -4,20 +4,24 @@ extends CharacterBody2D
 signal player_died
 signal player_killed_enemy(position)
 
+#If the game is paused
 var is_paused: bool = false
+#If the dying animation and sound is being played
+var dying = false
 
 #Creates movement variables
 const SPEED = 125.0
 var direction = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var frame = 0
-var dying = false
 
 
+#When the bear is instantiated
 func _ready():
+	#Starts the bear
 	velocity = direction * SPEED
 
 
+#Called every frame
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_paused and not dying:
@@ -39,9 +43,6 @@ func _physics_process(delta):
 		
 		
 		move_and_slide()
-		
-	if $"Bear-more-frames-edited".modulate.a == 0:
-		queue_free()
 
 #Emits a signal when the player hits the side, connects to the player through the level scene
 func _on_player_dies_hitbox_body_entered(body):
@@ -51,6 +52,7 @@ func _on_player_dies_hitbox_body_entered(body):
 #When the player jumps on the head of the enemy, the enemy dies.
 func _on_head_jump_region_body_entered(body):
 	if body.is_in_group("Player"):
+		#Plays the audio, emits the signal and ensures bear doesn't fall through floor
 		$AudioStreamPlayer_death_bear.play()
 		dying = true
 		player_killed_enemy.emit(position)
@@ -66,10 +68,10 @@ func _on_head_jump_region_body_entered(body):
 		var tween = get_tree().create_tween()
 		tween.tween_property($"Bear-more-frames-edited", "modulate", Color(0.439, 0.306, 0.231, 0), 2)
 
-
+#Pauses the enemy
 func pause(game_is_paused):
 	is_paused = game_is_paused
 
-
+#Deletes the bear once the timer runs out
 func _on_timer_timeout():
 	queue_free()
