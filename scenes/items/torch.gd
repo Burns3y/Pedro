@@ -12,23 +12,21 @@ Color(0.98, 0.898, 0.616)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#Chooses a colour for the torch to change to
 	var flicker_colour = fire_rgbs[randi() % fire_rgbs.size()]
 	start_torch_flicker(flicker_colour, 0)
 
 
 func start_torch_flicker(flicker_colour, energy_changing):
+	#Creates a tween and the time between each flicker
 	var random_time = randi() % 20 + 1
 	random_time = float(random_time)
 	var tween = get_tree().create_tween()
 	
 	#Animations, changing energy and colour at the same time
-	
-	
 	tween.tween_property($PointLight2D, "color", flicker_colour, random_time / 5)
 	tween.parallel()
 	tween.tween_property($PointLight2D, "energy", $PointLight2D.energy + energy_changing, random_time)
-	
-	
 	
 	#Setting up timer
 	$Timer.wait_time = random_time / 5

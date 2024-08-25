@@ -9,6 +9,7 @@ func _ready():
 
 #Removes all enemies and tacos, disables the buttons, unpauses the game
 func starting_game():
+	#Resets the game
 	Global.game_started = true
 	$"../../Pedro".ended = false
 	$"../..".remove_enemies()
@@ -20,8 +21,11 @@ func starting_game():
 	#Emits started() signal
 	started.emit()
 
+
+###When the buttons are pressed the game starts
 func _on_start_button_pressed():
 	starting_game()
+
 
 func _on_tutorial_button_pressed():
 	$"../..".level = 0
