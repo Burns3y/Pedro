@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="3_h5n62"]
 [ext_resource type="PackedScene" uid="uid://c6p5nj1fodfa3" path="res://scenes/UI/stats.tscn" id="4_5x40a"]
 [ext_resource type="AudioStream" uid="uid://wbbv7fqpsgug" path="res://assets/music/Finished pedro start screen%3F.mp3" id="7_2xef2"]
-[ext_resource type="PackedScene" uid="uid://dnh6nxe84y4lp" path="res://power_up_block.tscn" id="8_0tac5"]
+[ext_resource type="PackedScene" uid="uid://dnh6nxe84y4lp" path="res://scenes/items/power_up_block.tscn" id="8_0tac5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqecp"]
 texture = ExtResource("1_2ufin")

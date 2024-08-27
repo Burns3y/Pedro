@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnh6nxe84y4lp"]
 
 [ext_resource type="Texture2D" uid="uid://bb7dhqho1lrex" path="res://assets/Power up block.png" id="1_q4pst"]
-[ext_resource type="Script" path="res://power_up_block.gd" id="2_6v7fu"]
+[ext_resource type="Script" path="res://scenes/items/power_up_block.gd" id="2_6v7fu"]
 [ext_resource type="AudioStream" uid="uid://g5lw6tn4x27x" path="res://assets/music/Powerup.mp3" id="3_80h67"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekss1"]

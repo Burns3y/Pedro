@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/levels/level 1.gd" id="1_a6t2t"]
 [ext_resource type="Texture2D" uid="uid://51nxjq1cgwlo" path="res://assets/backgrounds/backgroundhill.png" id="2_wdh3a"]
 [ext_resource type="Texture2D" uid="uid://bw5dexwiyucm6" path="res://assets/tiles/pedro_tiles.png" id="3_qoa61"]
-[ext_resource type="PackedScene" uid="uid://dnh6nxe84y4lp" path="res://power_up_block.tscn" id="5_hd6qa"]
+[ext_resource type="PackedScene" uid="uid://dnh6nxe84y4lp" path="res://scenes/items/power_up_block.tscn" id="5_hd6qa"]
 [ext_resource type="PackedScene" uid="uid://61bcos6b4c8a" path="res://scenes/player/pedro.tscn" id="6_posip"]
 [ext_resource type="AudioStream" uid="uid://wbbv7fqpsgug" path="res://assets/music/Finished pedro start screen%3F.mp3" id="7_5x6ud"]
 [ext_resource type="PackedScene" uid="uid://chksvnkh4bye7" path="res://scenes/levels/Start Screen/start_screen.tscn" id="7_ijmcg"]
